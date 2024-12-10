@@ -1,0 +1,356 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 23.0
+        }
+      },
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 50.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 21.0
+        }
+      }
+    },
+    "Count": 5,
+    "DefaultSize": 50.0
+  },
+  "Cols": {
+    "InLogicalVisibleIndexes": [
+      46,
+      47
+    ],
+    "Count": 51
+  },
+  "Values": {
+    "1,1": "部門名",
+    "1,17": "部署"
+  },
+  "AttachInfos": {
+    "1,1": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "V_MagementEvaluationCommiteeIsNotAssigned",
+        "RowIndex": 1,
+        "ColumnIndex": 1,
+        "ColumnCount": 48,
+        "RowCount": 3,
+        "SelectionMode": 1,
+        "DisableAutoSelectRow": true,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "リストビュー1",
+        "TopCondition": null,
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "V_MagementEvaluationCommiteeIsNotAssigned",
+                "ColumnName": "department_name_lvl02"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "ListViewStyleName": "template_view"
+      }
+    },
+    "2,1": {
+      "BindingInfo": {
+        "TableName": "V_MagementEvaluationCommiteeIsNotAssigned",
+        "ColumnName": "department_name_lvl02"
+      }
+    },
+    "2,17": {
+      "BindingInfo": {
+        "TableName": "V_MagementEvaluationCommiteeIsNotAssigned",
+        "ColumnName": "department_name_lvl04"
+      }
+    },
+    "2,46": {
+      "BindingInfo": {
+        "TableName": "V_MagementEvaluationCommiteeIsNotAssigned",
+        "ColumnName": "is_excluded"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "FontSize": 14.67,
+        "FontWeight": 2,
+        "Foreground": 3,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "FontWeight": 2,
+        "Foreground": 3,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "Foreground": 6,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Foreground": 3,
+        "HorizontalAlignment": 4,
+        "BorderBottom": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Foreground": 3,
+        "BorderBottom": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "FontWeight": 2,
+        "BorderBottom": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Foreground": 6,
+        "BorderBottom": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Background 1 0",
+        "Body",
+        "Bold",
+        "Text 1 25",
+        "Left",
+        "Background 1 -25",
+        "Text 1 35"
+      ],
+      "Borders": [
+        {
+          "Color": 5
+        }
+      ]
+    },
+    "CellStyles": {
+      "1,1": 0,
+      "1,2": 1,
+      "1,3": 1,
+      "1,4": 1,
+      "1,5": 1,
+      "1,6": 1,
+      "1,7": 1,
+      "1,8": 1,
+      "1,9": 1,
+      "1,10": 1,
+      "1,11": 1,
+      "1,12": 1,
+      "1,13": 1,
+      "1,14": 1,
+      "1,15": 1,
+      "1,16": 1,
+      "1,17": 2,
+      "1,18": 1,
+      "1,19": 1,
+      "1,20": 1,
+      "1,21": 1,
+      "1,22": 1,
+      "1,23": 1,
+      "1,24": 1,
+      "1,25": 1,
+      "1,26": 1,
+      "1,27": 1,
+      "1,28": 3,
+      "1,29": 1,
+      "1,30": 4,
+      "1,31": 1,
+      "1,32": 1,
+      "1,33": 1,
+      "1,34": 1,
+      "1,35": 1,
+      "1,36": 1,
+      "1,37": 1,
+      "1,38": 1,
+      "1,39": 1,
+      "1,40": 1,
+      "1,41": 1,
+      "1,42": 1,
+      "1,43": 1,
+      "1,44": 1,
+      "1,45": 1,
+      "1,46": 5,
+      "1,47": 1,
+      "1,48": 5,
+      "1,49": 6,
+      "1,50": 6,
+      "2,1": 7,
+      "2,17": 8,
+      "2,28": 9,
+      "2,30": 10,
+      "2,46": 11,
+      "2,48": 11,
+      "3,1": 12,
+      "3,2": 12,
+      "3,3": 12,
+      "3,4": 12,
+      "3,5": 12,
+      "3,6": 12,
+      "3,7": 12,
+      "3,8": 12,
+      "3,9": 12,
+      "3,10": 12,
+      "3,11": 12,
+      "3,12": 12,
+      "3,13": 12,
+      "3,14": 12,
+      "3,15": 12,
+      "3,16": 12,
+      "3,17": 12,
+      "3,18": 12,
+      "3,19": 12,
+      "3,20": 12,
+      "3,21": 12,
+      "3,22": 12,
+      "3,23": 12,
+      "3,24": 12,
+      "3,25": 12,
+      "3,26": 12,
+      "3,27": 12,
+      "3,28": 12,
+      "3,29": 12,
+      "3,30": 12,
+      "3,31": 12,
+      "3,32": 12,
+      "3,33": 12,
+      "3,34": 12,
+      "3,35": 12,
+      "3,36": 12,
+      "3,37": 12,
+      "3,38": 12,
+      "3,39": 12,
+      "3,40": 12,
+      "3,41": 12,
+      "3,42": 12,
+      "3,43": 12,
+      "3,44": 12,
+      "3,45": 12,
+      "3,46": 12,
+      "3,47": 12,
+      "3,48": 12
+    },
+    "RowStyles": {
+      "0": 12,
+      "1": 12,
+      "2": 12,
+      "3": 12,
+      "4": 12
+    },
+    "SheetStyle": {
+      "FontFamily": 1,
+      "BorderBottom": null,
+      "BorderTop": null,
+      "BorderLeft": null,
+      "BorderRight": null
+    }
+  },
+  "Spans": [
+    "2,1,1,16",
+    "2,17,1,11",
+    "2,28,1,2",
+    "2,30,1,16",
+    "2,46,1,2",
+    "3,1,1,48",
+    "1,1,1,16",
+    "1,17,1,11",
+    "1,28,1,2",
+    "1,30,1,16",
+    "1,46,1,2"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//lvuoJW00NEnIl0kfdh/4wfCyT9/q/Ns2kFIsyPhDyyzUMN9TEYw5iLL16GgOylNr96+iOwlezNntUf12B6na82CVWxZLgOm6s9WSzdhfRXKnKQXpRWitHcM56FowTO0NXzxDLpyhQ74rbHOyJnYFkGBno7G0VKlq61LX9PqA7Amoz4ihfTomSQASd472HGV72IK72A7hhgrUjsMHB/SoHfByQxofrfA7EdSOxOvjZYMeDPbSGtTLMTFgBpY10lWyz1RerLf+5YyDWELuuIMN6lzWRcPjoHx1BN6vvHOtweGVG/n8ACKLXMM5+d3EQ9fwHDatCC2511TmNkE8EDe31tJLgicL3LG5LiBPm1CNqI191QXneA61k9QaPh4ESLHbWtdTrVobb2kac7fF3HV74ymawTWco2StHNZH1L3EMeikeFClwjEZQGOUabNggbe4oqvAQGjhaTkOKijBBZpvyZu4BrcwBEnjUY0m+jTeyMf9Gsf5zYTtUqLysNMrD8aYjJlHJA/tjDfbzUOZ7OnotjvCAF7k3Wyie5nguq6yjVJiX6UWRVG+Sc1Kt697ZMlwjBGdyNbs8iLZG7/e5XT0aOUE0GjyGuOzO87ijXAIyfemrNGBxYlOB8KUK+xzB0NDwqdmvlh7bJRIScpzr0jfOblWO3QAmcpi5xdSqDeurdSI8+AX1qFwNICrYO2nGNnpfFZlfzIL6x8QVgU8rvVGqSfoxvt5HPtoC+VxS5JGh1/zxYMSc/Ofk0wS9xapFsxbucC1Md9o2oQswuCv0apnlx09SEo8zJoDBCAlH1hqW+ILw0pzysajfICA4u7J2OCcGCJ/7Zo258B5RNAGDhYfiFCPLUHnnnks4PmNvgsjJUR/EM4Gq+RYapq+55jrqtUoLTx+Cz8aNiHBzIgt1eDT+w==|920

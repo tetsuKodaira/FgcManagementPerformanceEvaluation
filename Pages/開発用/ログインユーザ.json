@@ -1,0 +1,744 @@
+{
+  "Rows": {
+    "Count": 16
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 88.0
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 80.0
+        }
+      },
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 230.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 81.0
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      }
+    },
+    "Count": 9,
+    "DefaultSize": 81.0
+  },
+  "Values": {
+    "1,1": "社員番号",
+    "1,2": "社員名",
+    "1,3": "所属名",
+    "1,4": "被評価者",
+    "1,5": "1次評価者",
+    "1,6": "2次評価者",
+    "1,7": "評価部門長",
+    "2,1": "Z068900",
+    "2,2": "坂下直人",
+    "2,3": "総務人事課総務G",
+    "2,4": "〇",
+    "3,1": "Z069015",
+    "3,2": "柳達志",
+    "3,3": "総務人事課総務G",
+    "3,4": "〇",
+    "3,5": "〇",
+    "4,1": "Z029390",
+    "4,2": "鹿野耕平",
+    "4,3": "総務人事課",
+    "4,4": "〇",
+    "4,6": "〇",
+    "5,1": "Z032856",
+    "5,2": "伊賀利直広",
+    "5,3": "製造課製造技術G",
+    "5,4": "〇",
+    "6,1": "Z032385",
+    "6,2": "石井琢也",
+    "6,3": "製造課製造技術G",
+    "6,4": "〇",
+    "6,5": "〇",
+    "7,1": "Z032640",
+    "7,2": "増田裕記",
+    "7,3": "製造課",
+    "7,4": "〇",
+    "7,6": "〇",
+    "8,1": "Z025249",
+    "8,2": "渡辺誠",
+    "8,3": "川崎工場",
+    "8,7": "〇",
+    "9,1": "Z031890",
+    "9,2": "古賀大士",
+    "9,3": "管理部設備管理G",
+    "9,4": "〇",
+    "9,5": "〇",
+    "10,1": "YKANZAKI",
+    "10,2": "神崎有美子",
+    "10,3": "管理部人事総務G総務購買G(総務)",
+    "10,4": "〇",
+    "10,5": "〇",
+    "11,1": "Z033862",
+    "11,2": "前田太志",
+    "11,3": "管理部人事総務G",
+    "11,4": "〇",
+    "11,5": "〇",
+    "12,1": "Z028475",
+    "12,2": "岸直哉",
+    "12,3": "管理部",
+    "12,4": "〇",
+    "12,6": "〇",
+    "13,1": "Z025124",
+    "13,2": "高橋和弘",
+    "13,3": "総合開発センター",
+    "13,7": "〇",
+    "14,1": "Z026346",
+    "14,2": "小瀬智之",
+    "14,3": "高岡工場",
+    "14,7": "〇"
+  },
+  "AttachInfos": {
+    "2,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B3"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z068900",
+        "ClickMode": 1
+      }
+    },
+    "3,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B4"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z069015",
+        "ClickMode": 1
+      }
+    },
+    "4,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B5"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z029390",
+        "ClickMode": 1
+      }
+    },
+    "5,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B6"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z032856",
+        "ClickMode": 1
+      }
+    },
+    "6,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B7"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z032385",
+        "ClickMode": 1
+      }
+    },
+    "7,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B8"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z032640",
+        "ClickMode": 1
+      }
+    },
+    "8,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B9"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z025249",
+        "ClickMode": 1
+      }
+    },
+    "9,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B10"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z031890",
+        "ClickMode": 1
+      }
+    },
+    "10,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B11"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "YKANZAKI",
+        "ClickMode": 1
+      }
+    },
+    "11,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B12"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z033862",
+        "ClickMode": 1
+      }
+    },
+    "12,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B13"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z028475",
+        "ClickMode": 1
+      }
+    },
+    "13,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B14"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z025124",
+        "ClickMode": 1
+      }
+    },
+    "14,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!ユーザー名"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!B15"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ログインユーザ!パスワード"
+                },
+                "Value": "123456"
+              }
+            ]
+          }
+        ],
+        "Text": "Z026346",
+        "ClickMode": 1
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "FontWeight": 2,
+        "Formatter": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "FontWeight": 2,
+        "Formatter": 3,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Foreground": 6,
+        "Formatter": 3,
+        "Underline": true,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 3,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 3,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Formatter": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Formatter": 3,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Accent 1 80",
+        "Body",
+        "Bold",
+        "[AUTO]General",
+        "black",
+        "Center",
+        "Blue"
+      ],
+      "Borders": [
+        {
+          "Color": 4
+        }
+      ]
+    },
+    "CellStyles": {
+      "1,1": 0,
+      "1,2": 0,
+      "1,3": 0,
+      "1,4": 1,
+      "1,5": 1,
+      "1,6": 1,
+      "1,7": 1,
+      "2,1": 2,
+      "2,2": 3,
+      "2,3": 3,
+      "2,4": 4,
+      "2,5": 4,
+      "2,6": 4,
+      "2,7": 4,
+      "2,8": 5,
+      "3,1": 2,
+      "3,2": 3,
+      "3,3": 3,
+      "3,4": 4,
+      "3,5": 4,
+      "3,6": 4,
+      "3,7": 4,
+      "3,8": 5,
+      "4,1": 2,
+      "4,2": 3,
+      "4,3": 3,
+      "4,4": 4,
+      "4,5": 4,
+      "4,6": 4,
+      "4,7": 4,
+      "4,8": 5,
+      "5,1": 2,
+      "5,2": 3,
+      "5,3": 3,
+      "5,4": 4,
+      "5,5": 4,
+      "5,6": 4,
+      "5,7": 4,
+      "5,8": 5,
+      "6,1": 2,
+      "6,2": 6,
+      "6,3": 6,
+      "6,4": 7,
+      "6,5": 7,
+      "6,6": 7,
+      "6,7": 4,
+      "7,1": 2,
+      "7,2": 6,
+      "7,3": 6,
+      "7,4": 7,
+      "7,5": 7,
+      "7,6": 7,
+      "7,7": 4,
+      "8,1": 2,
+      "8,2": 3,
+      "8,3": 3,
+      "8,4": 4,
+      "8,5": 4,
+      "8,6": 4,
+      "8,7": 4,
+      "9,1": 2,
+      "9,2": 8,
+      "9,3": 8,
+      "9,4": 4,
+      "9,5": 4,
+      "9,6": 9,
+      "9,7": 9,
+      "10,1": 2,
+      "10,2": 3,
+      "10,3": 3,
+      "10,4": 4,
+      "10,5": 4,
+      "10,6": 4,
+      "10,7": 4,
+      "11,1": 2,
+      "11,2": 3,
+      "11,3": 3,
+      "11,4": 4,
+      "11,5": 4,
+      "11,6": 4,
+      "11,7": 4,
+      "12,1": 2,
+      "12,2": 3,
+      "12,3": 3,
+      "12,4": 4,
+      "12,5": 4,
+      "12,6": 4,
+      "12,7": 4,
+      "13,1": 2,
+      "13,2": 3,
+      "13,3": 3,
+      "13,4": 4,
+      "13,5": 4,
+      "13,6": 4,
+      "13,7": 4,
+      "14,1": 2,
+      "14,2": 3,
+      "14,3": 3,
+      "14,4": 4,
+      "14,5": 4,
+      "14,6": 4,
+      "14,7": 4
+    },
+    "SheetStyle": {
+      "FontFamily": 1,
+      "BorderBottom": null,
+      "BorderTop": null,
+      "BorderLeft": null,
+      "BorderRight": null
+    }
+  },
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//41i/j+C7eeK4Al3Pes053qXM6zwxZRv/cPAnrly+5eweyQfJ87I2/9tsXpViHrSo81gg4Im8fb+RmH6cr3hy0xOkt0jOFaIVx7g0efGgTY5RQ+ahHBFXz8tWt2iVY1ZJL+tHdM0QC0pfWw126veF21VSY+h5vJ8NVqSPjUeHw29Et9wxJIezuVfrLv6T2v1VhR8qyhZoMwqhlROnK7J59HYAMJC2VgysONmyV5cjaw6GJ9iS90zUuPghAiQBH75dea6QGAw9R/RIgOOBJVf8Y1UfhFWrBaf98uHqdCEk+rTng2ZSSy4W5SP707cbAVzA6QPoKvH8+A2qEfTrudDWzlUpXx8F8TmJPiKqCsVcB/2zTzrwbItnIpMtGW/bIusOwrKl3fzXQOl+YSJ35ojBj8Cubj3qsd2FvVNtga3D/jLadQuwpuh5aaLtqKs+HCDwtQHxOUYQRnWaFSowwbLa9nCIliE5kJP1cqVXXDbQcWWpVhQm0jGSUCz1MeoMosRNuPkwCFYyAgs6zSqwoVTA7caxhFml+8Qrt2ZW3k7cJBTsGBUbfGm/Gk2W7eU0l74EeNDoJs+kSHx2djlDw4b6isgpD+WoAAv31VSeZKu9J5WFfRoxnuufWbiEsUgwzUDceX6VF/68q/bKdaqbdCEjGVuW7yjQUB+F6SVJED5yqN7yrjYr3DLHEIzJ2W7OBP4AVldwGRDnW1FxuuvvwkS3F+zAwYahlZiwMDn7RBk6QMxleLKXTalSFGxBfl9DF2nNSBgsxgHmRtNH2vm1AkqFVGrZ5SnwTOCMrjWKcDg9lBdQdItQGjYA9zj9VWFnwJPtHnL+hf7VGbiJ/JyVuSTPhmgIAOquemaJKtTvCdGiuKf3UwYJCmN3ORlhNVY9AbErZp1XWi7hQEWwrTmygaf1DQ==|920

@@ -1,0 +1,165 @@
+{
+  "Rows": {
+    "Count": 25
+  },
+  "Cols": {
+    "Count": 18
+  },
+  "Values": {
+    "2,3": "パスワードの変更",
+    "6,3": "現在のパスワード",
+    "10,3": "新しいパスワード",
+    "14,3": "新しいパスワードの確認",
+    "19,3": "パスワードの変更",
+    "22,3": "キャンセル"
+  },
+  "AttachInfos": {
+    "7,3": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "ShowPassword": true,
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "ForguncyAttribute": "ChangePassword_OldPassword"
+      },
+      "DataValidationInfo": {
+        "IgnoreBlank": false
+      }
+    },
+    "11,3": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "ShowPassword": true,
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "ForguncyAttribute": "ChangePassword_NewPassword"
+      },
+      "DataValidationInfo": {
+        "IgnoreBlank": false
+      }
+    },
+    "15,3": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "ShowPassword": true,
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "ForguncyAttribute": "ChangePassword_ConfirmPassword"
+      },
+      "DataValidationInfo": {
+        "IgnoreBlank": false
+      }
+    },
+    "19,3": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "Text": "パスワードの変更",
+        "AutoExecute": true,
+        "TemplateKey": "_RS_Normal_Style2",
+        "ForguncyAttribute": "ChangePassword_Button"
+      }
+    },
+    "22,3": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "NavigateType": "back",
+            "PassValues": []
+          }
+        ],
+        "Text": "キャンセル",
+        "TemplateKey": "_RS_Outline_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontSize": 21.333333969116211,
+        "Foreground": 0,
+        "Formatter": 1,
+        "HorizontalAlignment": 2,
+        "VerticalAlignment": 3
+      },
+      {
+        "FontSize": 14.666666984558105,
+        "Foreground": 4,
+        "Formatter": 1
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": null,
+        "Formatter": 5
+      },
+      {
+        "FontSize": 16.0,
+        "FontWeight": 6,
+        "Foreground": null,
+        "Formatter": 1
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "#FF09519D",
+        "[AUTO]General",
+        "Center",
+        "Bottom",
+        "#FF7F7F7F",
+        "@",
+        "Bold",
+        "Body",
+        "#FF000000"
+      ]
+    },
+    "CellStyles": {
+      "2,3": 0,
+      "6,3": 1,
+      "7,3": 2,
+      "10,3": 1,
+      "11,3": 2,
+      "14,3": 1,
+      "15,3": 2,
+      "19,3": 3,
+      "22,3": 3
+    },
+    "SheetStyle": {
+      "FontFamily": 7,
+      "FontSize": 13.333333015441895,
+      "Foreground": 8
+    }
+  },
+  "Spans": [
+    "2,3,2,12",
+    "7,3,2,12",
+    "11,3,2,12",
+    "15,3,2,12",
+    "19,3,2,12",
+    "22,3,2,12"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "Title": "パスワードの変更",
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "IsBuiltInPage": true,
+    "IsMobilePage": true
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//LeWEHeDxX/PMmQTp8v6Ug5bm0di9Vp1Qy4thwZl2WToQk/hPKwyYtoH/55KPL/PdmM4M2PhAui3WlQE6ssRsQt0dzxuOZF9knhRRjh5wm2PC6OGw//0n4KCscC2+2uCXCCnwu364ZM9VSBoOU2WtcE2XaqNijFSfkC9Wxvh9m6Qq1yr4hq0Bc/6sLfTg8WWwFV5+/q3qEl8irdB4HpL17X39jxSNeKcxvOArjPWBa6BBG15n6pIRvPeFdt3w+Z9JbAqR5E62v3dVPYO/DVdlk7/xm0X2/ee7AlgZXl9HhDUGx5t1yTFpnuTwaSJrHjpuMwTrU4414jKgE+KuQJ7WPsuraVtIZH1Zg9D8qXvz2YjfvqT9iErKFexkFpFIYPnQyYFkPCC3fXBmL4aTUv5NDATe75cOHQ/RryR0HRzj6HUwidjtxXpuKOvVDesCsLeAoTm7T9rSrv0kIoETzdPap2p1/Lc6QwOqN7eggDTTJI7/M9bAHX8eHYeZqMYomdvPdgxA6GDCBzOqz4glPzVwkMM2tgMAiqAUrVeqMNThatFuNS/F6nGkXKrr1UZ4LfkL4uN63jBu5f9YttRA7Hlvrz9YZ6jVq+fBUTK9i97o0xBdLLiFHmv82Jhki/qlbuBOjhjV/SHm9eHTJKBzPa2824UddzbnzvEEti1+lHv6CPrv9/uE/jxrc91yIkZy/kgFbsD++B7A7YlHtyS1iYbkbxGPVeyM+O3lp3ozVAfn0dCMRod5nlDtXxJrx8RmRS4H5Wt2BKUnbcY1UHLTFqJVDRZPy0/nIXmbhWGx230eNmWNUN5v+/MbM9FJis1M1GnH8OneQTZQBeqz4mP0XN44lokiRTFX6gNbiJdcXxv7l9G1uJlR+cZCYFfVBdaFDbqq86HVx60UmZtQTVKbRbrGnA==|920

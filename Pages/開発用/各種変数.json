@@ -1,0 +1,150 @@
+{
+  "Rows": {
+    "Count": 45
+  },
+  "Cols": {
+    "Count": 60
+  },
+  "Values": {
+    "1,1": "起票権限(コースコード)",
+    "4,1": "スペシャリストコースのメンバー(ポストコード)",
+    "7,1": "マネジメントコース(部長未満)のメンバー(ポストコード)",
+    "10,1": "マネジメントコース(部長以上)のメンバー(ポストコード)"
+  },
+  "Formulas": {
+    "2,2": "\"15,35\"",
+    "11,2": "\"410,412,420,450,610,612\"",
+    "8,2": "\"630,430,670,750,740,760,730\"",
+    "5,2": "\"999,988\""
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0,
+        "Formatter": 1
+      },
+      {
+        "FontFamily": 0
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "[AUTO]General"
+      ]
+    },
+    "CellStyles": {
+      "4,1": 0,
+      "4,2": 1,
+      "4,3": 1,
+      "4,4": 1,
+      "4,5": 1,
+      "4,6": 1,
+      "4,7": 1,
+      "4,8": 1,
+      "4,9": 1,
+      "4,10": 1,
+      "4,11": 1,
+      "4,12": 1,
+      "4,13": 1,
+      "4,14": 1,
+      "4,15": 1,
+      "5,1": 1,
+      "5,2": 1,
+      "5,3": 1,
+      "5,4": 1,
+      "5,5": 1,
+      "5,6": 1,
+      "5,7": 1,
+      "5,8": 1,
+      "5,9": 1,
+      "5,10": 1,
+      "5,11": 1,
+      "5,12": 1,
+      "5,13": 1,
+      "5,14": 1,
+      "5,15": 1,
+      "7,1": 0,
+      "7,2": 1,
+      "7,3": 1,
+      "7,4": 1,
+      "7,5": 1,
+      "7,6": 1,
+      "7,7": 1,
+      "7,8": 1,
+      "7,9": 1,
+      "7,10": 1,
+      "7,11": 1,
+      "7,12": 1,
+      "7,13": 1,
+      "7,14": 1,
+      "7,15": 1,
+      "8,1": 1,
+      "8,2": 1,
+      "8,3": 1,
+      "8,4": 1,
+      "8,5": 1,
+      "8,6": 1,
+      "8,7": 1,
+      "8,8": 1,
+      "8,9": 1,
+      "8,10": 1,
+      "8,11": 1,
+      "8,12": 1,
+      "8,13": 1,
+      "8,14": 1,
+      "8,15": 1,
+      "10,1": 0,
+      "10,2": 1,
+      "10,3": 1,
+      "10,4": 1,
+      "10,5": 1,
+      "10,6": 1,
+      "10,7": 1,
+      "10,8": 1,
+      "10,9": 1,
+      "10,10": 1,
+      "10,11": 1,
+      "10,12": 1,
+      "10,13": 1,
+      "10,14": 1,
+      "10,15": 1,
+      "11,1": 1,
+      "11,2": 1,
+      "11,3": 1,
+      "11,4": 1,
+      "11,5": 1,
+      "11,6": 1,
+      "11,7": 1,
+      "11,8": 1,
+      "11,9": 1,
+      "11,10": 1,
+      "11,11": 1,
+      "11,12": 1,
+      "11,13": 1,
+      "11,14": 1,
+      "11,15": 1
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "2,2,1,6",
+    "5,2,1,6",
+    "8,2,1,14",
+    "11,2,1,14"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//umiGI4McmyseVIqG1Uj38J3esS9KryVHL7PFa8EnEsGD3EbSfBIBbydjoyhffTVdeTT+YAOszPAylHhijA2IlewAU2FKCMGvPiYi0KjxY/7vlwJBbB7vo7ZpblYkWfWMx3SAS7Sf0ue0L0V9J1sy42drGbES0cUUausn/09pxPGzR1HZiqmA7HNxMYIGVWFGAge7hU1aGDQH5jU+Tt/9bRAEPKtXTvlojXRDffkSByrI/x4Ai2q687T4bUpKGDsZU6d+h772E/3vCJtASISwFC/f+L7dZyy+hSgyRLVrANfnt4BaLhi99CiQ9TaFSHRGMY3tRc6epR9fg6g6zHbjJcRCC09JHMULJcRG6/UJg1K6kvTRmK55I2byl5J+BGaPWju1QsoDF5po3zeyrdbamNuBkvFfyOqeexHQfgwO+atdFtOvIf+rZDTauL7e5hYfDk1nJ+1zsBlPdPDVNL9cZ057ASKJF+FOg0pVR3csE0zZfU8GZat5uawVF52pebOfxb6+kePdjuJmRWx6zjXttOSn8WP0GhU+DI9sCqggz3GLfViNY6Fmusnw19FfCMosM3wYRJCEcoIveRp52XuOZpJyh2bHcV5zyDJrE3i4YW0qoYgkipN6+vcO6PATUaYVH2llbGikBdvvKKsrDswmg/JbycMulVbgwSO1WicLDRWzx+UoeeO+5ADnLkkj75YJyou/uoarBcAEryI7XxNB42WwEQpf2SWUi/UWJiMGJu49Fv57sZLgu/GBTOOUY6G8wi5Spzzw5W1e+06MUSf+nPDdAdMb6M5YLo97hY9LICs4gb3T23wFglQJClLdzBKTaaVnLrg8ySupd0ztn9gfuf/pm3FPGtyWzP3wnHO/yXpiKRwKgxBTqhoXid5VcU65EhiTQJBflqHSJ1YTQ+g0wQ==|920

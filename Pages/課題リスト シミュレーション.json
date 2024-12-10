@@ -1,0 +1,5535 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      }
+    },
+    "Count": 27
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "38": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 80.0,
+          "IsHidden": true
+        }
+      },
+      "59": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "60": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0,
+          "IsHidden": true
+        }
+      },
+      "61": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "62": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "63": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "64": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "65": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "66": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "68": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "69": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 130.0,
+          "IsHidden": true
+        }
+      },
+      "70": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      },
+      "78": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      },
+      "79": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      1,
+      38,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    "Count": 80
+  },
+  "Values": {
+    "0,60": "非表示",
+    "1,2": "課題",
+    "1,10": "行動評価",
+    "1,61": "プロジェクトID",
+    "2,2": "評点平均",
+    "2,6": "評価結果",
+    "2,10": "評点平均",
+    "2,14": "評価結果",
+    "2,61": "コース",
+    "3,61": "職務等級",
+    "6,2": "課題リスト",
+    "7,2": "No.",
+    "7,5": "課題名",
+    "7,22": "専門性",
+    "7,26": "影響範囲",
+    "7,30": "新規性",
+    "7,34": "裁量権",
+    "7,38": "4軸合計",
+    "7,39": "課題ランク",
+    "7,43": "ステータス",
+    "7,49": "評点",
+    "7,53": "課題ランク反映後",
+    "8,2": 1,
+    "9,2": 2,
+    "10,2": 3,
+    "11,2": 4,
+    "12,2": 5,
+    "13,2": 6,
+    "14,2": 7,
+    "16,2": "行動評価",
+    "17,2": "No.",
+    "17,5": "評価項目",
+    "17,22": "評点",
+    "18,2": 1,
+    "19,2": 2,
+    "20,2": 3,
+    "21,2": 4,
+    "22,2": 5,
+    "23,2": 6,
+    "24,2": 7,
+    "24,55": "閉じる",
+    "25,2": 8
+  },
+  "Formulas": {
+    "3,2": "IFERROR(ROUND(AVERAGEIFS(BB9:BG15,BB9:BG15,\"<>\"),1),\"\")",
+    "3,6": "IFS(C4=\"\",\"\",C4>=4.2,\"S\",C4>=3.5,\"A\",C4>=3,\"B+\",C4>=2,\"B\",TRUE,\"C\")",
+    "3,10": "IF(SUM(W19:Z26)=0,\"\",IFERROR(ROUND(SUM(W19:Z26)/8,1),\"\"))",
+    "3,14": "IFS(K4=\"\",\"\",K4>=4.2,\"S\",K4>=3.5,\"A\",K4>=3,\"B+\",K4>=2,\"B\",TRUE,\"C\")",
+    "8,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B9&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "8,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B9&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "8,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B9&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "8,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B9&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "8,38": "IFERROR(IF(AND(W9>0,AA9>0,AE9>0,AI9>0),W9+AA9+AE9+AI9,\"\"),\"\")",
+    "8,53": "IFS(AX9=\"\",\"\",AN9=\"\",AX9,AN9=\"B\",AX9-1,AN9=\"A\",AX9,AN9=\"Z\",AX9+1)",
+    "9,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B10&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "9,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B10&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "9,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B10&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "9,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B10&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "9,53": "IFS(AX10=\"\",\"\",AN10=\"\",AX10,AN10=\"B\",AX10-1,AN10=\"A\",AX10,AN10=\"Z\",AX10+1)",
+    "10,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B11&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "10,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B11&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "10,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B11&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "10,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B11&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "10,53": "IFS(AX11=\"\",\"\",AN11=\"\",AX11,AN11=\"B\",AX11-1,AN11=\"A\",AX11,AN11=\"Z\",AX11+1)",
+    "11,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B12&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "11,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B12&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "11,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B12&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "11,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B12&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "11,53": "IFS(AX12=\"\",\"\",AN12=\"\",AX12,AN12=\"B\",AX12-1,AN12=\"A\",AX12,AN12=\"Z\",AX12+1)",
+    "12,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B13&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "12,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B13&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "12,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B13&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "12,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B13&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "12,53": "IFS(AX13=\"\",\"\",AN13=\"\",AX13,AN13=\"B\",AX13-1,AN13=\"A\",AX13,AN13=\"Z\",AX13+1)",
+    "13,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B14&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "13,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B14&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "13,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B14&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "13,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B14&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "13,53": "IFS(AX14=\"\",\"\",AN14=\"\",AX14,AN14=\"B\",AX14-1,AN14=\"A\",AX14,AN14=\"Z\",AX14+1)",
+    "14,22": "IF($BK$3=\"1\",\"\",VLOOKUP($B15&\"_1\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "14,26": "IF($BK$3=\"1\",\"\",VLOOKUP($B15&\"_2\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "14,30": "IF($BK$3=\"1\",\"\",VLOOKUP($B15&\"_3\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "14,34": "IF($BK$3=\"1\",\"\",VLOOKUP($B15&\"_4\",$BR$9:$BS$9,2,FALSE)&\"\")",
+    "14,53": "IFS(AX15=\"\",\"\",AN15=\"\",AX15,AN15=\"B\",AX15-1,AN15=\"A\",AX15,AN15=\"Z\",AX15+1)"
+  },
+  "ArrayFormulas": {
+    "8,39,7,4": "BN9&\"\"",
+    "8,5,7,17": "BM9&\"\"",
+    "8,43,7,6": "BO9&\"\"",
+    "8,1,7,1": "BK9"
+  },
+  "AttachInfos": {
+    "2,62": {
+      "BindingInfo": {
+        "TableName": "T_ManagementBasicInformation",
+        "ColumnName": "management_course_id"
+      }
+    },
+    "3,62": {
+      "BindingInfo": {
+        "TableName": "T_ManagementBasicInformation",
+        "ColumnName": "job_grade_id"
+      }
+    },
+    "7,61": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "T_ManagementAssignmentTasks",
+        "RowIndex": 7,
+        "ColumnIndex": 61,
+        "ColumnCount": 6,
+        "RowCount": 8,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "リストビュー1",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "T_ManagementAssignmentTasks",
+            "ColumnName": "project_id"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!BK2"
+          }
+        },
+        "TopCondition": null,
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "T_ManagementAssignmentTasks",
+                "ColumnName": "task_no"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "DoNotLoadDataWhenLoadPage": true,
+        "ListViewStyleName": "_RS_Medium2"
+      }
+    },
+    "7,68": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "T_ManagementAssignmentTaskElements",
+        "RowIndex": 7,
+        "ColumnIndex": 68,
+        "ColumnCount": 5,
+        "RowCount": 8,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "リストビュー2",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "T_ManagementAssignmentTaskElements",
+            "ColumnName": "assignment_manage_id",
+            "RelationBinding": {
+              "RelatedTable": "T_ManagementAssignmentTasks",
+              "RelatedColumn": "assignment_manage_id",
+              "DisplayColumn": "project_id"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!BK2"
+          }
+        },
+        "TopCondition": null,
+        "DoNotLoadDataWhenLoadPage": true,
+        "ListViewStyleName": "_RS_Medium2"
+      }
+    },
+    "8,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "8,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "8,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "8,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "8,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "8,38": {
+      "CellType": {
+        "$type": "Forguncy.NumberCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "='課題リスト シミュレーション'!BK3"
+                      }
+                    ]
+                  },
+                  "value": "1"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.StopCommand, ServerDesignerCommon"
+                  }
+                ],
+                "Comments": "1:マネジメントコース",
+                "ID": "24b41405-1146-436e-a984-2425cd997a4e"
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "='課題リスト シミュレーション'!AM9"
+                      }
+                    ]
+                  },
+                  "value": "4",
+                  "compareType": 4
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "='課題リスト シミュレーション'!$AN9"
+                        },
+                        "Value": "%Null%"
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.StopCommand, ServerDesignerCommon"
+                  }
+                ],
+                "ID": "1c9f6159-b50e-46b4-9594-1e7d1602fa1e"
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+            "ParameterName": "グレード4点合計",
+            "TableValue": {
+              "TableName": "M_GradeManagementAssignmentTaskElementRelations",
+              "OnlyGetValue": true,
+              "TableValueType": 0,
+              "BindingInfos": [
+                {
+                  "BindingInfo": {
+                    "TableName": "M_GradeManagementAssignmentTaskElementRelations",
+                    "ColumnName": "grade"
+                  },
+                  "ColumnName": "grade"
+                }
+              ],
+              "SqlCondition": {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "M_GradeManagementAssignmentTaskElementRelations",
+                  "ColumnName": "task_element_value_sum"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "='課題リスト シミュレーション'!AM9"
+                }
+              }
+            },
+            "ID": "b8075b6a4b5b4954a336b6e4378e846a",
+            "Comments": ""
+          },
+          {
+            "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+            "ParameterName": "課題ランク計算",
+            "ParameterValue": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "='課題リスト シミュレーション'!グレード4点合計-VALUE('課題リスト シミュレーション'!$BK$4)"
+            },
+            "ID": "15bf028fc3f0458a95d6d94a0c2a0adb"
+          },
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "='課題リスト シミュレーション'!課題ランク計算"
+                      }
+                    ]
+                  },
+                  "value": "0",
+                  "compareType": 2
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "='課題リスト シミュレーション'!$AN9"
+                        },
+                        "Value": "Z"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "4f73ade6-c724-4d35-8837-755c652bcfd2"
+              },
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "='課題リスト シミュレーション'!課題ランク計算"
+                      }
+                    ]
+                  },
+                  "value": "0"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "='課題リスト シミュレーション'!$AN9"
+                        },
+                        "Value": "A"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "0f46c092-eebd-4743-b8b0-6a6b002808fb"
+              },
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "='課題リスト シミュレーション'!課題ランク計算"
+                      }
+                    ]
+                  },
+                  "value": "0",
+                  "compareType": 4
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "='課題リスト シミュレーション'!$AN9"
+                        },
+                        "Value": "B"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "d8821b19-cefa-4c57-b768-449698bc546b"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "8,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "8,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "8,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN9"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "8,61": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTasks",
+        "ColumnName": "project_id"
+      }
+    },
+    "8,62": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTasks",
+        "ColumnName": "assignment_manage_id"
+      }
+    },
+    "8,63": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTasks",
+        "ColumnName": "task_no"
+      }
+    },
+    "8,64": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTasks",
+        "ColumnName": "task_name"
+      }
+    },
+    "8,65": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTasks",
+        "ColumnName": "task_rank_id"
+      }
+    },
+    "8,66": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTasks",
+        "ColumnName": "status_id"
+      }
+    },
+    "8,68": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTaskElements",
+        "ColumnName": "assignment_manage_id",
+        "RelationBinding": {
+          "RelatedTable": "T_ManagementAssignmentTasks",
+          "RelatedColumn": "assignment_manage_id",
+          "DisplayColumn": "project_id"
+        }
+      }
+    },
+    "8,69": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTaskElements",
+        "ColumnName": "am_and_te_id"
+      }
+    },
+    "8,70": {
+      "BindingInfo": {
+        "TableName": "T_ManagementAssignmentTaskElements",
+        "ColumnName": "figure"
+      }
+    },
+    "9,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "9,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "9,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "9,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "9,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "9,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "9,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "9,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN10"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "10,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "10,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "10,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "10,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "10,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "10,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "10,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "10,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN11"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "11,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "11,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "11,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "11,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "11,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "11,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "11,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "11,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN12"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "12,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "12,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "12,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "12,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "12,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "12,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "12,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "12,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN13"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "13,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "13,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "13,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "13,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "13,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "13,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "13,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "13,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN14"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "14,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "14,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!W$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "14,26": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AA$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "14,30": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AE$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "14,34": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "NoneItemText": "",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskElementValues",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskElementValues",
+          "ColumnName": "task_element_value"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "M_ManagementAssignmentTaskElementValues",
+            "ColumnName": "task_element_id",
+            "RelationBinding": {
+              "RelatedTable": "M_ManagementAssignmentTaskElements",
+              "RelatedColumn": "task_element_id",
+              "DisplayColumn": "task_element_name"
+            }
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AI$8"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskElementValues",
+                "ColumnName": "task_element_value"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "14,39": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "M_ManagementAssignmentTaskRanks",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_ManagementAssignmentTaskRanks",
+          "ColumnName": "task_rank_name"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_ManagementAssignmentTaskRanks",
+                "ColumnName": "task_rank_id"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "14,43": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "進行中",
+            "DisplayValue": "進行中"
+          },
+          {
+            "Value": "計画通り",
+            "DisplayValue": "計画通り"
+          },
+          {
+            "Value": "遅れ",
+            "DisplayValue": "遅れ"
+          },
+          {
+            "Value": "中止",
+            "DisplayValue": "中止"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ],
+        "DataSource": "M_status",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_status",
+          "ColumnName": "status_name"
+        },
+        "AddNullItemWhenBinding": true,
+        "ReadOnly": true,
+        "TabIndex": 52
+      }
+    },
+    "14,49": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ],
+        "DataSource": "M_AssesmentPoint",
+        "ValueColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "M_AssesmentPoint",
+          "ColumnName": "assesment_point"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 7,
+          "ColumnBindingInfo": {
+            "TableName": "M_AssesmentPoint",
+            "ColumnName": "hidden_ranks"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "='課題リスト シミュレーション'!AN15"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "M_AssesmentPoint",
+                "ColumnName": "assesment_point_id"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "18,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "18,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "19,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "19,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "20,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "20,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "21,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "21,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "22,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "22,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "23,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "23,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "24,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "24,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    },
+    "24,55": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ClosePopupCommand, ServerDesignerCommon",
+            "PassValueBack": true
+          }
+        ],
+        "Text": "閉じる",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "25,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "25,22": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "5",
+            "DisplayValue": "5"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "4"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "3"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "2"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "1"
+          }
+        ]
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "Foreground": 2,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 3,
+        "FontFamily": 1,
+        "FontSize": 14.67,
+        "Formatter": 4,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 3,
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": 0,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": 0,
+        "BorderLeft": null,
+        "BorderRight": 0
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 1,
+        "BorderRight": 0
+      },
+      {
+        "Background": 3,
+        "FontFamily": 1,
+        "Formatter": 4,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "FontSize": 14.67,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 3,
+        "FontFamily": 1,
+        "Formatter": 4,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": 1,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 7,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 1
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": 0,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": 0
+      },
+      {
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 8,
+        "Foreground": 9,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 8,
+        "FontFamily": 1,
+        "Foreground": 9,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 8,
+        "FontFamily": 1,
+        "Foreground": 9,
+        "Formatter": 7,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Foreground": 9,
+        "Formatter": 7,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "Background": 8,
+        "FontFamily": 1,
+        "Foreground": 9,
+        "Formatter": 7,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 8,
+        "FontFamily": 1,
+        "Foreground": 9,
+        "Formatter": 7,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": null,
+        "BorderRight": 2
+      },
+      {
+        "Background": 8,
+        "Foreground": 9,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "Formatter": 11,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 11,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": 2
+      },
+      {
+        "Background": 12,
+        "FontFamily": 1,
+        "Foreground": 13,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": 2
+      },
+      {
+        "Background": 8,
+        "FontFamily": 1,
+        "Foreground": 9,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 11,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 2,
+        "BorderTop": null,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 4,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 1,
+        "Foreground": 2,
+        "Formatter": 4,
+        "HorizontalAlignment": 14,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 8,
+        "FontFamily": 1,
+        "Foreground": 9,
+        "Formatter": 7,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 11,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": 2
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 5,
+        "BorderBottom": 2,
+        "BorderTop": 2,
+        "BorderLeft": 2,
+        "BorderRight": null
+      },
+      {
+        "Background": 0,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 1 50",
+        "Body",
+        "#FFFF0000",
+        "Accent 1 60",
+        "[AUTO]General",
+        "Center",
+        "black",
+        "General",
+        "Accent 1 0",
+        "Background 1 0",
+        "Background 1 -15",
+        "@",
+        "Background 1 -5",
+        "Text 1 25",
+        "Right"
+      ],
+      "Borders": [
+        {
+          "Color": 6
+        },
+        {
+          "Style": 4,
+          "Color": 6
+        },
+        {
+          "Color": 10
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,60": 0,
+      "0,61": 1,
+      "0,62": 1,
+      "0,63": 1,
+      "0,64": 1,
+      "0,65": 1,
+      "0,66": 1,
+      "0,67": 1,
+      "0,68": 1,
+      "0,69": 1,
+      "0,70": 1,
+      "0,71": 1,
+      "0,72": 1,
+      "0,73": 1,
+      "0,74": 1,
+      "0,75": 1,
+      "0,76": 1,
+      "0,77": 1,
+      "0,78": 1,
+      "0,79": 1,
+      "1,2": 2,
+      "1,3": 3,
+      "1,4": 3,
+      "1,5": 3,
+      "1,6": 3,
+      "1,7": 3,
+      "1,8": 3,
+      "1,9": 3,
+      "1,10": 4,
+      "1,11": 5,
+      "1,12": 5,
+      "1,13": 5,
+      "1,14": 5,
+      "1,15": 5,
+      "1,16": 5,
+      "1,17": 6,
+      "1,21": 7,
+      "1,26": 7,
+      "1,27": 7,
+      "1,28": 7,
+      "1,29": 7,
+      "1,30": 7,
+      "1,31": 7,
+      "1,32": 7,
+      "1,33": 7,
+      "1,34": 7,
+      "1,35": 7,
+      "1,36": 7,
+      "1,37": 7,
+      "1,39": 7,
+      "1,40": 7,
+      "1,41": 7,
+      "1,42": 7,
+      "1,43": 7,
+      "1,44": 7,
+      "1,61": 8,
+      "1,62": 9,
+      "1,78": 7,
+      "1,79": 7,
+      "2,2": 10,
+      "2,3": 11,
+      "2,4": 11,
+      "2,5": 11,
+      "2,6": 10,
+      "2,7": 11,
+      "2,8": 11,
+      "2,9": 11,
+      "2,10": 4,
+      "2,11": 5,
+      "2,12": 5,
+      "2,13": 5,
+      "2,14": 12,
+      "2,15": 5,
+      "2,16": 5,
+      "2,17": 6,
+      "2,21": 7,
+      "2,26": 7,
+      "2,27": 7,
+      "2,28": 7,
+      "2,29": 7,
+      "2,30": 7,
+      "2,31": 7,
+      "2,32": 7,
+      "2,33": 7,
+      "2,34": 7,
+      "2,35": 7,
+      "2,36": 7,
+      "2,37": 7,
+      "2,39": 7,
+      "2,40": 7,
+      "2,41": 7,
+      "2,42": 7,
+      "2,43": 7,
+      "2,44": 7,
+      "2,61": 13,
+      "2,62": 14,
+      "2,63": 15,
+      "2,64": 15,
+      "2,65": 15,
+      "2,66": 15,
+      "2,67": 15,
+      "2,68": 15,
+      "2,69": 15,
+      "2,70": 15,
+      "2,71": 15,
+      "2,72": 15,
+      "2,73": 15,
+      "2,74": 15,
+      "2,75": 15,
+      "2,76": 15,
+      "2,77": 15,
+      "2,78": 7,
+      "2,79": 7,
+      "3,2": 16,
+      "3,3": 5,
+      "3,4": 5,
+      "3,5": 5,
+      "3,6": 17,
+      "3,7": 5,
+      "3,8": 5,
+      "3,9": 5,
+      "3,10": 17,
+      "3,11": 5,
+      "3,12": 5,
+      "3,13": 5,
+      "3,14": 17,
+      "3,15": 5,
+      "3,16": 5,
+      "3,17": 6,
+      "3,21": 7,
+      "3,26": 7,
+      "3,27": 7,
+      "3,28": 7,
+      "3,29": 7,
+      "3,30": 7,
+      "3,31": 7,
+      "3,32": 7,
+      "3,33": 7,
+      "3,34": 7,
+      "3,35": 7,
+      "3,36": 7,
+      "3,37": 7,
+      "3,39": 7,
+      "3,40": 7,
+      "3,41": 7,
+      "3,42": 7,
+      "3,43": 7,
+      "3,44": 7,
+      "3,61": 18,
+      "3,62": 9,
+      "3,78": 7,
+      "3,79": 7,
+      "4,2": 19,
+      "4,3": 20,
+      "4,4": 20,
+      "4,5": 20,
+      "4,6": 19,
+      "4,7": 20,
+      "4,8": 20,
+      "4,9": 20,
+      "4,10": 19,
+      "4,11": 20,
+      "4,12": 20,
+      "4,13": 20,
+      "4,14": 19,
+      "4,15": 20,
+      "4,16": 20,
+      "4,17": 21,
+      "4,21": 7,
+      "4,26": 7,
+      "4,27": 7,
+      "4,28": 7,
+      "4,29": 7,
+      "4,30": 7,
+      "4,31": 7,
+      "4,32": 7,
+      "4,33": 7,
+      "4,34": 7,
+      "4,35": 7,
+      "4,36": 7,
+      "4,37": 7,
+      "4,39": 7,
+      "4,40": 7,
+      "4,41": 7,
+      "4,42": 7,
+      "4,43": 7,
+      "4,44": 7,
+      "4,78": 7,
+      "4,79": 7,
+      "5,26": 7,
+      "5,27": 7,
+      "5,28": 7,
+      "5,29": 7,
+      "5,30": 7,
+      "5,31": 7,
+      "5,32": 7,
+      "5,33": 7,
+      "5,34": 7,
+      "5,35": 7,
+      "5,36": 7,
+      "5,37": 7,
+      "5,39": 7,
+      "5,40": 7,
+      "5,41": 7,
+      "5,42": 7,
+      "5,43": 7,
+      "5,44": 7,
+      "5,78": 7,
+      "5,79": 7,
+      "6,24": 22,
+      "6,25": 22,
+      "6,26": 22,
+      "6,27": 22,
+      "6,28": 22,
+      "6,29": 22,
+      "6,30": 22,
+      "6,31": 22,
+      "6,32": 22,
+      "6,33": 22,
+      "6,78": 7,
+      "6,79": 7,
+      "7,2": 23,
+      "7,3": 24,
+      "7,4": 24,
+      "7,5": 23,
+      "7,6": 24,
+      "7,7": 24,
+      "7,8": 24,
+      "7,9": 24,
+      "7,10": 24,
+      "7,11": 24,
+      "7,12": 24,
+      "7,13": 24,
+      "7,14": 24,
+      "7,15": 24,
+      "7,16": 24,
+      "7,17": 24,
+      "7,18": 24,
+      "7,19": 24,
+      "7,20": 24,
+      "7,21": 24,
+      "7,22": 25,
+      "7,23": 26,
+      "7,24": 26,
+      "7,25": 26,
+      "7,26": 25,
+      "7,27": 24,
+      "7,28": 24,
+      "7,29": 24,
+      "7,30": 25,
+      "7,31": 26,
+      "7,32": 26,
+      "7,33": 26,
+      "7,34": 27,
+      "7,35": 26,
+      "7,36": 26,
+      "7,37": 26,
+      "7,38": 28,
+      "7,39": 29,
+      "7,40": 26,
+      "7,41": 26,
+      "7,42": 26,
+      "7,43": 30,
+      "7,44": 31,
+      "7,45": 31,
+      "7,46": 31,
+      "7,47": 31,
+      "7,48": 31,
+      "7,49": 27,
+      "7,50": 26,
+      "7,51": 26,
+      "7,52": 26,
+      "7,53": 27,
+      "7,54": 24,
+      "7,55": 24,
+      "7,56": 24,
+      "7,57": 26,
+      "7,58": 32,
+      "7,61": 15,
+      "7,63": 15,
+      "7,64": 15,
+      "7,65": 15,
+      "7,70": 15,
+      "7,78": 7,
+      "7,79": 7,
+      "8,2": 33,
+      "8,3": 34,
+      "8,4": 34,
+      "8,5": 35,
+      "8,6": 34,
+      "8,7": 34,
+      "8,8": 34,
+      "8,9": 34,
+      "8,10": 34,
+      "8,11": 34,
+      "8,12": 34,
+      "8,13": 34,
+      "8,14": 34,
+      "8,15": 34,
+      "8,16": 34,
+      "8,17": 34,
+      "8,18": 34,
+      "8,19": 34,
+      "8,20": 34,
+      "8,21": 34,
+      "8,22": 36,
+      "8,23": 15,
+      "8,24": 15,
+      "8,25": 15,
+      "8,26": 36,
+      "8,27": 15,
+      "8,28": 15,
+      "8,29": 15,
+      "8,30": 36,
+      "8,31": 15,
+      "8,32": 15,
+      "8,33": 15,
+      "8,34": 36,
+      "8,35": 15,
+      "8,36": 15,
+      "8,37": 15,
+      "8,38": 37,
+      "8,39": 38,
+      "8,40": 39,
+      "8,41": 39,
+      "8,42": 39,
+      "8,43": 40,
+      "8,44": 26,
+      "8,45": 26,
+      "8,46": 26,
+      "8,47": 26,
+      "8,48": 32,
+      "8,49": 41,
+      "8,50": 39,
+      "8,51": 39,
+      "8,52": 42,
+      "8,53": 43,
+      "8,54": 44,
+      "8,55": 44,
+      "8,56": 44,
+      "8,57": 44,
+      "8,58": 45,
+      "8,61": 15,
+      "8,63": 15,
+      "8,64": 15,
+      "8,65": 15,
+      "8,70": 15,
+      "8,78": 7,
+      "8,79": 7,
+      "9,2": 46,
+      "9,3": 47,
+      "9,4": 47,
+      "9,5": 48,
+      "9,6": 49,
+      "9,7": 49,
+      "9,8": 49,
+      "9,9": 49,
+      "9,10": 49,
+      "9,11": 49,
+      "9,12": 49,
+      "9,13": 49,
+      "9,14": 49,
+      "9,15": 49,
+      "9,16": 49,
+      "9,17": 49,
+      "9,18": 49,
+      "9,19": 49,
+      "9,20": 49,
+      "9,21": 49,
+      "9,22": 36,
+      "9,23": 15,
+      "9,24": 15,
+      "9,25": 15,
+      "9,26": 36,
+      "9,27": 15,
+      "9,28": 15,
+      "9,29": 15,
+      "9,30": 36,
+      "9,31": 15,
+      "9,32": 15,
+      "9,33": 15,
+      "9,34": 36,
+      "9,35": 15,
+      "9,36": 15,
+      "9,37": 15,
+      "9,38": 37,
+      "9,39": 38,
+      "9,40": 39,
+      "9,41": 39,
+      "9,42": 39,
+      "9,43": 40,
+      "9,44": 26,
+      "9,45": 26,
+      "9,46": 26,
+      "9,47": 26,
+      "9,48": 32,
+      "9,49": 41,
+      "9,50": 39,
+      "9,51": 39,
+      "9,52": 42,
+      "9,53": 43,
+      "9,54": 39,
+      "9,55": 39,
+      "9,56": 39,
+      "9,57": 39,
+      "9,58": 42,
+      "9,61": 15,
+      "9,62": 15,
+      "9,63": 7,
+      "9,64": 7,
+      "9,65": 7,
+      "9,66": 7,
+      "9,68": 7,
+      "9,69": 7,
+      "9,70": 7,
+      "9,71": 7,
+      "9,72": 7,
+      "9,78": 7,
+      "9,79": 7,
+      "10,2": 46,
+      "10,3": 47,
+      "10,4": 47,
+      "10,5": 48,
+      "10,6": 49,
+      "10,7": 49,
+      "10,8": 49,
+      "10,9": 49,
+      "10,10": 49,
+      "10,11": 49,
+      "10,12": 49,
+      "10,13": 49,
+      "10,14": 49,
+      "10,15": 49,
+      "10,16": 49,
+      "10,17": 49,
+      "10,18": 49,
+      "10,19": 49,
+      "10,20": 49,
+      "10,21": 49,
+      "10,22": 36,
+      "10,23": 15,
+      "10,24": 15,
+      "10,25": 15,
+      "10,26": 36,
+      "10,27": 15,
+      "10,28": 15,
+      "10,29": 15,
+      "10,30": 36,
+      "10,31": 15,
+      "10,32": 15,
+      "10,33": 15,
+      "10,34": 36,
+      "10,35": 15,
+      "10,36": 15,
+      "10,37": 15,
+      "10,38": 37,
+      "10,39": 38,
+      "10,40": 39,
+      "10,41": 39,
+      "10,42": 39,
+      "10,43": 40,
+      "10,44": 26,
+      "10,45": 26,
+      "10,46": 26,
+      "10,47": 26,
+      "10,48": 32,
+      "10,49": 41,
+      "10,50": 39,
+      "10,51": 39,
+      "10,52": 42,
+      "10,53": 43,
+      "10,54": 39,
+      "10,55": 39,
+      "10,56": 39,
+      "10,57": 39,
+      "10,58": 42,
+      "10,61": 15,
+      "10,62": 15,
+      "10,63": 7,
+      "10,64": 7,
+      "10,65": 7,
+      "10,66": 7,
+      "10,68": 7,
+      "10,69": 7,
+      "10,70": 7,
+      "10,71": 7,
+      "10,72": 7,
+      "10,78": 7,
+      "10,79": 7,
+      "11,2": 46,
+      "11,3": 47,
+      "11,4": 47,
+      "11,5": 48,
+      "11,6": 49,
+      "11,7": 49,
+      "11,8": 49,
+      "11,9": 49,
+      "11,10": 49,
+      "11,11": 49,
+      "11,12": 49,
+      "11,13": 49,
+      "11,14": 49,
+      "11,15": 49,
+      "11,16": 49,
+      "11,17": 49,
+      "11,18": 49,
+      "11,19": 49,
+      "11,20": 49,
+      "11,21": 49,
+      "11,22": 36,
+      "11,23": 15,
+      "11,24": 15,
+      "11,25": 15,
+      "11,26": 36,
+      "11,27": 15,
+      "11,28": 15,
+      "11,29": 15,
+      "11,30": 36,
+      "11,31": 15,
+      "11,32": 15,
+      "11,33": 15,
+      "11,34": 36,
+      "11,35": 15,
+      "11,36": 15,
+      "11,37": 15,
+      "11,38": 37,
+      "11,39": 38,
+      "11,40": 39,
+      "11,41": 39,
+      "11,42": 39,
+      "11,43": 40,
+      "11,44": 26,
+      "11,45": 26,
+      "11,46": 26,
+      "11,47": 26,
+      "11,48": 32,
+      "11,49": 41,
+      "11,50": 39,
+      "11,51": 39,
+      "11,52": 42,
+      "11,53": 43,
+      "11,54": 39,
+      "11,55": 39,
+      "11,56": 39,
+      "11,57": 39,
+      "11,58": 42,
+      "11,61": 15,
+      "11,62": 15,
+      "11,63": 7,
+      "11,64": 7,
+      "11,65": 7,
+      "11,66": 7,
+      "11,68": 7,
+      "11,69": 7,
+      "11,70": 7,
+      "11,71": 7,
+      "11,72": 7,
+      "11,78": 7,
+      "11,79": 7,
+      "12,2": 46,
+      "12,3": 47,
+      "12,4": 47,
+      "12,5": 48,
+      "12,6": 49,
+      "12,7": 49,
+      "12,8": 49,
+      "12,9": 49,
+      "12,10": 49,
+      "12,11": 49,
+      "12,12": 49,
+      "12,13": 49,
+      "12,14": 49,
+      "12,15": 49,
+      "12,16": 49,
+      "12,17": 49,
+      "12,18": 49,
+      "12,19": 49,
+      "12,20": 49,
+      "12,21": 49,
+      "12,22": 36,
+      "12,23": 15,
+      "12,24": 15,
+      "12,25": 15,
+      "12,26": 36,
+      "12,27": 15,
+      "12,28": 15,
+      "12,29": 15,
+      "12,30": 36,
+      "12,31": 15,
+      "12,32": 15,
+      "12,33": 15,
+      "12,34": 36,
+      "12,35": 15,
+      "12,36": 15,
+      "12,37": 15,
+      "12,38": 37,
+      "12,39": 38,
+      "12,40": 39,
+      "12,41": 39,
+      "12,42": 39,
+      "12,43": 40,
+      "12,44": 26,
+      "12,45": 26,
+      "12,46": 26,
+      "12,47": 26,
+      "12,48": 32,
+      "12,49": 41,
+      "12,50": 39,
+      "12,51": 39,
+      "12,52": 42,
+      "12,53": 43,
+      "12,54": 39,
+      "12,55": 39,
+      "12,56": 39,
+      "12,57": 39,
+      "12,58": 42,
+      "12,61": 15,
+      "12,62": 15,
+      "12,63": 7,
+      "12,64": 7,
+      "12,65": 7,
+      "12,66": 7,
+      "12,68": 7,
+      "12,69": 7,
+      "12,70": 7,
+      "12,71": 7,
+      "12,72": 7,
+      "12,78": 7,
+      "12,79": 7,
+      "13,2": 46,
+      "13,3": 47,
+      "13,4": 47,
+      "13,5": 48,
+      "13,6": 49,
+      "13,7": 49,
+      "13,8": 49,
+      "13,9": 49,
+      "13,10": 49,
+      "13,11": 49,
+      "13,12": 49,
+      "13,13": 49,
+      "13,14": 49,
+      "13,15": 49,
+      "13,16": 49,
+      "13,17": 49,
+      "13,18": 49,
+      "13,19": 49,
+      "13,20": 49,
+      "13,21": 49,
+      "13,22": 36,
+      "13,23": 15,
+      "13,24": 15,
+      "13,25": 15,
+      "13,26": 36,
+      "13,27": 15,
+      "13,28": 15,
+      "13,29": 15,
+      "13,30": 36,
+      "13,31": 15,
+      "13,32": 15,
+      "13,33": 15,
+      "13,34": 36,
+      "13,35": 15,
+      "13,36": 15,
+      "13,37": 15,
+      "13,38": 37,
+      "13,39": 38,
+      "13,40": 39,
+      "13,41": 39,
+      "13,42": 39,
+      "13,43": 40,
+      "13,44": 26,
+      "13,45": 26,
+      "13,46": 26,
+      "13,47": 26,
+      "13,48": 32,
+      "13,49": 41,
+      "13,50": 39,
+      "13,51": 39,
+      "13,52": 42,
+      "13,53": 43,
+      "13,54": 39,
+      "13,55": 39,
+      "13,56": 39,
+      "13,57": 39,
+      "13,58": 42,
+      "13,61": 15,
+      "13,62": 15,
+      "13,63": 7,
+      "13,64": 7,
+      "13,65": 7,
+      "13,66": 7,
+      "13,68": 7,
+      "13,69": 7,
+      "13,70": 7,
+      "13,71": 7,
+      "13,72": 7,
+      "13,78": 7,
+      "13,79": 7,
+      "14,2": 46,
+      "14,3": 47,
+      "14,4": 47,
+      "14,5": 48,
+      "14,6": 49,
+      "14,7": 49,
+      "14,8": 49,
+      "14,9": 49,
+      "14,10": 49,
+      "14,11": 49,
+      "14,12": 49,
+      "14,13": 49,
+      "14,14": 49,
+      "14,15": 49,
+      "14,16": 49,
+      "14,17": 49,
+      "14,18": 49,
+      "14,19": 49,
+      "14,20": 49,
+      "14,21": 49,
+      "14,22": 36,
+      "14,23": 15,
+      "14,24": 15,
+      "14,25": 15,
+      "14,26": 36,
+      "14,27": 15,
+      "14,28": 15,
+      "14,29": 15,
+      "14,30": 36,
+      "14,31": 15,
+      "14,32": 15,
+      "14,33": 15,
+      "14,34": 36,
+      "14,35": 15,
+      "14,36": 15,
+      "14,37": 15,
+      "14,38": 37,
+      "14,39": 38,
+      "14,40": 39,
+      "14,41": 39,
+      "14,42": 39,
+      "14,43": 40,
+      "14,44": 26,
+      "14,45": 26,
+      "14,46": 26,
+      "14,47": 26,
+      "14,48": 32,
+      "14,49": 41,
+      "14,50": 39,
+      "14,51": 39,
+      "14,52": 42,
+      "14,53": 43,
+      "14,54": 39,
+      "14,55": 39,
+      "14,56": 39,
+      "14,57": 39,
+      "14,58": 42,
+      "14,61": 15,
+      "14,62": 15,
+      "14,63": 7,
+      "14,64": 7,
+      "14,65": 7,
+      "14,66": 7,
+      "14,68": 7,
+      "14,69": 7,
+      "14,70": 7,
+      "14,71": 7,
+      "14,72": 7,
+      "14,78": 7,
+      "14,79": 7,
+      "15,24": 22,
+      "15,25": 22,
+      "15,26": 22,
+      "15,27": 22,
+      "15,28": 22,
+      "15,29": 22,
+      "15,30": 22,
+      "15,31": 22,
+      "15,32": 22,
+      "15,33": 22,
+      "15,61": 7,
+      "15,62": 7,
+      "15,78": 7,
+      "15,79": 7,
+      "16,2": 50,
+      "16,3": 15,
+      "16,4": 15,
+      "16,5": 15,
+      "16,6": 15,
+      "16,7": 15,
+      "16,8": 15,
+      "16,9": 15,
+      "16,10": 15,
+      "16,11": 15,
+      "16,12": 15,
+      "16,13": 15,
+      "16,14": 15,
+      "16,15": 15,
+      "16,16": 15,
+      "16,17": 15,
+      "16,18": 15,
+      "16,19": 15,
+      "16,20": 15,
+      "16,21": 15,
+      "16,24": 22,
+      "16,25": 22,
+      "16,26": 22,
+      "16,27": 22,
+      "16,28": 22,
+      "16,29": 22,
+      "16,30": 22,
+      "16,31": 22,
+      "16,32": 22,
+      "16,33": 22,
+      "16,43": 7,
+      "16,44": 7,
+      "16,45": 7,
+      "16,46": 7,
+      "16,47": 7,
+      "16,48": 7,
+      "16,52": 51,
+      "16,53": 51,
+      "16,54": 51,
+      "16,55": 51,
+      "16,56": 51,
+      "16,57": 51,
+      "16,58": 51,
+      "16,61": 7,
+      "16,62": 7,
+      "16,78": 7,
+      "16,79": 7,
+      "17,2": 46,
+      "17,3": 47,
+      "17,4": 47,
+      "17,5": 46,
+      "17,6": 47,
+      "17,7": 47,
+      "17,8": 47,
+      "17,9": 47,
+      "17,10": 47,
+      "17,11": 47,
+      "17,12": 47,
+      "17,13": 47,
+      "17,14": 47,
+      "17,15": 47,
+      "17,16": 47,
+      "17,17": 47,
+      "17,18": 47,
+      "17,19": 47,
+      "17,20": 47,
+      "17,21": 47,
+      "17,22": 52,
+      "17,23": 47,
+      "17,24": 47,
+      "17,25": 47,
+      "17,31": 7,
+      "17,32": 7,
+      "17,33": 7,
+      "17,34": 7,
+      "17,35": 15,
+      "17,36": 15,
+      "17,37": 15,
+      "17,38": 15,
+      "17,39": 15,
+      "17,40": 15,
+      "17,41": 15,
+      "17,42": 7,
+      "17,43": 7,
+      "17,44": 7,
+      "17,45": 7,
+      "17,46": 15,
+      "17,47": 15,
+      "17,61": 7,
+      "17,62": 7,
+      "17,78": 7,
+      "17,79": 7,
+      "18,2": 46,
+      "18,3": 47,
+      "18,4": 47,
+      "18,5": 53,
+      "18,6": 47,
+      "18,7": 47,
+      "18,8": 47,
+      "18,9": 47,
+      "18,10": 47,
+      "18,11": 47,
+      "18,12": 47,
+      "18,13": 47,
+      "18,14": 47,
+      "18,15": 47,
+      "18,16": 47,
+      "18,17": 47,
+      "18,18": 47,
+      "18,19": 47,
+      "18,20": 47,
+      "18,21": 47,
+      "18,22": 54,
+      "18,23": 26,
+      "18,24": 26,
+      "18,25": 32,
+      "18,28": 22,
+      "18,29": 22,
+      "18,30": 22,
+      "18,31": 15,
+      "18,32": 15,
+      "18,33": 15,
+      "18,34": 15,
+      "18,35": 15,
+      "18,36": 15,
+      "18,37": 15,
+      "18,38": 15,
+      "18,39": 15,
+      "18,40": 15,
+      "18,41": 15,
+      "18,42": 15,
+      "18,43": 15,
+      "18,44": 15,
+      "18,45": 15,
+      "18,46": 15,
+      "18,47": 15,
+      "18,61": 7,
+      "18,62": 7,
+      "18,78": 7,
+      "18,79": 7,
+      "19,2": 46,
+      "19,3": 47,
+      "19,4": 47,
+      "19,5": 53,
+      "19,6": 47,
+      "19,7": 47,
+      "19,8": 47,
+      "19,9": 47,
+      "19,10": 47,
+      "19,11": 47,
+      "19,12": 47,
+      "19,13": 47,
+      "19,14": 47,
+      "19,15": 47,
+      "19,16": 47,
+      "19,17": 47,
+      "19,18": 47,
+      "19,19": 47,
+      "19,20": 47,
+      "19,21": 47,
+      "19,22": 54,
+      "19,23": 26,
+      "19,24": 26,
+      "19,25": 32,
+      "19,28": 22,
+      "19,29": 22,
+      "19,30": 22,
+      "19,31": 22,
+      "19,32": 22,
+      "19,33": 22,
+      "19,61": 7,
+      "19,62": 7,
+      "19,78": 7,
+      "19,79": 7,
+      "20,2": 46,
+      "20,3": 47,
+      "20,4": 47,
+      "20,5": 53,
+      "20,6": 47,
+      "20,7": 47,
+      "20,8": 47,
+      "20,9": 47,
+      "20,10": 47,
+      "20,11": 47,
+      "20,12": 47,
+      "20,13": 47,
+      "20,14": 47,
+      "20,15": 47,
+      "20,16": 47,
+      "20,17": 47,
+      "20,18": 47,
+      "20,19": 47,
+      "20,20": 47,
+      "20,21": 47,
+      "20,22": 54,
+      "20,23": 26,
+      "20,24": 26,
+      "20,25": 32,
+      "20,28": 22,
+      "20,29": 22,
+      "20,30": 22,
+      "20,31": 22,
+      "20,32": 22,
+      "20,33": 22,
+      "20,61": 7,
+      "20,62": 7,
+      "20,78": 7,
+      "20,79": 7,
+      "21,2": 46,
+      "21,3": 47,
+      "21,4": 47,
+      "21,5": 53,
+      "21,6": 47,
+      "21,7": 47,
+      "21,8": 47,
+      "21,9": 47,
+      "21,10": 47,
+      "21,11": 47,
+      "21,12": 47,
+      "21,13": 47,
+      "21,14": 47,
+      "21,15": 47,
+      "21,16": 47,
+      "21,17": 47,
+      "21,18": 47,
+      "21,19": 47,
+      "21,20": 47,
+      "21,21": 47,
+      "21,22": 54,
+      "21,23": 26,
+      "21,24": 26,
+      "21,25": 32,
+      "21,28": 22,
+      "21,29": 22,
+      "21,30": 22,
+      "21,31": 22,
+      "21,32": 22,
+      "21,33": 22,
+      "21,61": 7,
+      "21,62": 7,
+      "21,78": 7,
+      "21,79": 7,
+      "22,2": 46,
+      "22,3": 47,
+      "22,4": 47,
+      "22,5": 53,
+      "22,6": 47,
+      "22,7": 47,
+      "22,8": 47,
+      "22,9": 47,
+      "22,10": 47,
+      "22,11": 47,
+      "22,12": 47,
+      "22,13": 47,
+      "22,14": 47,
+      "22,15": 47,
+      "22,16": 47,
+      "22,17": 47,
+      "22,18": 47,
+      "22,19": 47,
+      "22,20": 47,
+      "22,21": 47,
+      "22,22": 54,
+      "22,23": 26,
+      "22,24": 26,
+      "22,25": 32,
+      "22,28": 22,
+      "22,29": 22,
+      "22,30": 22,
+      "22,31": 22,
+      "22,32": 22,
+      "22,33": 22,
+      "22,61": 7,
+      "22,62": 7,
+      "22,78": 7,
+      "22,79": 7,
+      "23,2": 46,
+      "23,3": 47,
+      "23,4": 47,
+      "23,5": 53,
+      "23,6": 47,
+      "23,7": 47,
+      "23,8": 47,
+      "23,9": 47,
+      "23,10": 47,
+      "23,11": 47,
+      "23,12": 47,
+      "23,13": 47,
+      "23,14": 47,
+      "23,15": 47,
+      "23,16": 47,
+      "23,17": 47,
+      "23,18": 47,
+      "23,19": 47,
+      "23,20": 47,
+      "23,21": 47,
+      "23,22": 54,
+      "23,23": 26,
+      "23,24": 26,
+      "23,25": 32,
+      "23,28": 22,
+      "23,29": 22,
+      "23,30": 22,
+      "23,31": 22,
+      "23,32": 22,
+      "23,33": 22,
+      "23,61": 7,
+      "23,62": 7,
+      "23,78": 7,
+      "23,79": 7,
+      "24,2": 46,
+      "24,3": 47,
+      "24,4": 47,
+      "24,5": 53,
+      "24,6": 47,
+      "24,7": 47,
+      "24,8": 47,
+      "24,9": 47,
+      "24,10": 47,
+      "24,11": 47,
+      "24,12": 47,
+      "24,13": 47,
+      "24,14": 47,
+      "24,15": 47,
+      "24,16": 47,
+      "24,17": 47,
+      "24,18": 47,
+      "24,19": 47,
+      "24,20": 47,
+      "24,21": 47,
+      "24,22": 54,
+      "24,23": 26,
+      "24,24": 26,
+      "24,25": 32,
+      "24,28": 22,
+      "24,29": 22,
+      "24,30": 22,
+      "24,31": 22,
+      "24,32": 22,
+      "24,33": 22,
+      "24,53": 15,
+      "24,54": 15,
+      "24,55": 15,
+      "24,56": 15,
+      "24,57": 15,
+      "24,58": 15,
+      "24,61": 7,
+      "24,62": 7,
+      "24,78": 7,
+      "24,79": 7,
+      "25,2": 46,
+      "25,3": 47,
+      "25,4": 47,
+      "25,5": 53,
+      "25,6": 47,
+      "25,7": 47,
+      "25,8": 47,
+      "25,9": 47,
+      "25,10": 47,
+      "25,11": 47,
+      "25,12": 47,
+      "25,13": 47,
+      "25,14": 47,
+      "25,15": 47,
+      "25,16": 47,
+      "25,17": 47,
+      "25,18": 47,
+      "25,19": 47,
+      "25,20": 47,
+      "25,21": 47,
+      "25,22": 54,
+      "25,23": 26,
+      "25,24": 26,
+      "25,25": 32,
+      "25,28": 22,
+      "25,29": 22,
+      "25,30": 22,
+      "25,31": 22,
+      "25,32": 22,
+      "25,33": 22,
+      "25,53": 15,
+      "25,54": 15,
+      "25,55": 15,
+      "25,56": 15,
+      "25,57": 15,
+      "25,58": 15,
+      "26,2": 7,
+      "26,3": 7,
+      "26,4": 7,
+      "26,5": 7,
+      "26,6": 7,
+      "26,7": 7,
+      "26,8": 7,
+      "26,9": 7,
+      "26,28": 22,
+      "26,29": 22,
+      "26,30": 22,
+      "26,31": 22,
+      "26,32": 22,
+      "26,33": 22
+    },
+    "ColStyles": {
+      "1": 55,
+      "38": 55,
+      "60": 55
+    },
+    "SheetStyle": {
+      "FontFamily": 1,
+      "BorderBottom": null,
+      "BorderTop": null,
+      "BorderLeft": null,
+      "BorderRight": null
+    }
+  },
+  "Spans": [
+    "1,2,1,8",
+    "1,10,1,8",
+    "2,2,1,4",
+    "2,6,1,4",
+    "2,10,1,4",
+    "2,14,1,4",
+    "3,2,2,4",
+    "3,6,2,4",
+    "3,10,2,4",
+    "3,14,2,4",
+    "7,2,1,3",
+    "7,5,1,17",
+    "7,22,1,4",
+    "7,26,1,4",
+    "7,30,1,4",
+    "7,34,1,4",
+    "7,39,1,4",
+    "7,43,1,6",
+    "7,49,1,4",
+    "7,53,1,6",
+    "8,2,1,3",
+    "8,5,1,17",
+    "8,22,1,4",
+    "8,26,1,4",
+    "8,30,1,4",
+    "8,34,1,4",
+    "8,39,1,4",
+    "8,43,1,6",
+    "8,49,1,4",
+    "8,53,1,6",
+    "9,2,1,3",
+    "9,5,1,17",
+    "9,22,1,4",
+    "9,26,1,4",
+    "9,30,1,4",
+    "9,34,1,4",
+    "9,39,1,4",
+    "9,43,1,6",
+    "9,53,1,6",
+    "9,61,6,6",
+    "9,68,6,5",
+    "10,2,1,3",
+    "10,5,1,17",
+    "10,22,1,4",
+    "10,26,1,4",
+    "10,30,1,4",
+    "10,34,1,4",
+    "10,39,1,4",
+    "10,43,1,6",
+    "10,53,1,6",
+    "11,2,1,3",
+    "11,5,1,17",
+    "11,22,1,4",
+    "11,26,1,4",
+    "11,30,1,4",
+    "11,34,1,4",
+    "11,39,1,4",
+    "11,43,1,6",
+    "11,53,1,6",
+    "12,2,1,3",
+    "12,5,1,17",
+    "12,22,1,4",
+    "12,26,1,4",
+    "12,30,1,4",
+    "12,34,1,4",
+    "12,39,1,4",
+    "12,43,1,6",
+    "12,53,1,6",
+    "13,2,1,3",
+    "13,5,1,17",
+    "13,22,1,4",
+    "13,26,1,4",
+    "13,30,1,4",
+    "13,34,1,4",
+    "13,39,1,4",
+    "13,43,1,6",
+    "13,53,1,6",
+    "14,2,1,3",
+    "14,5,1,17",
+    "14,22,1,4",
+    "14,26,1,4",
+    "14,30,1,4",
+    "14,34,1,4",
+    "14,39,1,4",
+    "14,43,1,6",
+    "14,53,1,6",
+    "17,2,1,3",
+    "17,5,1,17",
+    "17,22,1,4",
+    "18,2,1,3",
+    "18,5,1,17",
+    "18,22,1,4",
+    "19,2,1,3",
+    "19,5,1,17",
+    "19,22,1,4",
+    "20,2,1,3",
+    "20,5,1,17",
+    "20,22,1,4",
+    "21,2,1,3",
+    "21,5,1,17",
+    "21,22,1,4",
+    "22,2,1,3",
+    "22,5,1,17",
+    "22,22,1,4",
+    "23,2,1,3",
+    "23,5,1,17",
+    "23,22,1,4",
+    "24,2,1,3",
+    "24,5,1,17",
+    "24,22,1,4",
+    "24,55,2,4",
+    "25,2,1,3",
+    "25,5,1,17",
+    "25,22,1,4",
+    "9,49,1,4",
+    "10,49,1,4",
+    "11,49,1,4",
+    "12,49,1,4",
+    "13,49,1,4",
+    "14,49,1,4"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "Title": "課題リスト&シミュレーション",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "='課題リスト シミュレーション'!BK3"
+                  }
+                ]
+              },
+              "value": "1"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "='課題リスト シミュレーション'!W9,'課題リスト シミュレーション'!W10,'課題リスト シミュレーション'!W11,'課題リスト シミュレーション'!W12,'課題リスト シミュレーション'!W13,'課題リスト シミュレーション'!W13,'課題リスト シミュレーション'!W14,'課題リスト シミュレーション'!W15,'課題リスト シミュレーション'!AA9,'課題リスト シミュレーション'!AA10,'課題リスト シミュレーション'!AA11,'課題リスト シミュレーション'!AA12,'課題リスト シミュレーション'!AA13,'課題リスト シミュレーション'!AA14,'課題リスト シミュレーション'!AA15,'課題リスト シミュレーション'!AE9,'課題リスト シミュレーション'!AE10,'課題リスト シミュレーション'!AE11,'課題リスト シミュレーション'!AE12,'課題リスト シミュレーション'!AE13,'課題リスト シミュレーション'!AE14,'課題リスト シミュレーション'!AE15,'課題リスト シミュレーション'!AI9,'課題リスト シミュレーション'!AI10,'課題リスト シミュレーション'!AI11,'課題リスト シミュレーション'!AI12,'課題リスト シミュレーション'!AI13,'課題リスト シミュレーション'!AI14,'課題リスト シミュレーション'!AI15"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Text 1 50"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "='課題リスト シミュレーション'!W9,'課題リスト シミュレーション'!W10,'課題リスト シミュレーション'!W11,'課題リスト シミュレーション'!W12,'課題リスト シミュレーション'!W13,'課題リスト シミュレーション'!W13,'課題リスト シミュレーション'!W14,'課題リスト シミュレーション'!W15,'課題リスト シミュレーション'!AA9,'課題リスト シミュレーション'!AA10,'課題リスト シミュレーション'!AA11,'課題リスト シミュレーション'!AA12,'課題リスト シミュレーション'!AA13,'課題リスト シミュレーション'!AA14,'課題リスト シミュレーション'!AA15,'課題リスト シミュレーション'!AE9,'課題リスト シミュレーション'!AE10,'課題リスト シミュレーション'!AE11,'課題リスト シミュレーション'!AE12,'課題リスト シミュレーション'!AE13,'課題リスト シミュレーション'!AE14,'課題リスト シミュレーション'!AE15,'課題リスト シミュレーション'!AI9,'課題リスト シミュレーション'!AI10,'課題リスト シミュレーション'!AI11,'課題リスト シミュレーション'!AI12,'課題リスト シミュレーション'!AI13,'課題リスト シミュレーション'!AI14,'課題リスト シミュレーション'!AI15"
+                    },
+                    "PropertyType": 0,
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "Comments": "1:マネジメントコース",
+            "ID": "23fb1386-a3ea-433c-8902-b33135568ffb"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "='課題リスト シミュレーション'!AN9,'課題リスト シミュレーション'!AN10,'課題リスト シミュレーション'!AN11,'課題リスト シミュレーション'!AN12,'課題リスト シミュレーション'!AN13,'課題リスト シミュレーション'!AN14,'課題リスト シミュレーション'!AN15"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "='課題リスト シミュレーション'!AN9,'課題リスト シミュレーション'!AN10,'課題リスト シミュレーション'!AN11,'課題リスト シミュレーション'!AN12,'課題リスト シミュレーション'!AN13,'課題リスト シミュレーション'!AN14,'課題リスト シミュレーション'!AN15"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 -5"
+                  }
+                ]
+              }
+            ],
+            "ID": "a7dc993b-6d43-4ebc-af16-974d0aa4a9cb"
+          }
+        ]
+      }
+    ],
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//bxj8668xzQVAfn8JBqectpV3eMn0zKoxz/YwsaQz1hTXsFWduAH3KHSlNdxWbDLqK5oRMT8yTCNVsD9Xu/TjqEPKrz6UJXnESsP8i6g4sxIwzsXpkwH/kdcLc+tH7IMXLxvC1u5owtVVx0/tjNj6F5Ehjubz0PIicGLjWypwFOv5Bax2NYaxQw1YFyvH50QOeRUM3TxR3sVjQPnMzZhmEdX5QC0sNvw1pQwazflrpWo1H1KwVBtFFxMEnK0YqlTXA3/C/dPBGa+iQZfvxlhtokjQ2ObaAcQQiQfN9Dz52kXlGluE1p8tiqrb9bbfMTL+iw9MliA3m1X8mEPkPWjjs0pZ2HQI9pJ4jyowsDZ1S2h58dN0pArA9PBYBNGutL8jef13T0bW+yoooa0RKw7xfhzSsoeZjj7PHV1LfPGIVEs19k2ox+x60fU3MkR1PLO7SFqp41EpPtLCmgJEBrrXYHVkE2nzfyqstGaW9Ldc+l9Ckn2/LsZjIcetp/LMgGt6S791d14TIFs1+VBiz/SOddAzLtRh70V0+3DkpjaAjm4uxIkCnaJfUBJq6Z53d7qr9jF9hs3l4DdDKY2WxeVc07O5vPrrDGUyPfZKtqW3D39uk1yfq/6FpkH+fIUl/fyuxaBVwwsxEo/iC1N5zKljuuMSdPiEcSxHK+E91Lhpviy2EDAtGYxKrCu/ePftZA14y/H6j/jhBf+lfxofY5HQejYJ1guZc7iUScmezSWXITmueqnyErZz/0ieGmD4ingUT4Wl4LYnuExelEs37Bgs/vaalctLgeTxav/ORrcJjxZ3/G/yrWqu+LFcyFPLnQXmmvhlZp3iRPaWJhsM3BIxzfjSHh8gNZihCMqJ+WulzoKYqm127GaLedySp7anyOZXDLhn37ES4gnrxPp3Dfw1yA==|920

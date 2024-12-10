@@ -1,0 +1,1016 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 22.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "7": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "33": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 35
+  },
+  "Cols": {
+    "InLogicalVisibleIndexes": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "Count": 107
+  },
+  "Values": {
+    "0,94": "非表示",
+    "1,1": "未処理\r\n案件",
+    "1,7": true,
+    "1,16": "年度",
+    "1,20": "評価部会",
+    "1,28": "部署",
+    "1,40": "職務グループ",
+    "1,45": "コース",
+    "1,51": "等級",
+    "1,56": "業績評語",
+    "1,60": "行動評語",
+    "1,66": "条件クリア",
+    "2,16": 2024,
+    "4,1": "社員番号",
+    "4,6": "社員名",
+    "4,11": "部署",
+    "4,26": "職務グループ",
+    "4,31": "コース",
+    "4,37": "等級",
+    "4,41": "入社年次",
+    "4,45": "自己評価",
+    "4,57": "評価者評価",
+    "5,45": "業績",
+    "5,51": "行動",
+    "5,57": "業績",
+    "5,63": "行動",
+    "5,69": "業績",
+    "5,73": "行動",
+    "5,77": "業績評語",
+    "5,81": "行動評語",
+    "5,85": "業績評語",
+    "5,89": "行動評語",
+    "6,45": "評点",
+    "6,48": "評語",
+    "6,51": "評点",
+    "6,54": "評語",
+    "6,57": "評点",
+    "6,60": "評語",
+    "6,63": "評点",
+    "6,66": "評語",
+    "6,69": "評語",
+    "6,73": "評語"
+  },
+  "Formulas": {
+    "4,77": "$Q$3-2&\"年度\"",
+    "4,85": "$Q$3-3&\"年度\"",
+    "4,69": "$Q$3-1&\"年度\""
+  },
+  "AttachInfos": {
+    "1,4": {
+      "CellType": {
+        "$type": "Forguncy.NumberCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "1,7": {
+      "CellType": {
+        "$type": "Forguncy.CheckBoxCellType, ServerDesignerCommon",
+        "CellDefaultValue": true,
+        "Caption": "未処理案件のみ表示",
+        "Style": 2
+      }
+    },
+    "1,66": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "新規登録",
+            "PassValues": []
+          }
+        ],
+        "Text": "条件クリア",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "2,16": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "T_BasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "year"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "year"
+        },
+        "CellDefaultValue": 2024
+      }
+    },
+    "2,20": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ]
+      }
+    },
+    "2,28": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "T_BasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "affiliation_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "affiliation_name"
+        }
+      }
+    },
+    "2,40": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "研究開発",
+            "DisplayValue": "研究開発"
+          },
+          {
+            "Value": "生産",
+            "DisplayValue": "生産"
+          },
+          {
+            "Value": "事業",
+            "DisplayValue": "事業"
+          },
+          {
+            "Value": "コーポレート",
+            "DisplayValue": "コーポレート"
+          },
+          {
+            "Value": "DX",
+            "DisplayValue": "DX"
+          }
+        ],
+        "DataSource": "T_ManagementBasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_group_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_group_id",
+          "RelationBinding": {
+            "RelatedTable": "M_JobGroups",
+            "RelatedColumn": "job_group_id",
+            "DisplayColumn": "job_group_name"
+          }
+        }
+      }
+    },
+    "2,45": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "マネジメント",
+            "DisplayValue": "マネジメント"
+          },
+          {
+            "Value": "スペシャリスト",
+            "DisplayValue": "スペシャリスト"
+          }
+        ],
+        "DataSource": "T_ManagementBasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "management_course_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "management_course_id",
+          "RelationBinding": {
+            "RelatedTable": "M_ManagementCourses",
+            "RelatedColumn": "management_course_id",
+            "DisplayColumn": "management_corse_name"
+          }
+        }
+      }
+    },
+    "2,51": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "6等級",
+            "DisplayValue": "6等級"
+          },
+          {
+            "Value": "5等級",
+            "DisplayValue": "5等級"
+          },
+          {
+            "Value": "4等級",
+            "DisplayValue": "4等級"
+          },
+          {
+            "Value": "3等級",
+            "DisplayValue": "3等級"
+          },
+          {
+            "Value": "2等級",
+            "DisplayValue": "2等級"
+          },
+          {
+            "Value": "1等級",
+            "DisplayValue": "1等級"
+          }
+        ],
+        "DataSource": "T_ManagementBasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_grade_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_grade_id",
+          "RelationBinding": {
+            "RelatedTable": "M_JobGrades",
+            "RelatedColumn": "job_grade_id",
+            "DisplayColumn": "job_grade_name"
+          }
+        }
+      }
+    },
+    "2,56": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "3E",
+            "DisplayValue": "3E"
+          },
+          {
+            "Value": "2E",
+            "DisplayValue": "2E"
+          },
+          {
+            "Value": "E",
+            "DisplayValue": "E"
+          },
+          {
+            "Value": "3G",
+            "DisplayValue": "3G"
+          },
+          {
+            "Value": "2G",
+            "DisplayValue": "2G"
+          },
+          {
+            "Value": "G",
+            "DisplayValue": "G"
+          }
+        ]
+      }
+    },
+    "2,60": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "3E",
+            "DisplayValue": "3E"
+          },
+          {
+            "Value": "2E",
+            "DisplayValue": "2E"
+          },
+          {
+            "Value": "E",
+            "DisplayValue": "E"
+          },
+          {
+            "Value": "3G",
+            "DisplayValue": "3G"
+          },
+          {
+            "Value": "2G",
+            "DisplayValue": "2G"
+          },
+          {
+            "Value": "G",
+            "DisplayValue": "G"
+          }
+        ]
+      }
+    },
+    "4,1": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "T_BasicInformation",
+        "RowIndex": 4,
+        "ColumnIndex": 1,
+        "ColumnCount": 92,
+        "RowCount": 30,
+        "ColumnHeaderRowCount": 3,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "リストビュー1",
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_Medium2"
+      }
+    },
+    "7,1": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "自身の業績評価表",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=部門評価部会_!AF8"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=自身の業績評価表!U4"
+                }
+              }
+            ]
+          }
+        ],
+        "ClickMode": 1
+      },
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "employee_z_code"
+      }
+    },
+    "7,6": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "name"
+      }
+    },
+    "7,11": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "affiliation_name"
+      }
+    },
+    "7,26": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id",
+        "RelationBinding": {
+          "RelatedTable": "T_ManagementBasicInformation",
+          "RelatedColumn": "project_id",
+          "DisplayColumn": "job_group_id",
+          "NextRelationBinding": {
+            "RelatedTable": "M_JobGroups",
+            "RelatedColumn": "job_group_id",
+            "DisplayColumn": "job_group_name"
+          }
+        }
+      }
+    },
+    "7,31": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id",
+        "RelationBinding": {
+          "RelatedTable": "T_ManagementBasicInformation",
+          "RelatedColumn": "project_id",
+          "DisplayColumn": "management_course_id",
+          "NextRelationBinding": {
+            "RelatedTable": "M_ManagementCourses",
+            "RelatedColumn": "management_course_id",
+            "DisplayColumn": "management_corse_name"
+          }
+        }
+      }
+    },
+    "7,37": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id",
+        "RelationBinding": {
+          "RelatedTable": "T_ManagementBasicInformation",
+          "RelatedColumn": "project_id",
+          "DisplayColumn": "job_grade_id",
+          "NextRelationBinding": {
+            "RelatedTable": "M_JobGrades",
+            "RelatedColumn": "job_grade_id",
+            "DisplayColumn": "job_grade_name"
+          }
+        }
+      }
+    },
+    "7,69": {
+      "IsCellIgnoreHideInListview": true
+    },
+    "7,73": {
+      "IsCellIgnoreHideInListview": true
+    },
+    "7,77": {
+      "IsCellIgnoreHideInListview": true
+    },
+    "7,81": {
+      "IsCellIgnoreHideInListview": true
+    },
+    "7,85": {
+      "IsCellIgnoreHideInListview": true
+    },
+    "7,89": {
+      "IsCellIgnoreHideInListview": true
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "Foreground": 1
+      },
+      {
+        "Background": 0
+      },
+      {
+        "Background": 2,
+        "HorizontalAlignment": 3,
+        "WordWrap": true
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332,
+        "HorizontalAlignment": 3
+      },
+      {
+        "Background": 2,
+        "FontFamily": 4,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5,
+        "BorderRight": 0
+      },
+      {
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 4,
+        "Formatter": 7,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 4,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 4,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 4
+      },
+      {
+        "FontFamily": 4,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 14.666666666666666
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332,
+        "Formatter": 7
+      },
+      {
+        "FontFamily": 4,
+        "Foreground": 8,
+        "HorizontalAlignment": 3,
+        "Underline": true
+      },
+      {
+        "FontFamily": 4,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 4,
+        "HorizontalAlignment": 3,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 1 50",
+        "#FFFF0000",
+        "Accent 1 60",
+        "Center",
+        "Body",
+        "Left",
+        "Background 1 0",
+        "[AUTO]General",
+        "Blue"
+      ],
+      "Borders": [
+        {
+          "Color": 6
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,94": 0,
+      "0,95": 1,
+      "0,96": 1,
+      "0,97": 1,
+      "0,98": 1,
+      "0,99": 1,
+      "0,100": 1,
+      "0,101": 1,
+      "0,102": 1,
+      "0,103": 1,
+      "0,104": 1,
+      "0,105": 1,
+      "0,106": 1,
+      "1,1": 2,
+      "1,7": 3,
+      "1,16": 4,
+      "1,17": 5,
+      "1,18": 5,
+      "1,19": 5,
+      "1,20": 6,
+      "1,21": 7,
+      "1,22": 7,
+      "1,23": 7,
+      "1,24": 7,
+      "1,25": 7,
+      "1,26": 7,
+      "1,27": 7,
+      "1,28": 6,
+      "1,29": 7,
+      "1,30": 7,
+      "1,31": 7,
+      "1,32": 7,
+      "1,33": 7,
+      "1,34": 7,
+      "1,35": 7,
+      "1,36": 7,
+      "1,37": 7,
+      "1,38": 7,
+      "1,39": 7,
+      "1,40": 6,
+      "1,41": 7,
+      "1,42": 7,
+      "1,43": 7,
+      "1,44": 7,
+      "1,45": 6,
+      "1,46": 7,
+      "1,47": 7,
+      "1,48": 7,
+      "1,49": 7,
+      "1,50": 7,
+      "1,51": 6,
+      "1,52": 7,
+      "1,53": 7,
+      "1,54": 7,
+      "1,55": 7,
+      "1,56": 6,
+      "1,57": 7,
+      "1,58": 7,
+      "1,59": 7,
+      "1,60": 6,
+      "1,61": 7,
+      "1,62": 7,
+      "1,63": 8,
+      "1,66": 9,
+      "2,16": 9,
+      "2,20": 9,
+      "2,21": 9,
+      "2,22": 9,
+      "2,23": 9,
+      "2,24": 9,
+      "2,25": 9,
+      "2,26": 9,
+      "2,27": 9,
+      "2,28": 9,
+      "2,29": 9,
+      "2,30": 9,
+      "2,31": 9,
+      "2,32": 9,
+      "2,33": 9,
+      "2,34": 9,
+      "2,35": 9,
+      "2,36": 9,
+      "2,37": 9,
+      "2,38": 9,
+      "2,39": 9,
+      "2,40": 9,
+      "2,41": 9,
+      "2,42": 9,
+      "2,43": 9,
+      "2,44": 9,
+      "2,45": 9,
+      "2,46": 9,
+      "2,47": 9,
+      "2,48": 9,
+      "2,49": 9,
+      "2,50": 9,
+      "2,51": 9,
+      "2,52": 9,
+      "2,53": 9,
+      "2,54": 9,
+      "2,55": 9,
+      "2,56": 9,
+      "2,57": 9,
+      "2,58": 9,
+      "2,59": 9,
+      "2,60": 9,
+      "2,61": 9,
+      "2,62": 9,
+      "2,63": 9,
+      "3,1": 9,
+      "3,2": 9,
+      "3,3": 9,
+      "3,7": 3,
+      "3,8": 3,
+      "3,9": 3,
+      "3,10": 3,
+      "3,11": 3,
+      "3,12": 3,
+      "3,13": 3,
+      "3,14": 3,
+      "3,15": 3,
+      "3,16": 9,
+      "3,17": 9,
+      "3,18": 9,
+      "3,19": 9,
+      "3,20": 9,
+      "3,21": 9,
+      "3,22": 9,
+      "3,23": 9,
+      "3,24": 9,
+      "3,25": 9,
+      "3,26": 9,
+      "3,27": 9,
+      "3,28": 9,
+      "3,29": 9,
+      "3,30": 9,
+      "3,31": 9,
+      "3,32": 9,
+      "3,33": 9,
+      "3,35": 9,
+      "3,36": 9,
+      "3,37": 9,
+      "3,38": 9,
+      "3,39": 9,
+      "3,40": 9,
+      "3,41": 9,
+      "3,42": 9,
+      "3,43": 9,
+      "3,44": 9,
+      "3,45": 9,
+      "3,46": 9,
+      "3,48": 9,
+      "3,49": 9,
+      "3,50": 9,
+      "3,51": 9,
+      "3,52": 9,
+      "3,53": 9,
+      "3,54": 9,
+      "3,55": 9,
+      "3,57": 9,
+      "3,58": 9,
+      "3,59": 9,
+      "3,60": 9,
+      "3,61": 9,
+      "3,62": 9,
+      "3,63": 9,
+      "3,64": 9,
+      "3,65": 9,
+      "3,66": 9,
+      "4,1": 9,
+      "4,6": 9,
+      "4,11": 10,
+      "4,12": 11,
+      "4,13": 11,
+      "4,14": 11,
+      "4,15": 11,
+      "4,16": 11,
+      "4,17": 11,
+      "4,18": 11,
+      "4,19": 11,
+      "4,20": 11,
+      "4,21": 11,
+      "4,22": 11,
+      "4,23": 11,
+      "4,24": 11,
+      "4,25": 11,
+      "4,26": 9,
+      "4,31": 10,
+      "4,32": 11,
+      "4,33": 11,
+      "4,34": 11,
+      "4,35": 11,
+      "4,36": 11,
+      "4,37": 9,
+      "4,41": 9,
+      "4,45": 9,
+      "4,57": 9,
+      "4,69": 9,
+      "4,77": 9,
+      "4,85": 9,
+      "5,45": 12,
+      "5,51": 13,
+      "5,57": 12,
+      "5,63": 13,
+      "5,69": 13,
+      "5,73": 14,
+      "5,77": 13,
+      "5,81": 14,
+      "5,85": 13,
+      "5,89": 14,
+      "6,45": 12,
+      "6,48": 12,
+      "6,51": 13,
+      "6,54": 13,
+      "6,57": 12,
+      "6,60": 12,
+      "6,63": 13,
+      "6,66": 13,
+      "6,69": 13,
+      "6,73": 14,
+      "6,77": 13,
+      "6,81": 14,
+      "6,85": 13,
+      "6,89": 14,
+      "7,1": 15,
+      "7,6": 16,
+      "7,11": 17,
+      "7,12": 11,
+      "7,13": 11,
+      "7,14": 11,
+      "7,15": 11,
+      "7,16": 11,
+      "7,17": 11,
+      "7,18": 11,
+      "7,19": 11,
+      "7,20": 11,
+      "7,21": 11,
+      "7,22": 11,
+      "7,23": 11,
+      "7,24": 11,
+      "7,25": 11,
+      "7,26": 16,
+      "7,31": 17,
+      "7,32": 11,
+      "7,33": 11,
+      "7,34": 11,
+      "7,35": 11,
+      "7,36": 11,
+      "7,37": 16,
+      "7,41": 16,
+      "7,45": 16,
+      "7,48": 16,
+      "7,51": 9,
+      "7,54": 9,
+      "7,57": 16,
+      "7,60": 16,
+      "7,63": 9,
+      "7,66": 9,
+      "7,69": 9,
+      "7,73": 9,
+      "7,77": 9,
+      "7,81": 9,
+      "7,85": 9,
+      "7,89": 9
+    },
+    "ColStyles": {
+      "94": 1
+    },
+    "SheetStyle": {
+      "FontFamily": 4
+    }
+  },
+  "Spans": [
+    "1,1,2,3",
+    "1,4,2,3",
+    "1,7,2,9",
+    "4,6,3,5",
+    "7,6,1,5",
+    "4,1,3,5",
+    "7,1,1,5",
+    "1,66,2,27",
+    "1,16,1,4",
+    "1,20,1,8",
+    "2,20,1,8",
+    "1,28,1,12",
+    "2,28,1,12",
+    "1,40,1,5",
+    "2,40,1,5",
+    "1,45,1,6",
+    "2,45,1,6",
+    "1,51,1,5",
+    "2,51,1,5",
+    "1,56,1,4",
+    "2,56,1,4",
+    "1,60,1,4",
+    "8,1,26,92",
+    "2,60,1,4",
+    "4,11,3,15",
+    "4,26,3,5",
+    "7,11,1,15",
+    "7,26,1,5",
+    "4,31,3,6",
+    "4,37,3,4",
+    "4,41,3,4",
+    "4,45,1,12",
+    "4,57,1,12",
+    "4,69,1,8",
+    "4,77,1,8",
+    "4,85,1,8",
+    "5,45,1,6",
+    "5,51,1,6",
+    "5,57,1,6",
+    "5,63,1,6",
+    "5,69,1,4",
+    "5,73,1,4",
+    "5,77,1,4",
+    "5,81,1,4",
+    "5,85,1,4",
+    "5,89,1,4",
+    "6,45,1,3",
+    "6,48,1,3",
+    "6,51,1,3",
+    "6,54,1,3",
+    "6,57,1,3",
+    "6,60,1,3",
+    "6,63,1,3",
+    "6,66,1,3",
+    "6,69,1,4",
+    "6,73,1,4",
+    "6,77,1,4",
+    "6,81,1,4",
+    "6,85,1,4",
+    "6,89,1,4",
+    "7,31,1,6",
+    "7,37,1,4",
+    "7,41,1,4",
+    "7,45,1,3",
+    "7,48,1,3",
+    "7,51,1,3",
+    "7,54,1,3",
+    "7,57,1,3",
+    "7,60,1,3",
+    "7,63,1,3",
+    "7,66,1,3",
+    "7,69,1,4",
+    "7,73,1,4",
+    "7,77,1,4",
+    "7,81,1,4",
+    "7,85,1,4",
+    "7,89,1,4",
+    "2,16,1,4"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "マスターページ",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "RelatedDataTableName": "T_BasicInformation"
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//rbbqdE7sHbee41XA/bxEazECwbJ7qNhQJO7Ty1fckcD0biVNNdOCZdL2jcJZuvz4iE/NePg/2vds2tq71E46BYHBd38w+gAobLkX7HSb9fPYn2tFi17Nsc8es9qckvDCIFgzfRMOx7m9Ex25VxG07yenC43/tgYTE4O3UsYtldHEZYZCxX+XCyEMqrQYQ5AH8UOUNlhq/vsi9AqVqzcjKxMsQs0JFAbNeVThsc21tgTQ9wPB93T639pLZvExtsO6tb3PI0vAVu8nqka8Y9IYTShcYozcZEXoevy45DMdYPM7VXaei110zFobQC4+OFrMH3OScNJzUzwN0nMQKKASb/oYGYH1kjnFl1pOQGepv25rfA0gmcugwRDDTmuJ17xvgIg1dWoI9XGw3VpZugaRibgGAp7qfjj6/2/3WHsjUNWyGzM7Dxnb4QXIUpgF8OmyL/c5uO3ZCpEg+FcSW6ZSqxBUa0ClYbx0cK9auOQk5J6UE6yQkPzn6zsWIY1Js000kOjzjjgEVv00C72XiEYkN7ChHEKS7O3xfUYH6DTWAvdAe5IbeuCds81K645u2xUkkG3C3/UOCNdjK5M27anq9u3fAhJtoAb1SWft1quKTGuFBTRxmOAul9SW60zLodcsoPbNtfRQ+xhu1jA2YBGlvnRe7QIwzbDJPMQaEQYrmNLeNUzIRG8rIGLRbBVfHfBDQUmZgEcVknMnJh7LDIgeUxcEKz1AkCKJ9gstcyhigd4qzJo4oDmYaFRrdimCcktKHUb/MAp/w2KGT2WZ9z9FZJ6sjuug1e0RGcT82uFFNtU2N8vg6Ic02s6S+nW6HzwfeVJpmcNdQc0Q5PHdy8HnIp1PhxVtY3Y/MJpiyDapgruc0pbEORmRYBsBremZCLmGnHOcpn8eEsjhV/K20KygpQ==|920

@@ -1,0 +1,898 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "ロールリスト",
+          "TestData": "7"
+        }
+      ],
+      "InvokeTriggerTestData": {
+        "UserName": "Z029499"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能部門一覧",
+      "TableValue": {
+        "TableName": "V_ManagementEvaluationCommittee",
+        "BindingInfos": [
+          {
+            "BindingInfo": {
+              "TableName": "V_ManagementEvaluationCommittee",
+              "ColumnName": "department_code"
+            },
+            "ColumnName": "department_code"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "V_ManagementEvaluationCommittee",
+            "ColumnName": "employee_z_code_consenter"
+          },
+          "Value": "%CurrentUser%"
+        }
+      },
+      "ID": "eaba9df647fb4745a30ef5d92e90ae2a"
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能部門一覧カンマ",
+      "ID": "1a42ff0ac2b94f4386efd69960b9cf56"
+    },
+    {
+      "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+      "LoopInfo": {
+        "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+        "LoopCount": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=アクセス可能部門一覧"
+        },
+        "LoopItemParamName": "Item"
+      },
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "アクセス可能部門一覧カンマ",
+          "ParameterValue": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=アクセス可能部門一覧カンマ&\",\"&Item.department_code"
+          },
+          "ID": "5e2b7b26e7a349aaa5727894d9274fa0"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能部署一覧",
+      "TableValue": {
+        "TableName": "V_EmployeeRoleAndAuthority",
+        "BindingInfos": [
+          {
+            "BindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthority",
+              "ColumnName": "department_code_lvl00"
+            },
+            "ColumnName": "department_code_lvl00"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "Condition1": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthority",
+              "ColumnName": "employee_z_code"
+            },
+            "Value": "%CurrentUser%"
+          },
+          "Condition2": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthority",
+              "ColumnName": "role_code"
+            },
+            "Value": "4"
+          }
+        }
+      },
+      "ID": "19b58a170f6d44bb837fa61b172e9606"
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能部署一覧カンマ",
+      "ID": "5ab04ac2a0cb44b39cf68afa65253858"
+    },
+    {
+      "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+      "LoopInfo": {
+        "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+        "LoopCount": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=アクセス可能部署一覧"
+        },
+        "LoopItemParamName": "Item"
+      },
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "アクセス可能部署一覧カンマ",
+          "ParameterValue": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=アクセス可能部署一覧カンマ&\",\"&Item.department_code_lvl00"
+          },
+          "ID": "a4aa223860cd4d18bb0a1ac25a6fa386"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能所属一覧",
+      "TableValue": {
+        "TableName": "V_EmployeeRoleAndAuthority",
+        "BindingInfos": [
+          {
+            "BindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthority",
+              "ColumnName": "department_code_lvl00"
+            },
+            "ColumnName": "department_code_lvl00"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "Condition1": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthority",
+              "ColumnName": "employee_z_code"
+            },
+            "Value": "%CurrentUser%"
+          },
+          "Condition2": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthority",
+              "ColumnName": "role_code"
+            },
+            "Value": "5"
+          }
+        }
+      },
+      "ID": "8f06303c752b457685906e646102cd70"
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能所属一覧カンマ",
+      "ID": "3bbc79f8e25c4dbaa8013784a17d6e7d"
+    },
+    {
+      "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+      "LoopInfo": {
+        "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+        "LoopCount": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=アクセス可能所属一覧"
+        },
+        "LoopItemParamName": "Item"
+      },
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "アクセス可能所属一覧カンマ",
+          "ParameterValue": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=アクセス可能所属一覧カンマ&\",\"&Item.department_code_lvl00"
+          },
+          "ID": "0f93a13a42ad48a68d217e57c8cc996b"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=アクセス可能部門一覧カンマ&アクセス可能部署一覧カンマ&アクセス可能所属一覧カンマ"
+              }
+            }
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "兼務ユーザー一覧カンマ",
+              "ID": "3ade95a7734149039fd8d8f79e5d7f10"
+            }
+          ],
+          "ID": "6a6d03bc-f858-4e1a-91f7-22bf8c04135e"
+        },
+        {
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "兼務ユーザー一覧",
+              "TableValue": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "BindingInfos": [
+                  {
+                    "BindingInfo": {
+                      "TableName": "lum_view_employee_department_relations_duplicated",
+                      "ColumnName": "employee_z_code"
+                    },
+                    "ColumnName": "employee_z_code"
+                  }
+                ],
+                "SqlCondition": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "Condition1": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                        "Condition1": {
+                          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                          "CompareType": 8,
+                          "ColumnBindingInfo": {
+                            "TableName": "lum_view_employee_department_relations_duplicated",
+                            "ColumnName": "department_code_lvl00"
+                          },
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=アクセス可能部門一覧カンマ"
+                          },
+                          "LeftBracket": 1
+                        },
+                        "Condition2": {
+                          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                          "CompareType": 8,
+                          "ColumnBindingInfo": {
+                            "TableName": "lum_view_employee_department_relations_duplicated",
+                            "ColumnName": "department_code_lvl04"
+                          },
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=アクセス可能部署一覧カンマ"
+                          }
+                        },
+                        "RelationType": 1
+                      },
+                      "Condition2": {
+                        "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                        "CompareType": 8,
+                        "ColumnBindingInfo": {
+                          "TableName": "lum_view_employee_department_relations_duplicated",
+                          "ColumnName": "department_code_lvl05"
+                        },
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=アクセス可能所属一覧カンマ"
+                        }
+                      },
+                      "RelationType": 1
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "department_code_lvl06"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=アクセス可能所属一覧カンマ"
+                      },
+                      "RightBracket": 1
+                    },
+                    "RelationType": 1
+                  },
+                  "Condition2": {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "CompareType": 3,
+                    "ColumnBindingInfo": {
+                      "TableName": "lum_view_employee_department_relations_duplicated",
+                      "ColumnName": "count_belonging_department"
+                    },
+                    "Value": "2"
+                  }
+                }
+              },
+              "ID": "7dc7e84d20924c3b8e3bde3867317ec2"
+            },
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "兼務ユーザー一覧カンマ",
+              "ID": "4bdae93d28bf4b1e8340a252741ec6a1"
+            },
+            {
+              "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+              "LoopInfo": {
+                "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+                "LoopCount": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=兼務ユーザー一覧"
+                },
+                "LoopItemParamName": "Item"
+              },
+              "CommandList": [
+                {
+                  "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                  "ParameterName": "兼務ユーザー一覧カンマ",
+                  "ParameterValue": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=兼務ユーザー一覧カンマ&\",\"&Item.employee_z_code"
+                  },
+                  "ID": "0fc5bd7749354641a1dd3275fdf47efb"
+                }
+              ]
+            }
+          ],
+          "ID": "4afc4ffc-5cda-4ae2-9558-50f7837f4e4e"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=ロールリスト"
+              }
+            },
+            "value": "1",
+            "compareType": 10
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "アクセス可能プロジェクト一覧",
+              "TableValue": {
+                "TableName": "T_BasicInformation",
+                "BindingInfos": [
+                  {
+                    "BindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "project_id"
+                    },
+                    "ColumnName": "project_id"
+                  }
+                ],
+                "SqlCondition": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "Condition1": {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "ColumnBindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "new_flag"
+                    },
+                    "Value": "1"
+                  },
+                  "Condition2": {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "CompareType": 1,
+                    "ColumnBindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "employee_z_code"
+                    },
+                    "Value": "%CurrentUser%"
+                  }
+                }
+              },
+              "ID": "f1e801a048a54cdb8bdc698494f47a9d",
+              "Comments": "ロールが1(フルコントロール)の場合、全件表示"
+            }
+          ],
+          "ID": "d3ceee9f-e18b-479e-bc10-203a9f6302f5"
+        },
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=ロールリスト"
+              }
+            },
+            "value": "2"
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "アクセス可能プロジェクト一覧",
+              "TableValue": {
+                "TableName": "T_BasicInformation",
+                "BindingInfos": [
+                  {
+                    "BindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "project_id"
+                    },
+                    "ColumnName": "project_id"
+                  }
+                ],
+                "SqlCondition": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "Condition1": {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "ColumnBindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "new_flag"
+                    },
+                    "Value": "1"
+                  },
+                  "Condition2": {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "CompareType": 1,
+                    "ColumnBindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "employee_z_code"
+                    },
+                    "Value": "%CurrentUser%"
+                  }
+                }
+              },
+              "ID": "2972e5285aa549af94aac428aa9beae1",
+              "Comments": "ロールが2(事業所管理者)の場合、どうするかTODO"
+            }
+          ],
+          "ID": "1e067370-8734-4ce2-9963-7bf2854ecf6b"
+        },
+        {
+          "Condition": {
+            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+            "Condition1": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                "Condition1": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                    "ParamObject": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=ロールリスト"
+                    }
+                  },
+                  "value": "3",
+                  "compareType": 10
+                },
+                "Condition2": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                    "ParamObject": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=ロールリスト"
+                    }
+                  },
+                  "value": "4",
+                  "compareType": 10
+                },
+                "RelationType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                  "ParamObject": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=ロールリスト"
+                  }
+                },
+                "value": "5",
+                "compareType": 10
+              },
+              "RelationType": 1
+            },
+            "Condition2": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                "ParamObject": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ロールリスト"
+                }
+              },
+              "value": "6",
+              "compareType": 10
+            },
+            "RelationType": 1
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "アクセス可能プロジェクト一覧",
+              "TableValue": {
+                "TableName": "T_BasicInformation",
+                "BindingInfos": [
+                  {
+                    "BindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "project_id"
+                    },
+                    "ColumnName": "project_id"
+                  }
+                ],
+                "SqlCondition": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "Condition1": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "T_BasicInformation",
+                        "ColumnName": "new_flag"
+                      },
+                      "Value": "1"
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 1,
+                      "ColumnBindingInfo": {
+                        "TableName": "T_BasicInformation",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": "%CurrentUser%"
+                    }
+                  },
+                  "Condition2": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                        "Condition1": {
+                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                          "Condition1": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                  "Condition1": {
+                                    "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                                    "CompareType": 8,
+                                    "ColumnBindingInfo": {
+                                      "TableName": "T_BasicInformation",
+                                      "ColumnName": "division_code"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=アクセス可能部門一覧カンマ"
+                                    },
+                                    "LeftBracket": 2
+                                  },
+                                  "Condition2": {
+                                    "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                                    "CompareType": 8,
+                                    "ColumnBindingInfo": {
+                                      "TableName": "T_BasicInformation",
+                                      "ColumnName": "affiliation_code"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=アクセス可能部門一覧カンマ"
+                                    }
+                                  },
+                                  "RelationType": 1
+                                },
+                                "Condition2": {
+                                  "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                                  "CompareType": 8,
+                                  "ColumnBindingInfo": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "affiliation_code"
+                                  },
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=アクセス可能部署一覧カンマ"
+                                  }
+                                },
+                                "RelationType": 1
+                              },
+                              "Condition2": {
+                                "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                                "CompareType": 8,
+                                "ColumnBindingInfo": {
+                                  "TableName": "T_BasicInformation",
+                                  "ColumnName": "organization_code"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=アクセス可能所属一覧カンマ"
+                                },
+                                "RightBracket": 1
+                              },
+                              "RelationType": 1
+                            },
+                            "Condition2": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "primary_evaluation_person"
+                              },
+                              "Value": "%CurrentUser%"
+                            },
+                            "RelationType": 1
+                          },
+                          "Condition2": {
+                            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                            "ColumnBindingInfo": {
+                              "TableName": "T_BasicInformation",
+                              "ColumnName": "secondary_evaluation_person"
+                            },
+                            "Value": "%CurrentUser%"
+                          },
+                          "RelationType": 1
+                        },
+                        "Condition2": {
+                          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                          "ColumnBindingInfo": {
+                            "TableName": "T_BasicInformation",
+                            "ColumnName": "pre_evaluation_person_1"
+                          },
+                          "Value": "%CurrentUser%"
+                        },
+                        "RelationType": 1
+                      },
+                      "Condition2": {
+                        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                        "ColumnBindingInfo": {
+                          "TableName": "T_BasicInformation",
+                          "ColumnName": "pre_evaluation_person_2"
+                        },
+                        "Value": "%CurrentUser%"
+                      },
+                      "RelationType": 1
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "T_BasicInformation",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=兼務ユーザー一覧カンマ"
+                      },
+                      "RightBracket": 1
+                    },
+                    "RelationType": 1
+                  }
+                }
+              },
+              "ID": "039ed0539b544b419a6540a30a6f4145",
+              "Comments": "以下のロールの場合、各ロールに対応した部門、部署、所属に応じたプロジェクトと、承認者として設定されているプロジェクトを表示"
+            }
+          ],
+          "ID": "d36433f6-2418-4103-a2eb-d1c162e3a4c0"
+        },
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=ロールリスト"
+              }
+            },
+            "value": "7",
+            "compareType": 10
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+              "ParameterName": "アクセス可能プロジェクト一覧",
+              "TableValue": {
+                "TableName": "T_BasicInformation",
+                "BindingInfos": [
+                  {
+                    "BindingInfo": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "project_id"
+                    },
+                    "ColumnName": "project_id"
+                  }
+                ],
+                "SqlCondition": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "Condition1": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "T_BasicInformation",
+                        "ColumnName": "new_flag"
+                      },
+                      "Value": "1"
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 1,
+                      "ColumnBindingInfo": {
+                        "TableName": "T_BasicInformation",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": "%CurrentUser%"
+                    }
+                  },
+                  "Condition2": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                        "Condition1": {
+                          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                          "ColumnBindingInfo": {
+                            "TableName": "T_BasicInformation",
+                            "ColumnName": "primary_evaluation_person"
+                          },
+                          "Value": "%CurrentUser%",
+                          "LeftBracket": 1
+                        },
+                        "Condition2": {
+                          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                          "ColumnBindingInfo": {
+                            "TableName": "T_BasicInformation",
+                            "ColumnName": "secondary_evaluation_person"
+                          },
+                          "Value": "%CurrentUser%"
+                        },
+                        "RelationType": 1
+                      },
+                      "Condition2": {
+                        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                        "ColumnBindingInfo": {
+                          "TableName": "T_BasicInformation",
+                          "ColumnName": "pre_evaluation_person_1"
+                        },
+                        "Value": "%CurrentUser%"
+                      },
+                      "RelationType": 1
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "T_BasicInformation",
+                        "ColumnName": "pre_evaluation_person_2"
+                      },
+                      "Value": "%CurrentUser%",
+                      "RightBracket": 1
+                    },
+                    "RelationType": 1
+                  }
+                }
+              },
+              "ID": "b85544d0f28f499d96040fdb8d686c9a",
+              "Comments": "ロールが7(被評価者)の場合、承認者として設定されているプロジェクトを表示"
+            }
+          ],
+          "ID": "d33dd434-be38-4a25-866b-bf28d5935c7b"
+        },
+        {
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+              "ErrorCode": "0",
+              "CustomReturns": [
+                {
+                  "ReturnPropertyName": "アクセス可能プロジェクトID一覧",
+                  "Value": "---"
+                }
+              ],
+              "Comments": "検索条件となるように空白ではなく無効な値を設定する"
+            }
+          ],
+          "ID": "ae6471b1-d5e7-4eed-9a0c-7fa921fa730c"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "アクセス可能プロジェクト一覧カンマ",
+      "ID": "7efdc2538af842f8a5fbbbcbd43fa420"
+    },
+    {
+      "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+      "LoopInfo": {
+        "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+        "LoopCount": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=アクセス可能プロジェクト一覧"
+        },
+        "LoopItemParamName": "Item"
+      },
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "アクセス可能プロジェクト一覧カンマ",
+          "ParameterValue": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=アクセス可能プロジェクト一覧カンマ&\",\"&Item.project_id"
+          },
+          "ID": "279a9a9094c04ac8bf5bea65090e12ce"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=アクセス可能プロジェクト一覧カンマ"
+              }
+            }
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+              "ErrorCode": "0",
+              "CustomReturns": [
+                {
+                  "ReturnPropertyName": "アクセス可能プロジェクトID一覧",
+                  "Value": "---"
+                }
+              ]
+            }
+          ],
+          "ID": "9b867640-beae-437a-9201-8e44fb6e0899"
+        },
+        {
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+              "CustomReturns": [
+                {
+                  "ReturnPropertyName": "アクセス可能プロジェクトID一覧",
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=RIGHT(アクセス可能プロジェクト一覧カンマ,LEN(アクセス可能プロジェクト一覧カンマ)-1)"
+                  }
+                }
+              ],
+              "Comments": "先頭の不要カンマを取り除いて返す"
+            }
+          ],
+          "ID": "4e32b833-4116-496c-b476-148fdb635a65"
+        }
+      ]
+    }
+  ],
+  "ReturnProperties": [
+    {
+      "Name": "アクセス可能プロジェクトID一覧"
+    }
+  ],
+  "Name": "被評価者プロジェクトID一覧取得"
+}

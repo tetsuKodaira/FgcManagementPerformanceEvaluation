@@ -1,0 +1,1913 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "36": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 37
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "73": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 80.0,
+          "IsHidden": true
+        }
+      },
+      "74": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "Count": 85
+  },
+  "Values": {
+    "0,72": "非表示",
+    "1,1": "年度",
+    "1,8": "部門名",
+    "1,37": "課題",
+    "1,45": "行動評価",
+    "2,1": "部署名",
+    "2,17": "所属名",
+    "2,37": "評点平均",
+    "2,41": "評価結果",
+    "2,45": "評点平均",
+    "2,49": "評価結果",
+    "2,54": "課題リスト&\r\nシミュレーション",
+    "2,60": "一時保存",
+    "2,66": "WF回送",
+    "2,73": "project_id",
+    "3,1": "ポジション名",
+    "3,17": "コース名",
+    "4,1": "職務グループ",
+    "4,12": "職務等級",
+    "4,23": "氏名",
+    "5,0": "自身の業績評価表_中身"
+  },
+  "AttachInfos": {
+    "1,5": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "year"
+      }
+    },
+    "1,11": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "division_name"
+      }
+    },
+    "2,5": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "affiliation_name"
+      }
+    },
+    "2,20": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "organization_name"
+      }
+    },
+    "2,54": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "課題リスト シミュレーション",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=自身の業績評価表!BW3"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "='課題リスト シミュレーション'!BK2"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "課題リスト&\r\nシミュレーション",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "2,60": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.OperateCellTypeCommand, ServerDesignerCommon",
+            "TargetPageElement": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=自身の業績評価表!マネジメント_保存"
+            },
+            "TargetType": "Forguncy.ButtonCellType, ServerDesignerCommon, Version=8.0.20.0, Culture=neutral, PublicKeyToken=967100671921c115",
+            "MethodName": "ExecuteCommand",
+            "ParameterValues": {},
+            "RetrunParamNames": {}
+          },
+          {
+            "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+            "MessageFormula": "保存しました"
+          }
+        ],
+        "Text": "一時保存",
+        "IsDisabled": true,
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "2,66": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                    "tableData": {
+                      "TableName": "T_BasicInformation",
+                      "ColumnName": "FGC_AssignTo"
+                    }
+                  },
+                  "value": "%CurrentUser%",
+                  "compareType": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+                    "PageName": "ワークフロー回送",
+                    "PassValues": [
+                      {
+                        "Source": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=自身の業績評価表!親_プロジェクトID"
+                        },
+                        "TargetCell": {
+                          "SerializeProperty": "=ワークフロー回送!AW2"
+                        }
+                      }
+                    ],
+                    "Comments": ""
+                  }
+                ],
+                "ID": "3e675879-c434-4202-b962-8aa30b5afd2f"
+              },
+              {
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.OperateCellTypeCommand, ServerDesignerCommon",
+                    "TargetPageElement": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=自身の業績評価表!マネジメント_保存"
+                    },
+                    "TargetType": "Forguncy.ButtonCellType, ServerDesignerCommon, Version=8.0.20.0, Culture=neutral, PublicKeyToken=967100671921c115",
+                    "MethodName": "ExecuteCommand",
+                    "ParameterValues": {},
+                    "RetrunParamNames": {}
+                  },
+                  {
+                    "$type": "Forguncy.Model.OperateCellTypeCommand, ServerDesignerCommon",
+                    "TargetPageElement": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=自身の業績評価表!マネジメント_WFチェック"
+                    },
+                    "TargetType": "Forguncy.ButtonCellType, ServerDesignerCommon, Version=8.0.20.0, Culture=neutral, PublicKeyToken=967100671921c115",
+                    "MethodName": "ExecuteCommand",
+                    "ParameterValues": {},
+                    "RetrunParamNames": {}
+                  },
+                  {
+                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                    "ParameterName": "エラーメッセージ",
+                    "ID": "c9c496147a294f7dbe3e68e3bef33f8e"
+                  },
+                  {
+                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                    "ParameterName": "Qチェック用エラーメッセージ",
+                    "ID": "7b58f95764df4a93aec7adc7941fab9c"
+                  },
+                  {
+                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                    "ParameterName": "期末評価用エラーメッセージ",
+                    "ID": "92029394c10d4ce78d0c0fbba2cade01"
+                  },
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "Condition": {
+                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                          "Condition1": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                  "Condition1": {
+                                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                    "Condition1": {
+                                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                      "Condition1": {
+                                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                        "Condition1": {
+                                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                          "Condition1": {
+                                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                            "Condition1": {
+                                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                              "Condition1": {
+                                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                "Condition1": {
+                                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                  "Condition1": {
+                                                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                    "Condition1": {
+                                                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                      "Condition1": {
+                                                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                        "Condition1": {
+                                                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                          "Condition1": {
+                                                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                                            "Condition1": {
+                                                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                              "param": {
+                                                                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                                "tableData": {
+                                                                  "TableName": "T_BasicInformation",
+                                                                  "ColumnName": "FGC_State"
+                                                                }
+                                                              },
+                                                              "value": "課題設定_申請"
+                                                            },
+                                                            "Condition2": {
+                                                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                              "param": {
+                                                                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                                "tableData": {
+                                                                  "TableName": "T_BasicInformation",
+                                                                  "ColumnName": "FGC_State"
+                                                                }
+                                                              },
+                                                              "value": "課題設定_再申請"
+                                                            },
+                                                            "RelationType": 1
+                                                          },
+                                                          "Condition2": {
+                                                            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                            "param": {
+                                                              "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                              "tableData": {
+                                                                "TableName": "T_BasicInformation",
+                                                                "ColumnName": "FGC_State"
+                                                              }
+                                                            },
+                                                            "value": "課題設定_0.5次評価_1"
+                                                          },
+                                                          "RelationType": 1
+                                                        },
+                                                        "Condition2": {
+                                                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                          "param": {
+                                                            "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                            "tableData": {
+                                                              "TableName": "T_BasicInformation",
+                                                              "ColumnName": "FGC_State"
+                                                            }
+                                                          },
+                                                          "value": "課題設定_0.5次評価_2"
+                                                        },
+                                                        "RelationType": 1
+                                                      },
+                                                      "Condition2": {
+                                                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                        "param": {
+                                                          "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                          "tableData": {
+                                                            "TableName": "T_BasicInformation",
+                                                            "ColumnName": "FGC_State"
+                                                          }
+                                                        },
+                                                        "value": "課題設定_一次評価"
+                                                      },
+                                                      "RelationType": 1
+                                                    },
+                                                    "Condition2": {
+                                                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                      "param": {
+                                                        "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                        "tableData": {
+                                                          "TableName": "T_BasicInformation",
+                                                          "ColumnName": "FGC_State"
+                                                        }
+                                                      },
+                                                      "value": "課題設定_二次評価"
+                                                    },
+                                                    "RelationType": 1
+                                                  },
+                                                  "Condition2": {
+                                                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                    "param": {
+                                                      "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                      "tableData": {
+                                                        "TableName": "T_BasicInformation",
+                                                        "ColumnName": "FGC_State"
+                                                      }
+                                                    },
+                                                    "value": "課題設定_評価部門長"
+                                                  },
+                                                  "RelationType": 1
+                                                },
+                                                "Condition2": {
+                                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                  "param": {
+                                                    "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                    "tableData": {
+                                                      "TableName": "T_BasicInformation",
+                                                      "ColumnName": "FGC_State"
+                                                    }
+                                                  },
+                                                  "value": "1Qマイルストーン_再申請"
+                                                },
+                                                "RelationType": 1
+                                              },
+                                              "Condition2": {
+                                                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                                "param": {
+                                                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                  "tableData": {
+                                                    "TableName": "T_BasicInformation",
+                                                    "ColumnName": "FGC_State"
+                                                  }
+                                                },
+                                                "value": "1Qマイルストーン_0.5次評価_1"
+                                              },
+                                              "RelationType": 1
+                                            },
+                                            "Condition2": {
+                                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                              "param": {
+                                                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                                "tableData": {
+                                                  "TableName": "T_BasicInformation",
+                                                  "ColumnName": "FGC_State"
+                                                }
+                                              },
+                                              "value": "1Qマイルストーン_0.5次評価_2"
+                                            },
+                                            "RelationType": 1
+                                          },
+                                          "Condition2": {
+                                            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                            "param": {
+                                              "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                              "tableData": {
+                                                "TableName": "T_BasicInformation",
+                                                "ColumnName": "FGC_State"
+                                              }
+                                            },
+                                            "value": "1Qマイルストーン_一次評価"
+                                          },
+                                          "RelationType": 1
+                                        },
+                                        "Condition2": {
+                                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                          "param": {
+                                            "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                            "tableData": {
+                                              "TableName": "T_BasicInformation",
+                                              "ColumnName": "FGC_State"
+                                            }
+                                          },
+                                          "value": "2Qマイルストーン_再申請"
+                                        },
+                                        "RelationType": 1
+                                      },
+                                      "Condition2": {
+                                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                        "param": {
+                                          "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                          "tableData": {
+                                            "TableName": "T_BasicInformation",
+                                            "ColumnName": "FGC_State"
+                                          }
+                                        },
+                                        "value": "2Qマイルストーン_0.5次評価_1"
+                                      },
+                                      "RelationType": 1
+                                    },
+                                    "Condition2": {
+                                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                      "param": {
+                                        "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                        "tableData": {
+                                          "TableName": "T_BasicInformation",
+                                          "ColumnName": "FGC_State"
+                                        }
+                                      },
+                                      "value": "2Qマイルストーン_0.5次評価_2"
+                                    },
+                                    "RelationType": 1
+                                  },
+                                  "Condition2": {
+                                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                    "param": {
+                                      "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                      "tableData": {
+                                        "TableName": "T_BasicInformation",
+                                        "ColumnName": "FGC_State"
+                                      }
+                                    },
+                                    "value": "2Qマイルストーン_一次評価"
+                                  },
+                                  "RelationType": 1
+                                },
+                                "Condition2": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                    "tableData": {
+                                      "TableName": "T_BasicInformation",
+                                      "ColumnName": "FGC_State"
+                                    }
+                                  },
+                                  "value": "3Qマイルストーン_再申請"
+                                },
+                                "RelationType": 1
+                              },
+                              "Condition2": {
+                                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                "param": {
+                                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                  "tableData": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "FGC_State"
+                                  }
+                                },
+                                "value": "3Qマイルストーン_0.5次評価_1"
+                              },
+                              "RelationType": 1
+                            },
+                            "Condition2": {
+                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                              "param": {
+                                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                "tableData": {
+                                  "TableName": "T_BasicInformation",
+                                  "ColumnName": "FGC_State"
+                                }
+                              },
+                              "value": "3Qマイルストーン_0.5次評価_2"
+                            },
+                            "RelationType": 1
+                          },
+                          "Condition2": {
+                            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                            "param": {
+                              "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                              "tableData": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "FGC_State"
+                              }
+                            },
+                            "value": "3Qマイルストーン_一次評価"
+                          },
+                          "RelationType": 1
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!期待行動詳細未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"期待行動詳細(課題設定)はすべて入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "97f02ed936f0444c99895031aa1501db"
+                                  }
+                                ],
+                                "ID": "9aae71d4-8cbf-414e-9a3a-75f707a6deb5"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!課題未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"課題は課題ランクと目標/達成水準のすべてを入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "f431a95a8fc74ce8948bff9294c02591"
+                                  }
+                                ],
+                                "ID": "98c3dbf2-a053-4976-90d4-81ac767487d1"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                                      }
+                                    ]
+                                  },
+                                  "value": "%Null%",
+                                  "compareType": 1
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                                    "MessageFormula": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                                    }
+                                  }
+                                ],
+                                "ID": "db51fe3c-907d-428d-849b-67ed2af82adb"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "c57ed970-40f9-4425-bac1-70f74a366fa0"
+                      },
+                      {
+                        "Condition": {
+                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                          "Condition1": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                  "Condition1": {
+                                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                    "param": {
+                                      "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                      "tableData": {
+                                        "TableName": "T_BasicInformation",
+                                        "ColumnName": "FGC_State"
+                                      }
+                                    },
+                                    "value": "期末評価_0.5次評価_1",
+                                    "LeftBracket": 1
+                                  },
+                                  "Condition2": {
+                                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                    "param": {
+                                      "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                      "tableData": {
+                                        "TableName": "T_BasicInformation",
+                                        "ColumnName": "FGC_State"
+                                      }
+                                    },
+                                    "value": "期末評価_0.5次評価_2"
+                                  },
+                                  "RelationType": 1
+                                },
+                                "Condition2": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                    "tableData": {
+                                      "TableName": "T_BasicInformation",
+                                      "ColumnName": "FGC_State"
+                                    }
+                                  },
+                                  "value": "期末評価_一次評価"
+                                },
+                                "RelationType": 1
+                              },
+                              "Condition2": {
+                                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                "param": {
+                                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                  "tableData": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "FGC_State"
+                                  }
+                                },
+                                "value": "期末評価_二次評価"
+                              },
+                              "RelationType": 1
+                            },
+                            "Condition2": {
+                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                              "param": {
+                                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                "tableData": {
+                                  "TableName": "T_BasicInformation",
+                                  "ColumnName": "FGC_State"
+                                }
+                              },
+                              "value": "期末評価_評価部門長",
+                              "RightBracket": 1
+                            },
+                            "RelationType": 1
+                          },
+                          "Condition2": {
+                            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                            "param": {
+                              "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                              "tableData": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "FGC_AssignTo"
+                              }
+                            },
+                            "value": "%CurrentUser%"
+                          }
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!行動評価評価者評価未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"行動評価評点はすべて入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "aa2f8bc2d7244a73b815af1c043ee44b"
+                                  }
+                                ],
+                                "ID": "1ed3f0a7-ec64-4590-b1da-443c7b6d6283"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!課題評価評価者評価未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"入力済の課題は達成度点、加減点、評価理由を入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "c8a34d44e8794de08f0fe77c08c3996e"
+                                  }
+                                ],
+                                "ID": "b0489d9f-d140-4f2f-adae-15ca3aaa8f3e"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                                      }
+                                    ]
+                                  },
+                                  "value": "%Null%",
+                                  "compareType": 1
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                                    "MessageFormula": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                                    }
+                                  }
+                                ],
+                                "ID": "f6a30d9a-30b7-43cd-acd5-3549f1de59f8"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "228db4f1-e494-4843-9e48-aeac8d4200bc"
+                      },
+                      {
+                        "Condition": {
+                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                          "Condition1": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                    "tableData": {
+                                      "TableName": "T_BasicInformation",
+                                      "ColumnName": "FGC_State"
+                                    }
+                                  },
+                                  "value": "課題設定_完了",
+                                  "LeftBracket": 1
+                                },
+                                "Condition2": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                    "tableData": {
+                                      "TableName": "T_BasicInformation",
+                                      "ColumnName": "FGC_State"
+                                    }
+                                  },
+                                  "value": "1Qマイルストーン_完了"
+                                },
+                                "RelationType": 1
+                              },
+                              "Condition2": {
+                                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                "param": {
+                                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                  "tableData": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "FGC_State"
+                                  }
+                                },
+                                "value": "2Qマイルストーン_完了"
+                              },
+                              "RelationType": 1
+                            },
+                            "Condition2": {
+                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                              "param": {
+                                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                                "tableData": {
+                                  "TableName": "T_BasicInformation",
+                                  "ColumnName": "FGC_State"
+                                }
+                              },
+                              "value": "3Qマイルストーン_完了",
+                              "RightBracket": 1
+                            },
+                            "RelationType": 1
+                          },
+                          "Condition2": {
+                            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                            "param": {
+                              "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                              "tableData": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "FGC_AssignTo"
+                              }
+                            },
+                            "value": "%CurrentUser%"
+                          }
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!課題未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "Qチェック用エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!Qチェック用エラーメッセージ&\"・課題は課題ランクと目標/達成水準のすべてを入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "4c487a3d7af14ecabbf9fd07e2139c45"
+                                  }
+                                ],
+                                "ID": "8ad9ff97-7344-4bcb-b655-b2c496728526"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!行動評価自己評価未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "期末評価用エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!期末評価用エラーメッセージ&\"・行動評価 自己評価はすべて入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "c560021ceed3487dae4e2e1e5afff908"
+                                  }
+                                ],
+                                "ID": "40b71441-bac0-4c71-abff-9af92e5ca02b"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!課題未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "期末評価用エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!期末評価用エラーメッセージ&\"・課題は課題ランクと目標/達成水準のすべてを入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "2b90fb351abc49ab8212f2d943eaa483"
+                                  }
+                                ],
+                                "ID": "d2005add-a48b-4dd4-ad9c-f0166e6d1e45"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!課題自己評価未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "期末評価用エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!期末評価用エラーメッセージ&\"・入力済の課題は自己評価を入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "ed94e3ff4c9943a68a7d3356b9230032"
+                                  }
+                                ],
+                                "ID": "29593ba2-f0b4-45a2-b14b-387311a9d513"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "f5ae7c95-2392-464d-be83-ed2d0cfff136"
+                      },
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                            "tableData": {
+                              "TableName": "T_BasicInformation",
+                              "ColumnName": "FGC_State"
+                            }
+                          },
+                          "value": "期末評価_再申請"
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "課題未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"課題は課題ランクと目標/達成水準のすべてを入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "c3cf2c50c300468ebddf5d0df5b167c7"
+                                  }
+                                ],
+                                "ID": "b50be1e3-4c51-4024-baff-48e6419b8c93"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "行動評価自己評価未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"行動評価 自己評価はすべて入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "130e744ecaaf4532ba1a865d86bda4d0"
+                                  }
+                                ],
+                                "ID": "0628ea7d-9e72-42ab-8ba3-62aa0ef51744"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "課題自己評価未入力チェック"
+                                      }
+                                    ]
+                                  },
+                                  "value": "1",
+                                  "compareType": 3
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                    "ParameterName": "エラーメッセージ",
+                                    "ParameterValue": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ&\"入力済の課題は自己評価を入力してください\"&CHAR(10)"
+                                    },
+                                    "ID": "51bde96e7ff14fbcab84413b14ad5b52"
+                                  }
+                                ],
+                                "ID": "d9b6cc86-8829-4bd4-ae87-4648de492026"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                                      }
+                                    ]
+                                  },
+                                  "value": "%Null%",
+                                  "compareType": 1
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                                    "MessageFormula": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                                    }
+                                  }
+                                ],
+                                "ID": "20476b78-7f90-4794-b3d1-78267e6513d2"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "00afd0cf-c92c-4b8a-94b3-44566ad086da"
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+                    "PageName": "ワークフロー回送",
+                    "PassValues": [
+                      {
+                        "Source": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=自身の業績評価表!親_プロジェクトID"
+                        },
+                        "TargetCell": {
+                          "SerializeProperty": "=ワークフロー回送!AW2"
+                        }
+                      },
+                      {
+                        "Source": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=自身の業績評価表!エラーメッセージ"
+                        },
+                        "TargetCell": {
+                          "SerializeProperty": "=ワークフロー回送!AZ3"
+                        }
+                      },
+                      {
+                        "Source": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=自身の業績評価表!Qチェック用エラーメッセージ"
+                        },
+                        "TargetCell": {
+                          "SerializeProperty": "=ワークフロー回送!AW48"
+                        }
+                      },
+                      {
+                        "Source": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=自身の業績評価表!期末評価用エラーメッセージ"
+                        },
+                        "TargetCell": {
+                          "SerializeProperty": "=ワークフロー回送!AW49"
+                        }
+                      }
+                    ],
+                    "Comments": ""
+                  }
+                ],
+                "ID": "4bd99d86-86a0-44c9-a09d-8c12506b067f"
+              }
+            ]
+          }
+        ],
+        "Text": "WF回送",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "2,74": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id"
+      }
+    },
+    "3,5": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "position_code",
+        "RelationBinding": {
+          "RelatedTable": "M_Position",
+          "RelatedColumn": "position_code",
+          "DisplayColumn": "position_name"
+        }
+      }
+    },
+    "3,20": {
+      "BindingInfo": {
+        "TableName": "T_ManagementBasicInformation",
+        "ColumnName": "management_course_id",
+        "RelationBinding": {
+          "RelatedTable": "M_ManagementCourses",
+          "RelatedColumn": "management_course_id",
+          "DisplayColumn": "management_corse_name"
+        }
+      }
+    },
+    "4,5": {
+      "BindingInfo": {
+        "TableName": "T_ManagementBasicInformation",
+        "ColumnName": "job_group_id",
+        "RelationBinding": {
+          "RelatedTable": "M_JobGroups",
+          "RelatedColumn": "job_group_id",
+          "DisplayColumn": "job_group_name"
+        }
+      }
+    },
+    "4,16": {
+      "BindingInfo": {
+        "TableName": "T_ManagementBasicInformation",
+        "ColumnName": "job_grade_id",
+        "RelationBinding": {
+          "RelatedTable": "M_JobGrades",
+          "RelatedColumn": "job_grade_id",
+          "DisplayColumn": "job_grade_name"
+        }
+      }
+    },
+    "4,26": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "name"
+      }
+    },
+    "5,0": {
+      "CellType": {
+        "$type": "Forguncy.TabControlCellType, ServerDesignerCommon",
+        "Tabs": [
+          "自身の業績評価表_子"
+        ],
+        "HideHeader": true,
+        "OverflowMode": 1
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "Foreground": 1
+      },
+      {
+        "Background": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 3,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderTop": 0
+      },
+      {
+        "BorderTop": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderTop": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "HorizontalAlignment": 4,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderTop": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0
+      },
+      {
+        "FontFamily": 3,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 3,
+        "Formatter": 7,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderTop": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "FontSize": 14.67
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "HorizontalAlignment": 4,
+        "WordWrap": true
+      },
+      {
+        "FontFamily": 3
+      },
+      {
+        "FontFamily": 3,
+        "Foreground": 8
+      },
+      {
+        "FontFamily": 3,
+        "HorizontalAlignment": 4
+      },
+      {
+        "FontFamily": 3,
+        "Formatter": 7
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderLeft": 0
+      },
+      {
+        "BorderRight": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "Formatter": 7,
+        "HorizontalAlignment": 4
+      },
+      {
+        "FontFamily": 3,
+        "Formatter": 7,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 3,
+        "Formatter": 7,
+        "HorizontalAlignment": 4,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "FontSize": 14.67,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "Formatter": 7,
+        "TextIndent": 5,
+        "HorizontalAlignment": 6,
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderBottom": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderBottom": 0
+      },
+      {
+        "FontFamily": 3,
+        "BorderBottom": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 3,
+        "Formatter": 7,
+        "HorizontalAlignment": 4
+      },
+      {
+        "FontFamily": 3,
+        "Foreground": 9
+      },
+      {
+        "Background": 0,
+        "FontFamily": 3
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 1 50",
+        "#FFFF0000",
+        "Accent 1 60",
+        "Body",
+        "Center",
+        "black",
+        "Left",
+        "[AUTO]General",
+        "#FF000000",
+        "#337AB7"
+      ],
+      "Borders": [
+        {
+          "Color": 5
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,72": 0,
+      "0,73": 1,
+      "0,74": 1,
+      "0,75": 1,
+      "0,76": 1,
+      "0,77": 1,
+      "0,78": 1,
+      "0,79": 1,
+      "0,80": 1,
+      "0,81": 1,
+      "0,82": 1,
+      "0,83": 1,
+      "0,84": 1,
+      "1,1": 2,
+      "1,2": 3,
+      "1,3": 3,
+      "1,4": 4,
+      "1,5": 5,
+      "1,6": 6,
+      "1,7": 6,
+      "1,8": 7,
+      "1,9": 6,
+      "1,10": 8,
+      "1,11": 9,
+      "1,12": 6,
+      "1,13": 6,
+      "1,14": 6,
+      "1,15": 6,
+      "1,16": 6,
+      "1,17": 6,
+      "1,18": 6,
+      "1,19": 6,
+      "1,20": 6,
+      "1,21": 6,
+      "1,22": 6,
+      "1,23": 6,
+      "1,24": 6,
+      "1,25": 6,
+      "1,26": 6,
+      "1,27": 6,
+      "1,28": 6,
+      "1,29": 6,
+      "1,30": 6,
+      "1,31": 6,
+      "1,32": 6,
+      "1,33": 6,
+      "1,34": 6,
+      "1,35": 8,
+      "1,37": 10,
+      "1,38": 11,
+      "1,39": 11,
+      "1,40": 11,
+      "1,41": 11,
+      "1,42": 11,
+      "1,43": 11,
+      "1,44": 11,
+      "1,45": 12,
+      "1,46": 13,
+      "1,47": 13,
+      "1,48": 13,
+      "1,49": 13,
+      "1,50": 13,
+      "1,51": 13,
+      "1,52": 14,
+      "2,1": 15,
+      "2,2": 16,
+      "2,3": 16,
+      "2,4": 16,
+      "2,5": 17,
+      "2,6": 3,
+      "2,7": 3,
+      "2,8": 3,
+      "2,9": 3,
+      "2,10": 3,
+      "2,11": 3,
+      "2,12": 3,
+      "2,13": 3,
+      "2,14": 3,
+      "2,15": 3,
+      "2,16": 4,
+      "2,17": 18,
+      "2,18": 11,
+      "2,19": 19,
+      "2,20": 20,
+      "2,21": 6,
+      "2,22": 6,
+      "2,23": 6,
+      "2,24": 6,
+      "2,25": 6,
+      "2,26": 6,
+      "2,27": 6,
+      "2,28": 6,
+      "2,29": 6,
+      "2,30": 6,
+      "2,31": 6,
+      "2,32": 6,
+      "2,33": 6,
+      "2,34": 6,
+      "2,35": 8,
+      "2,37": 21,
+      "2,38": 22,
+      "2,39": 22,
+      "2,40": 22,
+      "2,41": 21,
+      "2,42": 22,
+      "2,43": 22,
+      "2,44": 22,
+      "2,45": 12,
+      "2,46": 13,
+      "2,47": 13,
+      "2,48": 13,
+      "2,49": 23,
+      "2,50": 13,
+      "2,51": 13,
+      "2,52": 14,
+      "2,54": 24,
+      "2,55": 25,
+      "2,56": 25,
+      "2,57": 25,
+      "2,58": 25,
+      "2,59": 26,
+      "2,60": 27,
+      "2,61": 25,
+      "2,62": 25,
+      "2,63": 25,
+      "2,64": 25,
+      "2,65": 26,
+      "2,66": 27,
+      "2,67": 25,
+      "2,68": 25,
+      "2,69": 25,
+      "2,70": 25,
+      "2,73": 28,
+      "2,74": 29,
+      "3,1": 30,
+      "3,2": 25,
+      "3,3": 25,
+      "3,4": 25,
+      "3,5": 31,
+      "3,16": 32,
+      "3,17": 33,
+      "3,18": 25,
+      "3,19": 25,
+      "3,20": 34,
+      "3,21": 6,
+      "3,22": 6,
+      "3,23": 6,
+      "3,24": 6,
+      "3,25": 6,
+      "3,26": 6,
+      "3,27": 6,
+      "3,28": 6,
+      "3,29": 6,
+      "3,30": 6,
+      "3,31": 6,
+      "3,32": 6,
+      "3,33": 6,
+      "3,34": 6,
+      "3,35": 8,
+      "3,37": 35,
+      "3,38": 13,
+      "3,39": 13,
+      "3,40": 13,
+      "3,41": 35,
+      "3,42": 13,
+      "3,43": 13,
+      "3,44": 13,
+      "3,45": 35,
+      "3,46": 13,
+      "3,47": 13,
+      "3,48": 13,
+      "3,49": 35,
+      "3,50": 13,
+      "3,51": 13,
+      "3,52": 14,
+      "3,54": 25,
+      "3,55": 25,
+      "3,56": 25,
+      "3,57": 25,
+      "3,58": 25,
+      "3,59": 26,
+      "3,60": 25,
+      "3,61": 25,
+      "3,62": 25,
+      "3,63": 25,
+      "3,64": 25,
+      "3,65": 26,
+      "3,66": 25,
+      "3,67": 25,
+      "3,68": 25,
+      "3,69": 25,
+      "3,70": 25,
+      "4,1": 10,
+      "4,2": 3,
+      "4,3": 3,
+      "4,4": 3,
+      "4,5": 36,
+      "4,6": 3,
+      "4,7": 3,
+      "4,8": 3,
+      "4,9": 3,
+      "4,10": 3,
+      "4,11": 3,
+      "4,12": 37,
+      "4,13": 3,
+      "4,14": 3,
+      "4,15": 3,
+      "4,16": 38,
+      "4,17": 3,
+      "4,18": 3,
+      "4,19": 3,
+      "4,20": 3,
+      "4,21": 3,
+      "4,22": 3,
+      "4,23": 37,
+      "4,24": 3,
+      "4,25": 4,
+      "4,26": 39,
+      "4,27": 3,
+      "4,28": 3,
+      "4,29": 3,
+      "4,30": 3,
+      "4,31": 3,
+      "4,32": 3,
+      "4,33": 3,
+      "4,34": 3,
+      "4,35": 4,
+      "4,37": 40,
+      "4,38": 41,
+      "4,39": 41,
+      "4,40": 41,
+      "4,41": 40,
+      "4,42": 41,
+      "4,43": 41,
+      "4,44": 41,
+      "4,45": 40,
+      "4,46": 41,
+      "4,47": 41,
+      "4,48": 41,
+      "4,49": 40,
+      "4,50": 41,
+      "4,51": 41,
+      "4,52": 42,
+      "4,58": 43,
+      "4,59": 25,
+      "4,60": 25,
+      "4,61": 25,
+      "5,0": 44,
+      "11,72": 45,
+      "11,73": 22,
+      "11,74": 22,
+      "11,75": 22,
+      "11,76": 22,
+      "11,77": 22,
+      "11,78": 22,
+      "11,79": 22,
+      "11,80": 22,
+      "11,81": 22,
+      "11,82": 22,
+      "11,83": 22,
+      "11,84": 22
+    },
+    "ColStyles": {
+      "72": 1
+    },
+    "SheetStyle": {
+      "FontFamily": 3
+    }
+  },
+  "Spans": [
+    "2,37,1,4",
+    "2,41,1,4",
+    "1,37,1,8",
+    "1,45,1,8",
+    "2,49,1,4",
+    "2,45,1,4",
+    "3,37,2,4",
+    "3,41,2,4",
+    "3,45,2,4",
+    "3,49,2,4",
+    "2,17,1,3",
+    "3,1,1,4",
+    "3,17,1,3",
+    "4,1,1,4",
+    "2,1,1,4",
+    "1,1,1,4",
+    "1,8,1,3",
+    "4,12,1,4",
+    "4,23,1,3",
+    "5,0,32,72",
+    "1,5,1,3",
+    "2,5,1,12",
+    "2,20,1,16",
+    "4,26,1,10",
+    "3,5,1,12",
+    "3,20,1,16",
+    "4,5,1,7",
+    "1,11,1,25",
+    "4,16,1,7",
+    "2,66,2,5",
+    "2,60,2,5",
+    "2,54,2,5"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "マスターページ",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "FGC_AssignTo"
+                }
+              },
+              "value": "%CurrentUser%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=自身の業績評価表!BI3"
+                    },
+                    "PropertyType": 0,
+                    "Value": true
+                  }
+                ]
+              }
+            ],
+            "ID": "e818be20-9827-48e1-b5f7-2689692758a8"
+          }
+        ]
+      }
+    ],
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "RelatedDataTableName": "T_ManagementBasicInformation"
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  },
+  "CustomNames": [
+    {
+      "Name": "親_プロジェクトID",
+      "Formula": "自身の業績評価表!$BW$3"
+    }
+  ]
+}//O7eIt8lg8sWOcydIwL+syyVWV3k4csG3R16Mhrx6E/VdVv2ncdLUkNUCM3u4cwWfyA+YOhEGq8n9GvUIv5djKSIWfb4jpEQ6KJwmMlpnzCIh4+mNa6GENHmoMprqErkOc7rdBA/DkfkYlWsQ1rsPIP4fHRtgsjhmX5jJYKesW4wMR54rb6HmZnqylVYOWK3tWgmcr9h8le4bk+UqeO2Upt6y0eD1ibEwOJWG/TwJ1J3CLpMpdY78hDbYj01CH9k8I/raWrVcPq25ytkt7MBo5NRQU6sGRwuWM/uoXcPfoVadLaCHUPrONexguBd3UJHUCnjF3xMPLbe0Ee8b05eDgip9B9Y6FTeqHErvML2j8MdgRLeRVwCThRM1hkjvNXfL1vtYhwPkAQIHSspzMIB9HFgUYyO1dUx9ZtXJfIAAAUfG+ZKzgt2ZkKstOAIfFUW9paegX0q3PK8DyxflQN4s6CZh4Gd9WxR/snr+VYG33jgntqN9hn+WWgTnAbANO2843taVpAssnWuJ/NjQGXnlyJGqGaul9qF1g761HKEeHfLD/MS3PY8vkMmpEMWSMw/RaGpCrVop+2Frw81AWUxSdD29pI/Dm1uOVZMHDr8TlRAB7qeFIqL/7ZSxdWw2TrLILHmuT5FPHdbdANaWY0toWr2k9GhuyLnmbklmFdzz39/n9lJ9K9lL2YMQb7lcUVOmFS0BL0lA1emAS0Ths9v6omYLtTxfYElOCoBzycgVah4zGqstRXxTD5SWaFhqoWapvA9jinl0Juyj9kAq6ci/g8rSvN4UH5Hxf6zg96Yn0vFYyLAmaGXtUbpK2YgDtk5QDUvrgauLDO7SCfrmNhNB5BwpepF2QgTkzFXn9dPcc0wStwp7UtlUJGj8l+SojDYodf5MBTaMAcE/8Q80bsnLQQ==|920

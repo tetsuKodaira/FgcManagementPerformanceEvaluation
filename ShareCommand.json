@@ -1,0 +1,4327 @@
+[
+  {
+    "ID": "1c01060e-1f00-4b86-8d09-9558d5620056",
+    "Name": "起票権限チェック",
+    "Params": [
+      {
+        "ID": "b2c2d802-d7ad-4459-94d7-8a4b2e95660c",
+        "Name": "社員コード"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "230c66ef-7b10-4f3a-8b67-a81cbedf661c",
+        "Name": "canCreate"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+        "ParameterName": "ロールリスト",
+        "TableValue": {
+          "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+          "OnlyGetValue": true,
+          "TableValueType": 0,
+          "BindingInfos": [
+            {
+              "BindingInfo": {
+                "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                "ColumnName": "role_code_list"
+              },
+              "ColumnName": "role_code_list"
+            }
+          ],
+          "SqlCondition": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+              "ColumnName": "employee_z_code"
+            },
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=社員コード"
+            }
+          }
+        },
+        "ID": "1a234f77b9b342478cc101b8437ba576"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=ロールリスト"
+                  }
+                ]
+              },
+              "value": "7",
+              "compareType": 10
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "canCreate",
+                    "Value": "1"
+                  }
+                ]
+              }
+            ],
+            "ID": "3e44610f-755f-4ffb-952f-b0613272945c"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "Message": "起票権限がありません",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "canCreate",
+                    "Value": "1"
+                  }
+                ]
+              }
+            ],
+            "ID": "015bd298-99d6-4976-80a1-f640057fc6e8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "95db83ee-f146-48e4-a595-38237a138527",
+    "Name": "ユーザー情報取得",
+    "Params": [
+      {
+        "ID": "1b205372-0719-40ae-8332-9540a72afd93",
+        "Name": "employee_z_code"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "ddd67f09-159c-4c42-b70c-001654b670e4",
+        "Name": "社員名"
+      },
+      {
+        "ID": "0d4f6413-6742-47cc-9c26-c91b53c60750",
+        "Name": "ポストコード"
+      },
+      {
+        "ID": "37326385-edde-4c4f-9e2c-4a26c1515d07",
+        "Name": "ポスト名"
+      },
+      {
+        "ID": "c59f8dfc-a0f3-4324-b07b-b0247387f9d8",
+        "Name": "階層"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+        "ParameterName": "ユーザー情報",
+        "TableValue": {
+          "TableName": "lum_view_employee_department_relations_duplicated",
+          "TableValueType": 1,
+          "BindingInfos": [
+            {
+              "BindingInfo": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "ColumnName": "employee_name"
+              },
+              "ColumnName": "employee_name"
+            },
+            {
+              "BindingInfo": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "ColumnName": "post_code"
+              },
+              "ColumnName": "post_code"
+            },
+            {
+              "BindingInfo": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "ColumnName": "post_name"
+              },
+              "ColumnName": "post_name"
+            },
+            {
+              "BindingInfo": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "ColumnName": "level_no_lvl00"
+              },
+              "ColumnName": "level_no_lvl00"
+            }
+          ],
+          "SqlCondition": {
+            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+            "Condition1": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "ColumnName": "employee_z_code"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=employee_z_code"
+              }
+            },
+            "Condition2": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "lum_view_employee_department_relations_duplicated",
+                "ColumnName": "count_belonging_department"
+              },
+              "Value": "1"
+            }
+          }
+        },
+        "ID": "bddcd09b34624830bd9a379dbc76d947"
+      },
+      {
+        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+        "CustomReturns": [
+          {
+            "ReturnPropertyName": "社員名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=ユーザー情報.employee_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "ポストコード",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=ユーザー情報.post_code"
+            }
+          },
+          {
+            "ReturnPropertyName": "ポスト名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=ユーザー情報.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "階層",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=ユーザー情報.level_no_lvl00"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "dae3555c-925f-4940-9b0b-b628037f6324",
+    "Name": "評価部門長取得",
+    "Params": [
+      {
+        "ID": "eb5fda93-648a-4e2a-b4b4-e7255e188689",
+        "Name": "社員Zコード"
+      },
+      {
+        "ID": "13b5007d-b25d-454b-9169-c33c7c2080ec",
+        "Name": "所属コード00"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "394dc2a0-0127-45b9-a226-617af49b1b2a",
+        "Name": "承認者コード"
+      },
+      {
+        "ID": "2fae727b-26c9-4598-8b96-7fe589370a67",
+        "Name": "承認者名"
+      },
+      {
+        "ID": "9e597476-942d-42e9-b8ab-b2311e03a290",
+        "Name": "役職"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+        "ParameterName": "評価部門長情報",
+        "TableValue": {
+          "TableName": "V_evaluation_commitee_consenters",
+          "TableValueType": 1,
+          "BindingInfos": [
+            {
+              "BindingInfo": {
+                "TableName": "V_evaluation_commitee_consenters",
+                "ColumnName": "employee_z_code_consenter"
+              },
+              "ColumnName": "employee_z_code_consenter"
+            },
+            {
+              "BindingInfo": {
+                "TableName": "V_evaluation_commitee_consenters",
+                "ColumnName": "employee_name_consenter"
+              },
+              "ColumnName": "employee_name_consenter"
+            },
+            {
+              "BindingInfo": {
+                "TableName": "V_evaluation_commitee_consenters",
+                "ColumnName": "consenter_post_name"
+              },
+              "ColumnName": "consenter_post_name"
+            }
+          ],
+          "SqlCondition": {
+            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+            "Condition1": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "V_evaluation_commitee_consenters",
+                "ColumnName": "employee_z_code"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=社員Zコード"
+              }
+            },
+            "Condition2": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "V_evaluation_commitee_consenters",
+                "ColumnName": "department_code_lvl00"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=所属コード00"
+              }
+            }
+          }
+        },
+        "ID": "1b48134607794c66abd011dc397dd84f"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=評価部門長情報"
+                  }
+                ]
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "Message": "該当データが見つかりませんでした",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "承認者コード"
+                  },
+                  {
+                    "ReturnPropertyName": "承認者名"
+                  },
+                  {
+                    "ReturnPropertyName": "役職"
+                  }
+                ]
+              }
+            ],
+            "ID": "a4c44b5f-607f-44e9-a124-c420e44581ff"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "承認者コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=評価部門長情報.employee_z_code_consenter"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "承認者名",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=評価部門長情報.employee_name_consenter"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "役職",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=評価部門長情報.consenter_post_name"
+                    }
+                  }
+                ]
+              }
+            ],
+            "ID": "17a63dde-5364-4a68-bd56-b36f54474114"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "57e343a4-7397-4ce0-aa9e-14824e2082be",
+    "Name": "課題ランク編集可不可設定",
+    "Params": [
+      {
+        "ID": "59a309ef-11d0-49eb-a4b2-38a99c556fa9",
+        "Name": "課題ランク"
+      },
+      {
+        "ID": "3446ecba-b0ff-4b2e-be17-75370e1dce11",
+        "Name": "レベル5点セル"
+      },
+      {
+        "ID": "64bdf87d-ba90-4a56-b78e-82638ecf5a97",
+        "Name": "レベル4点セル"
+      },
+      {
+        "ID": "37ccee61-a2ec-4de3-ad12-67fef654da6a",
+        "Name": "レベル3点セル"
+      },
+      {
+        "ID": "b048ac6d-3256-4d28-bb52-ba4f9380db46",
+        "Name": "レベル2点セル"
+      },
+      {
+        "ID": "de84480b-377f-404f-b61a-0f9c844b76d5",
+        "Name": "レベル1点セル"
+      },
+      {
+        "ID": "486ad8e9-ff21-40af-91a8-8f173b4439fd",
+        "Name": "編集許可"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=課題ランク"
+                    }
+                  ]
+                },
+                "value": "Z"
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=編集許可"
+                    }
+                  ]
+                },
+                "value": "1"
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル5点セル"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル5点セル"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 -5"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル1点セル,レベル2点セル,レベル3点セル,レベル4点セル"
+                    },
+                    "PropertyType": 5,
+                    "Value": false
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル1点セル,レベル2点セル,レベル3点セル,レベル4点セル"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 0"
+                  }
+                ]
+              }
+            ],
+            "ID": "dd2edd62-7a86-4254-ae1d-5e1dff50803d"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=課題ランク"
+                    }
+                  ]
+                },
+                "value": "A"
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=編集許可"
+                    }
+                  ]
+                },
+                "value": "1"
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル1点セル,レベル2点セル,レベル3点セル,レベル4点セル,レベル5点セル"
+                    },
+                    "PropertyType": 5,
+                    "Value": false
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル1点セル,レベル2点セル,レベル3点セル,レベル4点セル,レベル5点セル"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 0"
+                  }
+                ]
+              }
+            ],
+            "ID": "8981ddef-f600-4b4c-bf82-6e4fed12839f"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=課題ランク"
+                    }
+                  ]
+                },
+                "value": "B"
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=編集許可"
+                    }
+                  ]
+                },
+                "value": "1"
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル1点セル"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル1点セル"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 -5"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル5点セル,レベル4点セル,レベル3点セル,レベル2点セル"
+                    },
+                    "PropertyType": 5,
+                    "Value": false
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル5点セル,レベル4点セル,レベル3点セル,レベル2点セル"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 0"
+                  }
+                ]
+              }
+            ],
+            "ID": "62911f2d-c54a-47ad-a402-6554932cf94d"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル5点セル,レベル4点セル,レベル3点セル,レベル2点セル,レベル1点セル"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=レベル5点セル,レベル4点セル,レベル3点セル,レベル2点セル,レベル1点セル"
+                    },
+                    "PropertyType": 2,
+                    "Value": "Background 1 -5"
+                  }
+                ]
+              }
+            ],
+            "Comments": "課題ランク未設定の場合、各目標を入力できない",
+            "ID": "c31fc92a-22d9-43ee-ba7a-fedd84ffc7ee"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "26666ca4-8ca0-44f2-9402-c9d6d4b8a80a",
+    "Name": "WFロード時_申請時評価者表示",
+    "Params": [
+      {
+        "ID": "a3727fa4-64e4-48c3-ba7f-7562cea1a7df",
+        "Name": "被評価者コード"
+      },
+      {
+        "ID": "62bbfa66-ee12-422b-b2c4-f6ca8fd4ac72",
+        "Name": "被評価者部署コード"
+      },
+      {
+        "ID": "da37c942-c800-4cf0-be06-d75e5286d372",
+        "Name": "被評価者兼務部署コードリスト"
+      },
+      {
+        "ID": "c5205f58-c5d8-4326-a314-94296c5550bc",
+        "Name": "プレ評価者1固定行"
+      },
+      {
+        "ID": "3693ec1f-8c54-491b-a3dd-bdc4e8e9931b",
+        "Name": "プレ評価者1コード"
+      },
+      {
+        "ID": "9bca7476-a6c6-4835-ae49-9ad7ff5a4772",
+        "Name": "プレ評価者1ラジオセル"
+      },
+      {
+        "ID": "7d915065-ca32-452d-84fe-a5a13b9d5728",
+        "Name": "プレ評価者2固定行"
+      },
+      {
+        "ID": "5ba053ef-d6ea-48c9-93e7-bbfa43cf6c7c",
+        "Name": "プレ評価者2コード"
+      },
+      {
+        "ID": "1d7f3eca-f3b0-486d-9953-c413b150ea15",
+        "Name": "プレ評価者2ラジオセル"
+      },
+      {
+        "ID": "05a20685-6cb8-4add-8217-0b1046e4431b",
+        "Name": "一次評価者全体"
+      },
+      {
+        "ID": "68f98e9a-e613-483f-8559-fb402689657a",
+        "Name": "一次評価者固定行"
+      },
+      {
+        "ID": "684fac61-5027-4d42-b540-f7d474444955",
+        "Name": "一次評価者コード"
+      },
+      {
+        "ID": "26a9fd97-20e9-4d7d-bf77-d5c6670a8731",
+        "Name": "二次評価者全体"
+      },
+      {
+        "ID": "dd407d91-fd73-4bab-9a11-3c079c256e49",
+        "Name": "一次評価者二次評価者全体"
+      },
+      {
+        "ID": "762c9554-b397-4a05-86ec-fed3d3d85b84",
+        "Name": "二次評価者コード"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "0483335b-b633-46cd-af0e-ccb91e42f349",
+        "Name": "プレ評価者1部署コード"
+      },
+      {
+        "ID": "14124cec-071c-49f1-bea1-b602c2a43267",
+        "Name": "プレ評価者2部署コード"
+      },
+      {
+        "ID": "59a4d3dc-dee7-4df0-93d2-a543d72df85d",
+        "Name": "一次評価者階層"
+      },
+      {
+        "ID": "c7516f19-748f-4c9d-966d-96216b3df199",
+        "Name": "一次評価者コード"
+      },
+      {
+        "ID": "f8b9f04b-6471-443d-b211-442e7d78adb7",
+        "Name": "一次評価者承認者名"
+      },
+      {
+        "ID": "552da79d-f593-4a0e-bfe7-5993e7b7f458",
+        "Name": "一次評価者役職"
+      },
+      {
+        "ID": "6fbc9a74-d2d7-4cb1-8043-69233ff94ae3",
+        "Name": "二次評価者階層"
+      },
+      {
+        "ID": "4202e812-2712-43d2-a26b-244631740f00",
+        "Name": "二次評価者コード"
+      },
+      {
+        "ID": "9341099b-aa20-4f96-b91d-7f6df65760bb",
+        "Name": "二次評価者承認者名"
+      },
+      {
+        "ID": "e5fc36fe-264f-4f07-85c2-2d2b77baca5f",
+        "Name": "二次評価者役職"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+        "PropertyItemsList": [
+          {
+            "Location": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1固定行"
+            },
+            "Value": false
+          },
+          {
+            "Location": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2固定行"
+            },
+            "Value": false
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=プレ評価者1コード"
+                    }
+                  ]
+                },
+                "value": "%Null%"
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=プレ評価者2コード"
+                    }
+                  ]
+                },
+                "value": "%Null%"
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1部署コード",
+                "ID": "3aaee0a85ddb47c1bc45a9d5aac05ffb"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2部署コード",
+                "ID": "37b1ad974d3340ba8a55909e3f4dc36a"
+              }
+            ],
+            "ID": "712de2c3-e294-4995-b01a-e64e8cc9f1f4"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=プレ評価者1コード"
+                    }
+                  ]
+                },
+                "value": "%Null%",
+                "compareType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=プレ評価者2コード"
+                    }
+                  ]
+                },
+                "value": "%Null%"
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1部署コード",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "OnlyGetValue": true,
+                  "TableValueType": 0,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    }
+                  }
+                },
+                "ID": "4e5a7afd9c6545f2a4b47486eb7a5770"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2部署コード",
+                "ID": "e9048f1fc0f64ff3b8e4e2f69c5b0a55"
+              },
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオセル"
+                    },
+                    "Value": "1"
+                  }
+                ]
+              }
+            ],
+            "ID": "f9c5cfc1-88ba-434e-a0c4-2b4cef64bf05"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=プレ評価者1コード"
+                    }
+                  ]
+                },
+                "value": "%Null%",
+                "compareType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=プレ評価者2コード"
+                    }
+                  ]
+                },
+                "value": "%Null%",
+                "compareType": 1
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1部署コード",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "OnlyGetValue": true,
+                  "TableValueType": 0,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    }
+                  }
+                },
+                "ID": "7fb9c556ac3f4979be928554d72bcbea"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2部署コード",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "OnlyGetValue": true,
+                  "TableValueType": 0,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者2コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    }
+                  }
+                },
+                "ID": "ed1b25b49e804f519639515b01f4a5ca"
+              },
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオセル,プレ評価者2ラジオセル"
+                    },
+                    "Value": "1"
+                  }
+                ]
+              }
+            ],
+            "ID": "601e3d3d-3a7d-41e6-979b-10cfa701cac5"
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+        "ParameterName": "被評価者ロールリスト",
+        "TableValue": {
+          "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+          "OnlyGetValue": true,
+          "TableValueType": 0,
+          "BindingInfos": [
+            {
+              "BindingInfo": {
+                "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                "ColumnName": "role_code_list"
+              },
+              "ColumnName": "role_code_list"
+            }
+          ],
+          "SqlCondition": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+              "ColumnName": "employee_z_code"
+            },
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=被評価者コード"
+            }
+          }
+        },
+        "ID": "8118f421b5c14c41be9b0604de42e78b"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=被評価者ロールリスト"
+                  }
+                ]
+              },
+              "value": "4",
+              "compareType": 10
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者二次評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "Comments": "二次評価者の場合、評価部門長のみ",
+            "ID": "c3490d13-1911-4942-9e22-657fb0672a92"
+          },
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=被評価者ロールリスト"
+                  }
+                ]
+              },
+              "value": "5",
+              "compareType": 10
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                      "param": {
+                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                        "cellLocations": [
+                          {
+                            "SerializeProperty": "=二次評価者コード"
+                          }
+                        ]
+                      },
+                      "value": "%Null%",
+                      "compareType": 1
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                        "PropertyItemsList": [
+                          {
+                            "Location": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=一次評価者全体"
+                            },
+                            "Value": false
+                          }
+                        ]
+                      },
+                      {
+                        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                        "ParameterName": "二次評価者",
+                        "TableValue": {
+                          "TableName": "lum_view_employee_department_relations_duplicated",
+                          "TableValueType": 1,
+                          "BindingInfos": [
+                            {
+                              "BindingInfo": {
+                                "TableName": "lum_view_employee_department_relations_duplicated",
+                                "ColumnName": "employee_name"
+                              },
+                              "ColumnName": "employee_name"
+                            },
+                            {
+                              "BindingInfo": {
+                                "TableName": "lum_view_employee_department_relations_duplicated",
+                                "ColumnName": "post_name"
+                              },
+                              "ColumnName": "post_name"
+                            }
+                          ],
+                          "SqlCondition": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "lum_view_employee_department_relations_duplicated",
+                                "ColumnName": "employee_z_code"
+                              },
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=二次評価者コード"
+                              }
+                            },
+                            "Condition2": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "lum_view_employee_department_relations_duplicated",
+                                "ColumnName": "count_belonging_department"
+                              },
+                              "Value": "1"
+                            }
+                          }
+                        },
+                        "ID": "90be477465944fa58874f379350b65c2"
+                      },
+                      {
+                        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                        "ErrorCode": "0",
+                        "CustomReturns": [
+                          {
+                            "ReturnPropertyName": "プレ評価者1部署コード",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=プレ評価者1部署コード"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "プレ評価者2部署コード",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=プレ評価者2部署コード"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者階層",
+                            "Value": "0"
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者コード"
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者承認者名"
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者役職"
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者階層",
+                            "Value": "4"
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者コード",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=二次評価者コード"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者承認者名",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=二次評価者.employee_name"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者役職",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=二次評価者.post_name"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "ID": "b7230cc8-0451-4b65-aac2-dc319d12beed"
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "二次評価者件数",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 3,
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者部署コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "level_no"
+                      },
+                      "Value": "4"
+                    }
+                  }
+                },
+                "ID": "91f52166e8fa4ce39c1b6e7576f6433f"
+              },
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                      "param": {
+                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                        "cellLocations": [
+                          {
+                            "SerializeProperty": "=二次評価者件数"
+                          }
+                        ]
+                      },
+                      "value": "0"
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                        "PropertyItemsList": [
+                          {
+                            "Location": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=一次評価者二次評価者全体"
+                            },
+                            "Value": false
+                          }
+                        ]
+                      },
+                      {
+                        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                        "ErrorCode": "0",
+                        "CustomReturns": [
+                          {
+                            "ReturnPropertyName": "プレ評価者1部署コード",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=プレ評価者1部署コード"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "プレ評価者2部署コード",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=プレ評価者2部署コード"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者階層",
+                            "Value": "0"
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者コード"
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者承認者名"
+                          },
+                          {
+                            "ReturnPropertyName": "一次評価者役職"
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者階層",
+                            "Value": "4"
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者コード",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=二次評価者.consenter_code"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者承認者名",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=二次評価者.consenter_name"
+                            }
+                          },
+                          {
+                            "ReturnPropertyName": "二次評価者役職",
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=二次評価者.post_name"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "ID": "c41eb697-b23b-4168-ba64-f655c45b8e8c"
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "二次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "ColumnName": "consenter_code"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者部署コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "level_no"
+                      },
+                      "Value": "4"
+                    }
+                  }
+                },
+                "ID": "f4a8e7e3fa684ec6a7d23eee71c18bf8"
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "プレ評価者1部署コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1部署コード"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "プレ評価者2部署コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者2部署コード"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者階層",
+                    "Value": "0"
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者コード"
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者承認者名"
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者役職"
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者階層",
+                    "Value": "4"
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者.consenter_code"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者承認者名",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者.consenter_name"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者役職",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者.post_name"
+                    }
+                  }
+                ]
+              }
+            ],
+            "Comments": "一次評価者の場合\r\n　評価部門長\r\n　二次評価者(いない場合はスキップ)",
+            "ID": "815d82c1-a0b3-42c4-a0c8-29d173ae0bfe"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=被評価者ロールリスト"
+                    }
+                  ]
+                },
+                "value": "6",
+                "compareType": 10
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=被評価者ロールリスト"
+                    }
+                  ]
+                },
+                "value": "7",
+                "compareType": 10
+              },
+              "RelationType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者固定行"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "一次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "ColumnName": "consenter_code"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者部署コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "level_no"
+                      },
+                      "Value": "5,6,7"
+                    }
+                  }
+                },
+                "ID": "293ddd8736434d0ba1f3b84ba1513be3"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "二次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "ColumnName": "consenter_code"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者部署コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "level_no"
+                      },
+                      "Value": "4"
+                    }
+                  }
+                },
+                "ID": "745d30d4c07c479981cdeaf73ce7a8b8"
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "プレ評価者1部署コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1部署コード"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "プレ評価者2部署コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者2部署コード"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者階層",
+                    "Value": "5,6,7"
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者.consenter_code"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者承認者名",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者.consenter_name"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "一次評価者役職",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者.post_name"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者階層",
+                    "Value": "4"
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者コード",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者.consenter_code"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者承認者名",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者.consenter_name"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "二次評価者役職",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者.post_name"
+                    }
+                  }
+                ]
+              }
+            ],
+            "ID": "4e471c91-a3a0-4b06-ac6b-a2ac0391d15f"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "d78daaf0-f22c-485d-a2d1-f856dbd59fec",
+    "Name": "WFロード時_申請時以外評価者表示",
+    "Params": [
+      {
+        "ID": "19aee376-4aa9-4ddc-bb10-6d83faf9cf7a",
+        "Name": "被評価者部署"
+      },
+      {
+        "ID": "47ca379b-5d50-472a-8c0a-ad524044e824",
+        "Name": "被評価者兼務部署コードリスト"
+      },
+      {
+        "ID": "4ed7218f-56b1-4624-9d00-c63719c65f60",
+        "Name": "プレ評価者全体"
+      },
+      {
+        "ID": "7dea66f5-1eb3-45d5-a7b9-776f2e9e9257",
+        "Name": "プレ評価者1リストビュー"
+      },
+      {
+        "ID": "94174220-fca2-4c73-932e-04655f895a05",
+        "Name": "プレ評価者2全体"
+      },
+      {
+        "ID": "3b9a1183-ca0a-4199-916f-2052653496fe",
+        "Name": "プレ評価者2リストビュー"
+      },
+      {
+        "ID": "2c02635d-a306-436d-b748-86396ecd7c7d",
+        "Name": "プレ評価者1コード"
+      },
+      {
+        "ID": "7daf3581-48e9-466e-be88-baaf21fcf552",
+        "Name": "プレ評価者1ラジオ"
+      },
+      {
+        "ID": "1d6eb209-af8b-4e8f-af16-1c760b32aba6",
+        "Name": "プレ評価者1部署セル"
+      },
+      {
+        "ID": "a70c8287-05cf-4bcc-9195-48079ad6ab14",
+        "Name": "プレ評価者1役職セル"
+      },
+      {
+        "ID": "2013d660-23f7-4f2a-bcdf-d2337b9288e6",
+        "Name": "プレ評価者1承認者名セル"
+      },
+      {
+        "ID": "040d63e6-4091-48ae-9044-a644758e290e",
+        "Name": "プレ評価者2コード"
+      },
+      {
+        "ID": "1665a869-5891-4878-81a3-1d4a9b56f1a0",
+        "Name": "プレ評価者2ラジオ"
+      },
+      {
+        "ID": "ae968fdb-dbb1-4c0d-9a0c-13cfb03b95e6",
+        "Name": "プレ評価者2部署セル"
+      },
+      {
+        "ID": "6bed33ac-34f7-4ee2-8817-19925d9bbb97",
+        "Name": "プレ評価者2役職セル"
+      },
+      {
+        "ID": "e6668a4e-2302-4a29-b418-23ace200a932",
+        "Name": "プレ評価者2承認者名セル"
+      },
+      {
+        "ID": "f976658d-7a45-4c24-b3a0-a96961ea30b5",
+        "Name": "一次評価者全体"
+      },
+      {
+        "ID": "d49f00ce-3f5b-47b4-acca-9bbab3208f6d",
+        "Name": "一次評価者リストビュー"
+      },
+      {
+        "ID": "2545b460-5f7b-484d-b609-87057ee66e06",
+        "Name": "一次評価者コード"
+      },
+      {
+        "ID": "b6bc4521-b58b-435a-ae39-261b9c1badd7",
+        "Name": "一次評価者役職セル"
+      },
+      {
+        "ID": "b6e0b85a-c90e-4f78-af30-f769737ba33d",
+        "Name": "一次評価者承認者名セル"
+      },
+      {
+        "ID": "0492a3b3-2b5e-4013-a4da-c771a10d009e",
+        "Name": "二次評価者全体"
+      },
+      {
+        "ID": "55519845-c92a-400c-a7ad-33e8494609c6",
+        "Name": "二次評価者コード"
+      },
+      {
+        "ID": "e9a8ca1b-a063-40ca-b88f-66e5b0e5f7c5",
+        "Name": "二次評価者役職セル"
+      },
+      {
+        "ID": "7a7deda9-238b-4614-a079-64dcd0b1a647",
+        "Name": "二次評価者承認者名セル"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "d56339a3-b41b-406a-9339-e5a911655331",
+        "Name": "プレ評価者1部署コード"
+      },
+      {
+        "ID": "6a6a382c-8181-4f58-80c4-06f7232318e2",
+        "Name": "プレ評価者1承認者名"
+      },
+      {
+        "ID": "003f11d8-8c47-4525-8293-290b6c61ac4a",
+        "Name": "プレ評価者1役職名"
+      },
+      {
+        "ID": "0db8612c-0cb5-4c63-8a94-c25477e55ed3",
+        "Name": "プレ評価者2部署コード"
+      },
+      {
+        "ID": "76797adc-3b1d-48c8-86f5-364d07e6a45f",
+        "Name": "プレ評価者2承認者名"
+      },
+      {
+        "ID": "224f8fb7-b735-4542-8e60-50ac9f048010",
+        "Name": "プレ評価者2役職名"
+      },
+      {
+        "ID": "615de695-d9c1-419d-ba4a-2a05526b55d0",
+        "Name": "一次評価者承認者名"
+      },
+      {
+        "ID": "0ace74ee-b0ed-44ad-8cf4-9df38108ea7c",
+        "Name": "一次評価者役職名"
+      },
+      {
+        "ID": "b7e163f7-6c4c-4c2a-86a2-4416e39578b4",
+        "Name": "二次評価者承認者名"
+      },
+      {
+        "ID": "1f79c130-6740-4177-8905-829fedd72fdb",
+        "Name": "二次評価者役職名"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "pre_evaluation_person_1"
+                }
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1",
+                "ID": "e78026158cd14426aa0ccec74028478e",
+                "Comments": "エラー回避のため、NULLデータ作成"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2",
+                "ID": "9fa7de8943de42e7a2b7290ddbdadadd",
+                "Comments": "エラー回避のため、NULLデータ作成"
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "d2ecf727-19d2-4c15-96f6-3ab367cfdd41"
+          },
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "pre_evaluation_person_2"
+                }
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    }
+                  },
+                  "TopCount": "1"
+                },
+                "ID": "0a687b7de95740c585fdea03734da3b7"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2",
+                "ID": "ea5ae48965e648ed8d7dd5c0bc501b79",
+                "Comments": ""
+              },
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ"
+                    },
+                    "Value": "1"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ,プレ評価者2ラジオ"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  }
+                ],
+                "Comments": ""
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1リストビュー"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者2全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "01509e67-dee7-49e6-bf8b-db2e28f41401"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                  "tableData": {
+                    "TableName": "T_BasicInformation",
+                    "ColumnName": "pre_evaluation_person_1"
+                  }
+                },
+                "value": "%Null%",
+                "compareType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                  "tableData": {
+                    "TableName": "T_BasicInformation",
+                    "ColumnName": "pre_evaluation_person_2"
+                  }
+                },
+                "value": "%Null%",
+                "compareType": 1
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    }
+                  },
+                  "TopCount": "1"
+                },
+                "ID": "ad9d2b8a4e6a422f804385c5bbdd357d"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者2コード"
+                      }
+                    }
+                  },
+                  "TopCount": "1"
+                },
+                "ID": "e89234a88f384c469a1c8e9371a72708"
+              },
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ,プレ評価者2ラジオ"
+                    },
+                    "Value": "1"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ,プレ評価者2ラジオ"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  }
+                ],
+                "Comments": "コマンドが動くため、ラジオセルのみコマンドで値を設定する"
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1リストビュー"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者2リストビュー"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "63e26c78-f435-42c1-9752-67e9e3b67898"
+          }
+        ],
+        "Comments": "0.5次評価者1、2"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "primary_evaluation_person"
+                }
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "一次評価者",
+                "ID": "44bece10cabd420faa5750afde5c9cf2"
+              }
+            ],
+            "ID": "43cd782e-04d1-4e38-a86c-467692a05a80"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者リストビュー"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "一次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "employee_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=一次評価者コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "6fa2d7190aff4b57ab7b589a109be931"
+              }
+            ],
+            "ID": "0000e558-6ace-4fdf-9dcc-2c76229ca2f7"
+          }
+        ],
+        "Comments": "一次評価者"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "secondary_evaluation_person"
+                }
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "二次評価者",
+                "ID": "0d7d1d68267c4e0a935b06084a233773"
+              }
+            ],
+            "ID": "0aef9c72-3cda-4303-8464-b0684131bd9a"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "二次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "employee_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=二次評価者コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "2d447ab5838f4ac8a011ad8a55ad84e4"
+              }
+            ],
+            "ID": "33acbddb-343d-42d7-a9f2-696777b50140"
+          }
+        ],
+        "Comments": "二次評価者"
+      },
+      {
+        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+        "ErrorCode": "0",
+        "CustomReturns": [
+          {
+            "ReturnPropertyName": "プレ評価者1部署コード",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1.department_code_00"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者1承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1.consenter_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者1役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者2部署コード",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2.department_code_00"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者2承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2.consenter_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者2役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "一次評価者承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=一次評価者.employee_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "一次評価者役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=一次評価者.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "二次評価者承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=二次評価者.employee_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "二次評価者役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=二次評価者.post_name"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "53290c29-b8e7-410e-bb7e-92199466b487",
+    "Name": "WFロード時_Qチェック時評価者表示",
+    "Params": [
+      {
+        "ID": "48380e29-5b05-4d80-9e20-88bedf2a2edf",
+        "Name": "被評価者部署"
+      },
+      {
+        "ID": "475e1956-6021-4f80-a88f-a2497e04332c",
+        "Name": "被評価者兼務部署コードリスト"
+      },
+      {
+        "ID": "ee2bdc5e-bcb1-4046-9faa-dede91584d22",
+        "Name": "プレ評価者全体"
+      },
+      {
+        "ID": "8a5a92df-8007-4ef4-a3b8-09b715f47739",
+        "Name": "プレ評価者1リストビュー"
+      },
+      {
+        "ID": "a5f70e6b-8dc4-40e6-85ad-cdbc134d87f4",
+        "Name": "プレ評価者2全体"
+      },
+      {
+        "ID": "654a4199-37f7-4f93-9fca-8d0c3a37727b",
+        "Name": "プレ評価者2リストビュー"
+      },
+      {
+        "ID": "ad9a3c11-983c-4bd0-ab46-468690f7112a",
+        "Name": "プレ評価者1コード"
+      },
+      {
+        "ID": "3702116f-60e3-4c7d-991c-3abd00a66df4",
+        "Name": "プレ評価者1ラジオ"
+      },
+      {
+        "ID": "00664eb3-0e6c-4eb9-b100-e7744468e712",
+        "Name": "プレ評価者1部署セル"
+      },
+      {
+        "ID": "3fc0fc11-18b1-4052-874e-efd75d6678c4",
+        "Name": "プレ評価者1役職セル"
+      },
+      {
+        "ID": "d047888e-aaa3-4b34-89a4-f7598c630a22",
+        "Name": "プレ評価者1承認者名セル"
+      },
+      {
+        "ID": "f674bc1c-619f-4c00-9293-af34402d0062",
+        "Name": "プレ評価者2コード"
+      },
+      {
+        "ID": "0a4aaf1a-55ef-4efa-9cb9-376a9c0777fc",
+        "Name": "プレ評価者2ラジオ"
+      },
+      {
+        "ID": "8bc00606-7959-4874-82f4-b7c523ffa061",
+        "Name": "プレ評価者2部署セル"
+      },
+      {
+        "ID": "b8edf609-0089-4b00-bc08-c45f747c85fe",
+        "Name": "プレ評価者2役職セル"
+      },
+      {
+        "ID": "ab5bcde3-f5ea-4450-ba56-9ea1abe0242c",
+        "Name": "一次評価者全体"
+      },
+      {
+        "ID": "4b71f4a5-63e1-4ed3-a5b7-413264970543",
+        "Name": "一次評価者リストビュー"
+      },
+      {
+        "ID": "b6f3c3c9-3bf6-4894-a7b5-7ad69c0b1bc8",
+        "Name": "一次評価者コード"
+      },
+      {
+        "ID": "3c762195-6fb5-4dec-90f9-0ac68eebe152",
+        "Name": "一次評価者役職セル"
+      },
+      {
+        "ID": "7663a8a0-6aba-41af-8280-165ae5c23bd7",
+        "Name": "一次評価者承認者名セル"
+      },
+      {
+        "ID": "2ead01f3-1c9e-497b-bf06-d6d2072d566e",
+        "Name": "二次評価者全体"
+      },
+      {
+        "ID": "0b90f5f9-605b-4b4f-a2e4-32f7d36b54ef",
+        "Name": "二次評価者コード"
+      },
+      {
+        "ID": "b1809766-50b4-4871-a575-9f28548cbdda",
+        "Name": "二次評価者役職セル"
+      },
+      {
+        "ID": "3a084fe8-a4cc-4375-b45d-8c815ee1d39c",
+        "Name": "二次評価者承認者名セル"
+      },
+      {
+        "ID": "34fa42c5-d12c-4fcc-af8a-fab3aeb5d30f",
+        "Name": "評価部門長全体"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "ed1124d7-1444-403b-a2c5-b9c3b3e5eda2",
+        "Name": "プレ評価者1部署コード"
+      },
+      {
+        "ID": "d3eba54d-2313-43ed-bf20-649c66c24fd9",
+        "Name": "プレ評価者1承認者名"
+      },
+      {
+        "ID": "a7f50a7f-4dee-4027-88c7-84d5cd4e2e32",
+        "Name": "プレ評価者1役職名"
+      },
+      {
+        "ID": "fc3bc09f-aa07-4ca7-bc93-4ddea81b9bfa",
+        "Name": "プレ評価者2部署コード"
+      },
+      {
+        "ID": "ddc379df-055b-4a1f-94c4-2a6a32d9f91f",
+        "Name": "プレ評価者2承認者名"
+      },
+      {
+        "ID": "9810e4ee-e60e-4a01-875e-1ca6cf2d4489",
+        "Name": "プレ評価者2役職名"
+      },
+      {
+        "ID": "1c173ca5-3c03-41f9-824a-771bd2091122",
+        "Name": "一次評価者承認者名"
+      },
+      {
+        "ID": "88eb9e39-cb69-455e-866c-6425f24a3bc1",
+        "Name": "一次評価者役職名"
+      },
+      {
+        "ID": "c1cac014-508d-405b-9f76-de72de20a6ab",
+        "Name": "二次評価者承認者名"
+      },
+      {
+        "ID": "243c8843-09e1-4e1b-9e36-1ee8d0e6049c",
+        "Name": "二次評価者役職名"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "pre_evaluation_person_1"
+                }
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1",
+                "ID": "8f3a38576caf438eb2aa9f0b4d7b4d3c",
+                "Comments": "エラー回避のため、NULLデータ作成"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2",
+                "ID": "7b663b8092f643f5bec9c63dd87d2309",
+                "Comments": "エラー回避のため、NULLデータ作成"
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "ad4b2fb8-f0a2-4748-85a6-47b967987be5"
+          },
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "pre_evaluation_person_2"
+                }
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    }
+                  }
+                },
+                "ID": "9dd394ec5b3240eab3dd93b546bd86d1"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2",
+                "ID": "e2c9d67817d045c8be9c195b97390350",
+                "Comments": ""
+              },
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ"
+                    },
+                    "Value": "1"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ,プレ評価者2ラジオ"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  }
+                ],
+                "Comments": ""
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1リストビュー"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者2全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "030079bf-a26b-4a5d-9eb9-9309cd0c5f45"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                  "tableData": {
+                    "TableName": "T_BasicInformation",
+                    "ColumnName": "pre_evaluation_person_1"
+                  }
+                },
+                "value": "%Null%",
+                "compareType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                  "tableData": {
+                    "TableName": "T_BasicInformation",
+                    "ColumnName": "pre_evaluation_person_2"
+                  }
+                },
+                "value": "%Null%",
+                "compareType": 1
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者1",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    }
+                  }
+                },
+                "ID": "960e711c06464a0ba436531d2e0196dc"
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "プレ評価者2",
+                "TableValue": {
+                  "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "ColumnName": "department_code_00"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_name"
+                      },
+                      "ColumnName": "consenter_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 8,
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "department_code_00"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=被評価者兼務部署コードリスト"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_depertment_consener_relations_nac_based_duplicated",
+                        "ColumnName": "consenter_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者2コード"
+                      }
+                    }
+                  }
+                },
+                "ID": "73aaad9e0dfd4a9085ea2c1dc1d2def9"
+              },
+              {
+                "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ,プレ評価者2ラジオ"
+                    },
+                    "Value": "1"
+                  },
+                  {
+                    "TargetCells": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1ラジオ,プレ評価者2ラジオ"
+                    },
+                    "PropertyType": 5,
+                    "Value": true
+                  }
+                ],
+                "Comments": "コマンドが動くため、ラジオセルのみコマンドで値を設定する"
+              },
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者1リストビュー"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=プレ評価者2リストビュー"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "633dea8f-2adc-4609-93da-c79f621fb961"
+          }
+        ],
+        "Comments": "0.5次評価者1、2"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "primary_evaluation_person"
+                }
+              },
+              "value": "%Null%",
+              "compareType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者リストビュー"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者全体"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=評価部門長全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "一次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "employee_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=一次評価者コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "77376a97df3a4ab4839e786e3c659bc5"
+              }
+            ],
+            "ID": "bbeccef1-a875-45fe-aba9-3274f1cf7b56"
+          },
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionTableDataParam, ServerDesignerCommon",
+                "tableData": {
+                  "TableName": "T_BasicInformation",
+                  "ColumnName": "secondary_evaluation_person"
+                }
+              },
+              "value": "%Null%",
+              "compareType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者全体"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=評価部門長全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "二次評価者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "employee_name"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "post_name"
+                      },
+                      "ColumnName": "post_name"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=二次評価者コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "2237cd5684e1492cb84dc10405d37b2e"
+              }
+            ],
+            "ID": "6c035a4e-d206-4d37-89fa-3c723bcabd10"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=一次評価者全体"
+                    },
+                    "Value": false
+                  },
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=二次評価者全体"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "e416f7ca-2c4b-44d2-8364-356b43f260a8"
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+        "ErrorCode": "0",
+        "CustomReturns": [
+          {
+            "ReturnPropertyName": "プレ評価者1部署コード",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1.department_code_00"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者1承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1.consenter_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者1役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者1.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者2部署コード",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2.department_code_00"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者2承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2.consenter_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "プレ評価者2役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=プレ評価者2.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "一次評価者承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=一次評価者.employee_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "一次評価者役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=一次評価者.post_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "二次評価者承認者名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=二次評価者.employee_name"
+            }
+          },
+          {
+            "ReturnPropertyName": "二次評価者役職名",
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=二次評価者.post_name"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "5d082138-1c59-4179-ae23-9e461d40e903",
+    "Name": "WF申請時_申請状態エラーチェック",
+    "Params": [
+      {
+        "ID": "c105c02e-4e50-44a6-bdd9-89593de1cb79",
+        "Name": "被評価者コード"
+      },
+      {
+        "ID": "d7e8c1a8-1e7d-4de2-9efa-5b44ddbd7992",
+        "Name": "一次評価者コード"
+      },
+      {
+        "ID": "f554ca2c-6c22-43a8-9b0d-55db2ba42e84",
+        "Name": "一次評価者候補者数"
+      },
+      {
+        "ID": "44ce8123-8337-4e38-9354-0533cd84bcc3",
+        "Name": "二次評価者コード"
+      },
+      {
+        "ID": "33eef791-d9c6-47a5-a125-e06de0c62f16",
+        "Name": "二次評価者候補者数"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+        "ParameterName": "被評価者ロール",
+        "TableValue": {
+          "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+          "OnlyGetValue": true,
+          "TableValueType": 0,
+          "BindingInfos": [
+            {
+              "BindingInfo": {
+                "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                "ColumnName": "role_code_list"
+              },
+              "ColumnName": "role_code_list"
+            }
+          ],
+          "SqlCondition": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+              "ColumnName": "employee_z_code"
+            },
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=被評価者コード"
+            }
+          }
+        },
+        "ID": "f7216c85513f4b37a56f07e8c44c536c"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=被評価者ロール"
+                  }
+                ]
+              },
+              "value": "4",
+              "compareType": 10
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0"
+              }
+            ],
+            "ID": "c13a4b2b-9917-42e2-8a03-857e4d0857ef"
+          },
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=被評価者ロール"
+                  }
+                ]
+              },
+              "value": "5",
+              "compareType": 10
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                          "cellLocations": [
+                            {
+                              "SerializeProperty": "=二次評価者コード"
+                            }
+                          ]
+                        },
+                        "value": "%Null%"
+                      },
+                      "Condition2": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                          "cellLocations": [
+                            {
+                              "SerializeProperty": "=二次評価者候補者数"
+                            }
+                          ]
+                        },
+                        "value": "1",
+                        "compareType": 3
+                      }
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                        "ErrorCode": "1",
+                        "Message": "一次評価者を選択してください"
+                      }
+                    ],
+                    "ID": "4828bd71-bca2-43d1-9124-ae82884cc8ca"
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0"
+              }
+            ],
+            "ID": "b79c45a7-395a-4001-9b2b-9a9886a947f4"
+          },
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=被評価者ロール"
+                    }
+                  ]
+                },
+                "value": "6",
+                "compareType": 10
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=被評価者ロール"
+                    }
+                  ]
+                },
+                "value": "7",
+                "compareType": 10
+              },
+              "RelationType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                          "cellLocations": [
+                            {
+                              "SerializeProperty": "=一次評価者コード"
+                            }
+                          ]
+                        },
+                        "value": "%Null%"
+                      },
+                      "Condition2": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                          "cellLocations": [
+                            {
+                              "SerializeProperty": "=一次評価者候補者数"
+                            }
+                          ]
+                        },
+                        "value": "1",
+                        "compareType": 3
+                      }
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                        "ErrorCode": "1",
+                        "Message": "一次評価者を選択してください"
+                      }
+                    ],
+                    "ID": "894714ee-0287-4edc-b40f-569dc3184023"
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0"
+              }
+            ],
+            "ID": "7158db3b-e82d-456a-a001-dd304bb0588e"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "f8276bde-6a66-4ff1-a338-4b5b5705041d",
+    "Name": "WF申請時_申請状態次の状態、担当者設定",
+    "Params": [
+      {
+        "ID": "5aa11a94-4a27-44e9-be23-738a1dd5b682",
+        "Name": "ステップ"
+      },
+      {
+        "ID": "dae9c933-aad9-41ba-bb03-b7c15569f97b",
+        "Name": "被評価者コード"
+      },
+      {
+        "ID": "4515079f-33db-4608-b9c9-051da6dfad0a",
+        "Name": "プレ評価者1コード"
+      },
+      {
+        "ID": "37ad6560-25f0-46f6-af6d-71555e27667f",
+        "Name": "プレ評価者2コード"
+      },
+      {
+        "ID": "6397c43f-3e72-4150-8f75-cb332f5b21af",
+        "Name": "一次評価者コード"
+      },
+      {
+        "ID": "093c5476-7583-41e4-af1f-dfc168c9f2df",
+        "Name": "一次評価者候補者数"
+      },
+      {
+        "ID": "783cdaaa-9618-4a47-96bc-9bc874906693",
+        "Name": "二次評価者コード"
+      },
+      {
+        "ID": "cd2f410e-0964-4b30-a841-3aa89b1222cf",
+        "Name": "二次評価者候補者数"
+      },
+      {
+        "ID": "70cf487f-bb70-4aa8-b708-f52baf9751b3",
+        "Name": "評価部門長コード"
+      }
+    ],
+    "Returns": [
+      {
+        "ID": "463a04b2-9a3d-48ee-baca-a307c16c6105",
+        "Name": "次の状態"
+      },
+      {
+        "ID": "f3d57d72-0a34-4cd8-92ab-c8f41f0787c9",
+        "Name": "担当者"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=プレ評価者1コード"
+                  }
+                ]
+              },
+              "value": "%Null%",
+              "compareType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "次の担当者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "ColumnName": "担当者コード"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "担当者氏名"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=プレ評価者1コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "0f68119733a94760994a92e1f785268a"
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "次の状態",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=ステップ&\"_0.5次評価_1\""
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "担当者",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=次の担当者"
+                    }
+                  }
+                ]
+              }
+            ],
+            "ID": "ad8be3ef-f961-4a52-8f71-7a355b103b1d"
+          }
+        ],
+        "Comments": "0.5次評価者"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                "Condition1": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=一次評価者コード"
+                      }
+                    ]
+                  },
+                  "value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=二次評価者コード"
+                  },
+                  "LeftBracket": 1
+                },
+                "Condition2": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=一次評価者コード"
+                      }
+                    ]
+                  },
+                  "value": "%Null%",
+                  "RightBracket": 1
+                },
+                "RelationType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=二次評価者コード"
+                    }
+                  ]
+                },
+                "value": "%Null%",
+                "compareType": 1
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "次の担当者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "ColumnName": "担当者コード"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "担当者氏名"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=二次評価者コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "109233165e0c4e2d809090da115cc11e"
+              },
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                        "Condition1": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=ステップ"
+                              }
+                            ]
+                          },
+                          "value": "1Qマイルストーン"
+                        },
+                        "Condition2": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=ステップ"
+                              }
+                            ]
+                          },
+                          "value": "2Qマイルストーン"
+                        },
+                        "RelationType": 1
+                      },
+                      "Condition2": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                          "cellLocations": [
+                            {
+                              "SerializeProperty": "=ステップ"
+                            }
+                          ]
+                        },
+                        "value": "3Qマイルストーン"
+                      },
+                      "RelationType": 1
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                        "ParameterName": "次の状態",
+                        "ParameterValue": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=ステップ&\"_一次評価\""
+                        },
+                        "ID": "fde26f0aa1ee41cc951eaad8c1ad05e6"
+                      }
+                    ],
+                    "ID": "6d7754fd-818d-4aef-95bb-b69f05a0996b"
+                  },
+                  {
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                        "ParameterName": "次の状態",
+                        "ParameterValue": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=ステップ&\"_二次評価\""
+                        },
+                        "ID": "3725b3ce88794e29a67622d61f8a899f"
+                      }
+                    ],
+                    "ID": "6c7c8f3a-4851-4534-b24d-f8629d917bad"
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "次の状態",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=次の状態"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "担当者",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=次の担当者"
+                    }
+                  }
+                ]
+              }
+            ],
+            "ID": "c508a277-8ec9-4168-acc9-bce3b386885f"
+          }
+        ],
+        "Comments": "二次評価者"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=一次評価者コード"
+                    }
+                  ]
+                },
+                "value": "%Null%"
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=二次評価者コード"
+                    }
+                  ]
+                },
+                "value": "%Null%"
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "次の担当者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "ColumnName": "担当者コード"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "担当者氏名"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=評価部門長コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "059498bb554a401b80a86503f2ed3b9f"
+              },
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "Condition1": {
+                        "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                        "Condition1": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=ステップ"
+                              }
+                            ]
+                          },
+                          "value": "1Qマイルストーン"
+                        },
+                        "Condition2": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=ステップ"
+                              }
+                            ]
+                          },
+                          "value": "2Qマイルストーン"
+                        },
+                        "RelationType": 1
+                      },
+                      "Condition2": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                          "cellLocations": [
+                            {
+                              "SerializeProperty": "=ステップ"
+                            }
+                          ]
+                        },
+                        "value": "3Qマイルストーン"
+                      },
+                      "RelationType": 1
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                        "ParameterName": "次の状態",
+                        "ParameterValue": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=ステップ&\"_一次評価\""
+                        },
+                        "ID": "1905a363a6f74219a6a62b1e1da34f33"
+                      }
+                    ],
+                    "ID": "a74df6f4-ab1e-4ccd-aedf-a2a8cd33416b"
+                  },
+                  {
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                        "ParameterName": "次の状態",
+                        "ParameterValue": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=ステップ&\"_評価部門長\""
+                        },
+                        "ID": "d6d8aff6f0ae4df2ac3d07b445288d64"
+                      }
+                    ],
+                    "ID": "056f5b84-9b39-48b7-8c22-5a71632b8cb0"
+                  }
+                ]
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "次の状態",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=次の状態"
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "担当者",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=次の担当者"
+                    }
+                  }
+                ]
+              }
+            ],
+            "ID": "54d2de8c-de22-40f1-a83b-1f8a241ec376"
+          }
+        ],
+        "Comments": "評価部門長"
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=一次評価者コード"
+                  }
+                ]
+              },
+              "value": "%Null%",
+              "compareType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "次の担当者",
+                "TableValue": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "TableValueType": 1,
+                  "BindingInfos": [
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "ColumnName": "担当者コード"
+                    },
+                    {
+                      "BindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_name"
+                      },
+                      "ColumnName": "担当者氏名"
+                    }
+                  ],
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "Condition1": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "employee_z_code"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=一次評価者コード"
+                      }
+                    },
+                    "Condition2": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "lum_view_employee_department_relations_duplicated",
+                        "ColumnName": "count_belonging_department"
+                      },
+                      "Value": "1"
+                    }
+                  }
+                },
+                "ID": "7e3fb9a13d694737986f9cb1c9b2bcc6"
+              },
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "0",
+                "CustomReturns": [
+                  {
+                    "ReturnPropertyName": "次の状態",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=ステップ&\"_一次評価\""
+                    }
+                  },
+                  {
+                    "ReturnPropertyName": "担当者",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=次の担当者"
+                    }
+                  }
+                ]
+              }
+            ],
+            "ID": "90599290-f511-44df-9684-e52f622254b1"
+          }
+        ],
+        "Comments": "一次評価者"
+      }
+    ]
+  },
+  {
+    "ID": "aff9007f-01cf-4629-83ff-2bc67c1db440",
+    "Name": "WF申請時_完了申請状態処理",
+    "Params": [
+      {
+        "ID": "c4e4d62c-bae1-487c-97da-b31e83d3a4ca",
+        "Name": "ステップ"
+      },
+      {
+        "ID": "c76eb91f-d132-4984-959c-69425f09e192",
+        "Name": "Qチェックエラー"
+      },
+      {
+        "ID": "a4e2396a-d890-4bab-96e4-53c9057cf136",
+        "Name": "期末評価エラー"
+      }
+    ],
+    "Commands": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=ステップ"
+                  }
+                ]
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "1",
+                "Message": "申請するステップを選択してください。"
+              }
+            ],
+            "ID": "e48ad210-653b-4ae3-a621-e249ac4d4cd0"
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                "Condition1": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "Condition1": {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                      "cellLocations": [
+                        {
+                          "SerializeProperty": "=ステップ"
+                        }
+                      ]
+                    },
+                    "value": "1Qマイルストーン",
+                    "LeftBracket": 1
+                  },
+                  "Condition2": {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                      "cellLocations": [
+                        {
+                          "SerializeProperty": "=ステップ"
+                        }
+                      ]
+                    },
+                    "value": "2Qマイルストーン"
+                  },
+                  "RelationType": 1
+                },
+                "Condition2": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=ステップ"
+                      }
+                    ]
+                  },
+                  "value": "3Qマイルストーン",
+                  "RightBracket": 1
+                },
+                "RelationType": 1
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=Qチェックエラー"
+                    }
+                  ]
+                },
+                "value": "%Null%",
+                "compareType": 1
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "1",
+                "Message": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=ステップ&\"として申請するには、以下を入力してください\"&CHAR(10)&Qチェックエラー"
+                }
+              }
+            ],
+            "ID": "8d1954a4-f636-4688-8f91-b44332d56d3d"
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=ステップ"
+                    }
+                  ]
+                },
+                "value": "期末評価"
+              },
+              "Condition2": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                  "cellLocations": [
+                    {
+                      "SerializeProperty": "=期末評価エラー"
+                    }
+                  ]
+                },
+                "value": "%Null%",
+                "compareType": 1
+              }
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                "ErrorCode": "1",
+                "Message": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=\"期末評価として申請するには、以下を入力してください\"&CHAR(10)&期末評価エラー"
+                }
+              }
+            ],
+            "ID": "51c0ca32-fe83-4f33-a477-c3b5740ac894"
+          }
+        ]
+      }
+    ]
+  }
+]

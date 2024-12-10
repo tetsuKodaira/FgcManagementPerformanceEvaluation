@@ -1,0 +1,902 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "37": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "38": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "39": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 40
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "24": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "25": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "26": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "27": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "28": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "29": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "30": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "31": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "32": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "33": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "34": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "35": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "36": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "37": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "38": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "39": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "40": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "41": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "42": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "43": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "44": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "45": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "46": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "47": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "48": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "49": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "50": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "51": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "52": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "53": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "54": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "55": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "56": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "57": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "58": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "59": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "60": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "61": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "62": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "63": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "64": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "65": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "66": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "67": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "68": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "69": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "70": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "71": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "73": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 192.0,
+          "IsHidden": true
+        }
+      },
+      "74": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 18.0,
+          "IsHidden": true
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    "Count": 80
+  },
+  "Values": {
+    "0,3": "業績評価票",
+    "0,12": "%PageName%",
+    "0,72": "非表示"
+  },
+  "AttachInfos": {
+    "0,0": {
+      "CellType": {
+        "$type": "Forguncy.ImageCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "自身の業務評価表一覧",
+            "PassValues": []
+          }
+        ],
+        "ImagePath": "Navigation/165_home_3.svg",
+        "BuiltIn": true,
+        "Color": "Background 1 0"
+      }
+    },
+    "0,63": {
+      "CellType": {
+        "$type": "Forguncy.CurrentUserCellType, ServerDesignerCommon",
+        "CellCustomValue": "%CurrentUser%",
+        "ShowCircleUserPicture": true,
+        "ShowNotification": false,
+        "NavigateSettingWhenLogout": {
+          "NavigateWhenLogoutMode": 1
+        }
+      }
+    },
+    "1,0": {
+      "CellType": {
+        "$type": "Forguncy.CustomMenu.ForguncyMenuCellType, Forguncy.CustomMenu",
+        "TemplateKey": "スタイル1",
+        "Items": [
+          {
+            "Text": "自身の業績評価表",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "自身の業務評価表一覧",
+                "PassValues": []
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Text": "被評価者の業績評価表",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "被評価者の業務評価表一覧",
+                "PassValues": []
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Text": "部門評価部会",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "部門評価部会",
+                "PassValues": []
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Value": "全社評価部会",
+            "Text": "全社評価部会",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Value": "評価率評価表",
+            "Text": "評価率評価表",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Value": "管理者",
+            "Text": "管理者",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ],
+            "SubItems": [
+              {
+                "Value": "評価部会　編集&確認",
+                "Text": "評価部会　編集&確認",
+                "SelectedIconColor": "Background 1",
+                "SelectedIconColorUseItemColor": true,
+                "IconColorUseItemColor": true,
+                "IsOldMenuPath": false,
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                    "PageName": "hyoukabukai",
+                    "PassValues": []
+                  }
+                ],
+                "CanVisitRoleList": [
+                  "FGC_Anonymous"
+                ]
+              },
+              {
+                "Value": "評価名簿　編集&確認",
+                "Text": "評価名簿　編集&確認",
+                "SelectedIconColor": "Background 1",
+                "SelectedIconColorUseItemColor": true,
+                "IconColorUseItemColor": true,
+                "IsOldMenuPath": false,
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                    "PageName": "meibo",
+                    "PassValues": []
+                  }
+                ],
+                "CanVisitRoleList": [
+                  "FGC_Anonymous"
+                ]
+              }
+            ]
+          }
+        ],
+        "Orientation": 0,
+        "MenuLevelsStyle": [
+          {
+            "FontSize": 17.333333333333332,
+            "Bold": true,
+            "Height": 45.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          },
+          {
+            "FontSize": 16.0,
+            "Bold": true,
+            "Height": 40.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          }
+        ]
+      }
+    },
+    "1,73": {
+      "BindingInfo": {
+        "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+        "ColumnName": "employee_z_code"
+      }
+    },
+    "2,73": {
+      "BindingInfo": {
+        "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+        "ColumnName": "department_code_list"
+      }
+    },
+    "3,0": {
+      "IsPlaceHolderCell": true
+    },
+    "3,73": {
+      "BindingInfo": {
+        "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+        "ColumnName": "role_code_list"
+      }
+    },
+    "4,73": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 2,
+        "FontFamily": 1,
+        "FontSize": 24.0,
+        "Foreground": 3,
+        "HorizontalAlignment": 4,
+        "Underline": null,
+        "Strikethrough": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 2,
+        "FontFamily": 1,
+        "FontSize": 21.333333333333332,
+        "Foreground": 3,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5,
+        "Underline": null,
+        "Strikethrough": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 2,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 2,
+        "FontFamily": 1,
+        "Underline": null,
+        "Strikethrough": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 2,
+        "FontFamily": 1,
+        "Foreground": 3,
+        "Underline": null,
+        "Strikethrough": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 6,
+        "FontFamily": 1,
+        "Foreground": 7,
+        "Underline": null,
+        "Strikethrough": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 6,
+        "FontFamily": 1,
+        "Foreground": 3,
+        "Underline": null,
+        "Strikethrough": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": 6,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 2 0",
+        "Body",
+        "Text 1 25",
+        "Background 1 0",
+        "Center",
+        "Left",
+        "Text 1 50",
+        "#FFFF0000"
+      ]
+    },
+    "CellStyles": {
+      "0,0": 0,
+      "0,3": 1,
+      "0,12": 2,
+      "0,35": 3,
+      "0,36": 3,
+      "0,37": 3,
+      "0,38": 3,
+      "0,39": 3,
+      "0,40": 3,
+      "0,41": 3,
+      "0,42": 3,
+      "0,43": 3,
+      "0,44": 3,
+      "0,45": 3,
+      "0,46": 3,
+      "0,47": 3,
+      "0,48": 3,
+      "0,49": 3,
+      "0,50": 3,
+      "0,51": 3,
+      "0,52": 3,
+      "0,53": 3,
+      "0,54": 3,
+      "0,55": 3,
+      "0,56": 3,
+      "0,57": 3,
+      "0,58": 3,
+      "0,59": 3,
+      "0,60": 3,
+      "0,61": 3,
+      "0,62": 4,
+      "0,63": 5,
+      "0,72": 6,
+      "0,73": 7,
+      "0,74": 7,
+      "0,75": 7,
+      "0,76": 7,
+      "0,77": 7,
+      "0,78": 7,
+      "0,79": 7,
+      "1,74": 8,
+      "2,74": 8,
+      "3,74": 8,
+      "5,73": 8,
+      "5,74": 8
+    },
+    "ColStyles": {
+      "72": 9
+    },
+    "SheetStyle": {
+      "FontFamily": 1,
+      "BorderBottom": null,
+      "BorderTop": null,
+      "BorderLeft": null,
+      "BorderRight": null
+    }
+  },
+  "Spans": [
+    "0,0,1,3",
+    "0,3,1,9",
+    "0,12,1,23",
+    "0,63,1,9",
+    "1,0,2,72",
+    "3,0,37,72"
+  ],
+  "BackgroundPictures": [
+    {
+      "DisplayName": "背景画像1",
+      "StyleInfo": {
+        "Fill": "Text 1 25"
+      },
+      "IsAutomaticFill": false,
+      "Name": "e1c7fb2b-ac49-4056-97b1-55bcdaf8f342",
+      "Location": "1140,0",
+      "Size": "100,40"
+    }
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.MasterPage, ServerDesignerCommon",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=マスターページ!employeeZCodeLogin"
+                  }
+                ]
+              },
+              "value": "%Null%"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                "ParameterName": "isExisted",
+                "TableValue": {
+                  "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                  "TableValueType": 3,
+                  "SqlCondition": {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "ColumnBindingInfo": {
+                      "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                      "ColumnName": "employee_z_code"
+                    },
+                    "Value": "%CurrentUser%"
+                  }
+                },
+                "ID": "163a07b093b54733803b8656bf200c1d"
+              },
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                      "param": {
+                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                        "cellLocations": [
+                          {
+                            "SerializeProperty": "=マスターページ!isExisted"
+                          }
+                        ]
+                      },
+                      "value": "0"
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                        "PageName": "FGC_401ページ",
+                        "PassValues": []
+                      }
+                    ],
+                    "ID": "ca65c413-1f36-449e-b1c3-57aeab006b6e"
+                  },
+                  {
+                    "CommandList": [
+                      {
+                        "$type": "SetCurrentRowCommand.SetCurrentRowCommand, SetCurrentRowCommand",
+                        "CurrentRowInfo": {
+                          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                          "ColumnBindingInfo": {
+                            "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                            "ColumnName": "employee_z_code"
+                          },
+                          "Value": "%CurrentUser%"
+                        },
+                        "Comments": "V_EmployeeRoleAndAuthorityGroupBy"
+                      }
+                    ],
+                    "ID": "4533e849-2f95-444b-9282-b8080e0b4169"
+                  }
+                ]
+              }
+            ],
+            "Comments": "ページロード時に毎回処理が走るのを避けるための分岐処理",
+            "ID": "5d8191a2-33b7-4fd4-ae98-c8fcbcf2bb1a"
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=マスターページ!マスタページ_ページ名"
+                  }
+                ]
+              },
+              "value": "自身の業績評価表"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                "ServerCommandName": "アクセス可能プロジェクトID一覧取得",
+                "Parameters": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=マスターページ!roleCodeList"
+                    },
+                    "ParamName": "ロールリスト"
+                  }
+                ],
+                "ReturnPropertiesTo": [
+                  {
+                    "ResultPropertyName": "アクセス可能プロジェクトID一覧",
+                    "ResultTo": {
+                      "SerializeProperty": "アクセス可能プロジェクトID一覧"
+                    }
+                  }
+                ],
+                "RefreshAfterFinish": true,
+                "CheckDataValidation": true
+              },
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                      "param": {
+                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                        "cellLocations": [
+                          {
+                            "SerializeProperty": "=マスターページ!アクセス可能プロジェクトID一覧"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=マスターページ!BV5"
+                      },
+                      "compareType": 11
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                        "PageName": "FGC_401ページ",
+                        "PassValues": []
+                      }
+                    ],
+                    "ID": "a8fb75c8-5c8d-49ef-be31-bf889f2a6dc4"
+                  }
+                ]
+              }
+            ],
+            "ID": "70e58db5-76a9-4864-bade-19f1e863b278"
+          }
+        ]
+      }
+    ]
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  },
+  "CustomNames": [
+    {
+      "Name": "シミュレーションボタン",
+      "Formula": "マスターページ!$AJ$1"
+    },
+    {
+      "Name": "マスタページ_ページ名",
+      "Formula": "マスターページ!$M$1"
+    },
+    {
+      "Name": "マスタページ_メニュー",
+      "Formula": "マスターページ!$A$2"
+    },
+    {
+      "Name": "表示エリア",
+      "Formula": "マスターページ!$AJ$1"
+    },
+    {
+      "Name": "employeeZCodeLogin",
+      "Formula": "マスターページ!$BV$2"
+    },
+    {
+      "Name": "roleCodeList",
+      "Formula": "マスターページ!$BV$4"
+    }
+  ]
+}//8kQCo+lYrEBhOBwwi0T1uDh6LMv/K+DAwVaeGkDdtAPPWWRo90jDD0+vFcNBSC3bIAyxk5mQTERhiPzn/biPE7qLJWy6uHhzPn6cmnK+hM2bgr9urfmPB9GX+QbhQPcq/dcWx1AfQLCaB8Iy2lsuG3AzVFt9ndDlj4z2bAPrPKuNytMyMjoV8Z8fTESp9dApbmkZsbBfv+fKQlS/l65Sud8zU+uvFwFm5TK11i3ciIZnu3RkS0jtq9lp17wVjLlpi5wydYDwI4wVuwJRVKMZeIW0DRT1p47ba54sN0njB61hVl5mbk/Av8dFdETS5Nus1nqnJpdsrEEYrnW88esrTd/L/RsSM67m73c2aom+hG3B6tiF9tcUbJZ2YCFmJKU13DUwYc9eftH0MWOZ+xjroLNEETD4gcw+c8rsOle9GTTL19csZrSaC+YgnmeMEB6YDMWP87JjNq3+fCGykXh3DMr1o17sOXSOVDjOMLB8O7Ganlgho5f8QMtDKSnr6tqiE6tLzslbveZnTVhCvZYNY4PeJPBN0MWreDxXVVOKGlypCC6koIt5uur33zLdwBjnrKZ98GCRddlcP5uO5V7kiEH+y0KJtLFrqDXU9J6ag9XRFsng533mEkgQ2KT6Z4+pz10zF3Q77gvAeQ0r9+g0IjPW+nOQCaCFSmS2Dg8ctVlRoi9V5tWQRvGj7ZrBdvoysNbDzJrT47g6hJYVP7Le41o6JLt47wRraVC+xmHMrrQ3WhUL9JiM/a63wx8jz4tqjHAZYzRRHcfZLjdnDgrFOifae8H2+z0FbqxTAlK4Y2YLD0rp0DedNZuYvcbWNDFxMA8P6fqokUYEHntVYRE5nvU8LoibZJPVXOCyHIeFXWM8VfpuCf8VPPUDO4LhFFlGN4ZKfRKnVms+YA94XgWQVQ==|920

@@ -1,0 +1,1620 @@
+{
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.ServerCommands.Models.PostRequestTrigger, ServerDesignerCommon",
+      "Permission": {
+        "AllowRoles": [
+          "FGC_LoginUser"
+        ]
+      },
+      "Parameters": [
+        {
+          "Name": "社員コード"
+        },
+        {
+          "Name": "年度"
+        },
+        {
+          "Name": "コース"
+        },
+        {
+          "Name": "職務グループ"
+        },
+        {
+          "Name": "職務等級"
+        },
+        {
+          "Name": "引き継ぐか"
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.ServerTransactionCommand, ServerDesignerCommon",
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "社員情報",
+          "TableValue": {
+            "TableName": "lum_view_employee_department_relations_duplicated",
+            "TableValueType": 1,
+            "BindingInfos": [
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "employee_code"
+                },
+                "ColumnName": "employee_code"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "employee_name"
+                },
+                "ColumnName": "employee_name"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "division_code"
+                },
+                "ColumnName": "division_code"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "division_name"
+                },
+                "ColumnName": "division_name"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_code_lvl00"
+                },
+                "ColumnName": "department_code_lvl00"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_name_lvl00"
+                },
+                "ColumnName": "department_name_lvl00"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_code_lvl03"
+                },
+                "ColumnName": "department_code_lvl03"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_name_lvl03"
+                },
+                "ColumnName": "department_name_lvl03"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_code_lvl04"
+                },
+                "ColumnName": "department_code_lvl04"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_name_lvl04"
+                },
+                "ColumnName": "department_name_lvl04"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_code_lvl06"
+                },
+                "ColumnName": "department_code_lvl06"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "department_name_lvl06"
+                },
+                "ColumnName": "department_name_lvl06"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "post_code"
+                },
+                "ColumnName": "post_code"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "course_code"
+                },
+                "ColumnName": "course_code"
+              },
+              {
+                "BindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "function_code"
+                },
+                "ColumnName": "function_code"
+              }
+            ],
+            "SqlCondition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "Condition1": {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "employee_z_code"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=社員コード"
+                }
+              },
+              "Condition2": {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "lum_view_employee_department_relations_duplicated",
+                  "ColumnName": "count_belonging_department"
+                },
+                "Value": "1"
+              }
+            }
+          },
+          "ID": "9ba8d2969e4c4003a8fdfb815ebf2f43"
+        },
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "ロールリスト",
+          "TableValue": {
+            "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+            "OnlyGetValue": true,
+            "TableValueType": 0,
+            "BindingInfos": [
+              {
+                "BindingInfo": {
+                  "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                  "ColumnName": "role_code_list"
+                },
+                "ColumnName": "role_code_list"
+              }
+            ],
+            "SqlCondition": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "V_EmployeeRoleAndAuthorityGroupBy",
+                "ColumnName": "employee_z_code"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=社員コード"
+              }
+            }
+          },
+          "ID": "d2b99f6138c44c03a4a8c14c8a6858e7"
+        },
+        {
+          "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+          "ConditionAndCommandPairList": [
+            {
+              "Condition": {
+                "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                "param": {
+                  "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                  "ParamObject": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=ロールリスト"
+                  }
+                },
+                "value": "7",
+                "compareType": 10
+              },
+              "CommandList": [
+                {
+                  "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                  "ConditionAndCommandPairList": [
+                    {
+                      "Condition": {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                          "ParamObject": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=引き継ぐか"
+                          }
+                        },
+                        "value": "True"
+                      },
+                      "CommandList": [
+                        {
+                          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                          "ParameterName": "org_BasicInformation",
+                          "TableValue": {
+                            "TableName": "T_BasicInformation",
+                            "TableValueType": 1,
+                            "BindingInfos": [
+                              {
+                                "BindingInfo": {
+                                  "TableName": "T_BasicInformation",
+                                  "ColumnName": "project_id"
+                                },
+                                "ColumnName": "project_id"
+                              }
+                            ],
+                            "SqlCondition": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "year"
+                                  }
+                                },
+                                "Condition2": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "period"
+                                  },
+                                  "Value": "3"
+                                }
+                              },
+                              "Condition2": {
+                                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                "ColumnBindingInfo": {
+                                  "TableName": "T_BasicInformation",
+                                  "ColumnName": "employee_z_code"
+                                }
+                              }
+                            },
+                            "TopCount": "1",
+                            "OrderBySqlCondition": {
+                              "OrderByColumns": [
+                                {
+                                  "ColumnBindingInfo": {
+                                    "TableName": "T_BasicInformation",
+                                    "ColumnName": "project_id"
+                                  },
+                                  "Order": 1
+                                }
+                              ]
+                            }
+                          },
+                          "ID": "24da02a08fd2423fa9f58a18387b3926"
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_BasicInformation",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に更新してもよろしいですか？",
+                          "RowsToUpdate": 1,
+                          "RowsToUpdateCondition": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "year"
+                              },
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=年度"
+                              }
+                            },
+                            "Condition2": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "employee_z_code"
+                              },
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員コード"
+                              }
+                            }
+                          },
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "new_flag",
+                              "Value": "0"
+                            }
+                          ],
+                          "Comments": "自身の同じ年度の業績評価表を最新ではなくす"
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_BasicInformation",
+                          "UpdateType": "add",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に追加してもよろしいですか？",
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "year",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=年度"
+                              }
+                            },
+                            {
+                              "ColumnName": "period",
+                              "Value": "3"
+                            },
+                            {
+                              "ColumnName": "division_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_code_lvl03"
+                              }
+                            },
+                            {
+                              "ColumnName": "division_name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_name_lvl03"
+                              }
+                            },
+                            {
+                              "ColumnName": "affiliation_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_code_lvl00"
+                              }
+                            },
+                            {
+                              "ColumnName": "affiliation_name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_name_lvl04"
+                              }
+                            },
+                            {
+                              "ColumnName": "organization_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_code_lvl06"
+                              }
+                            },
+                            {
+                              "ColumnName": "organization_name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_name_lvl06"
+                              }
+                            },
+                            {
+                              "ColumnName": "employee_z_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員コード"
+                              }
+                            },
+                            {
+                              "ColumnName": "employee_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.employee_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.employee_name"
+                              }
+                            },
+                            {
+                              "ColumnName": "course_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.course_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "qualification_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.function_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "position_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.post_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "date_goal"
+                            },
+                            {
+                              "ColumnName": "date_comment"
+                            },
+                            {
+                              "ColumnName": "date_1st_month"
+                            },
+                            {
+                              "ColumnName": "date_2q_milestone"
+                            },
+                            {
+                              "ColumnName": "date_3q_milestone"
+                            },
+                            {
+                              "ColumnName": "date_self_assessment"
+                            },
+                            {
+                              "ColumnName": "date_end_comment"
+                            },
+                            {
+                              "ColumnName": "evaluation_type"
+                            },
+                            {
+                              "ColumnName": "exc_evaluation_type"
+                            },
+                            {
+                              "ColumnName": "end_check_status",
+                              "Value": "0"
+                            },
+                            {
+                              "ColumnName": "create_user"
+                            },
+                            {
+                              "ColumnName": "create_date"
+                            },
+                            {
+                              "ColumnName": "update_user"
+                            },
+                            {
+                              "ColumnName": "update_date"
+                            },
+                            {
+                              "ColumnName": "primary_evaluation_person"
+                            },
+                            {
+                              "ColumnName": "secondary_evaluation_person"
+                            },
+                            {
+                              "ColumnName": "pre_evaluation_person_1"
+                            },
+                            {
+                              "ColumnName": "pre_evaluation_person_2"
+                            },
+                            {
+                              "ColumnName": "new_flag",
+                              "Value": "1"
+                            }
+                          ],
+                          "ParamNameToSaveNewRowValue": "NewBasicInformation"
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_ManagementBasicInformation",
+                          "UpdateType": "add",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に追加してもよろしいですか？",
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "project_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=NewBasicInformation.project_id"
+                              }
+                            },
+                            {
+                              "ColumnName": "management_course_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=コース"
+                              }
+                            },
+                            {
+                              "ColumnName": "job_group_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=職務グループ"
+                              }
+                            },
+                            {
+                              "ColumnName": "job_grade_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=職務等級"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                          "ParameterName": "行動評価要素一覧",
+                          "TableValue": {
+                            "TableName": "M_ManagementProcessElements",
+                            "BindingInfos": [
+                              {
+                                "BindingInfo": {
+                                  "TableName": "M_ManagementProcessElements",
+                                  "ColumnName": "process_element_id"
+                                },
+                                "ColumnName": "process_element_id"
+                              }
+                            ],
+                            "SqlCondition": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "process_element_type_id"
+                                  },
+                                  "Value": "1"
+                                },
+                                "Condition2": {
+                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                  "Condition1": {
+                                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                    "ColumnBindingInfo": {
+                                      "TableName": "M_ManagementProcessElements",
+                                      "ColumnName": "process_element_type_id"
+                                    },
+                                    "Value": "2",
+                                    "LeftBracket": 1
+                                  },
+                                  "Condition2": {
+                                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                    "ColumnBindingInfo": {
+                                      "TableName": "M_ManagementProcessElements",
+                                      "ColumnName": "management_course_id"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=コース"
+                                    },
+                                    "RightBracket": 1
+                                  }
+                                },
+                                "RelationType": 1
+                              },
+                              "Condition2": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "process_element_type_id"
+                                  },
+                                  "Value": "3",
+                                  "LeftBracket": 1
+                                },
+                                "Condition2": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "job_group_id"
+                                  },
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=職務グループ"
+                                  },
+                                  "RightBracket": 1
+                                }
+                              },
+                              "RelationType": 1
+                            },
+                            "OrderBySqlCondition": {
+                              "OrderByColumns": [
+                                {
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "sort"
+                                  },
+                                  "Order": 0
+                                }
+                              ]
+                            }
+                          },
+                          "ID": "4314fe6b80ff4a1d81d0484440a3f17c"
+                        },
+                        {
+                          "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                          "LoopInfo": {
+                            "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+                            "LoopCount": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=行動評価要素一覧"
+                            },
+                            "LoopItemParamName": "Item"
+                          },
+                          "CommandList": [
+                            {
+                              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                              "TableName": "T_ManagementProcessElements",
+                              "UpdateType": "add",
+                              "ShowConfirm": false,
+                              "ConfirmText": "本当に追加してもよろしいですか？",
+                              "UpdateValues": [
+                                {
+                                  "ColumnName": "project_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=NewBasicInformation.project_id"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "process_element_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.process_element_id"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                          "LoopInfo": {
+                            "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+                            "LoopCount": "7",
+                            "LoopIndexParamName": "Count",
+                            "LoopItemParamName": "Item"
+                          },
+                          "CommandList": [
+                            {
+                              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                              "TableName": "T_ManagementAssignmentTasks",
+                              "UpdateType": "add",
+                              "ShowConfirm": false,
+                              "ConfirmText": "本当に追加してもよろしいですか？",
+                              "UpdateValues": [
+                                {
+                                  "ColumnName": "project_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=NewBasicInformation.project_id"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "task_no",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Count"
+                                  }
+                                }
+                              ],
+                              "ParamNameToSaveNewRowValue": "AssignmentTask"
+                            },
+                            {
+                              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                              "ConditionAndCommandPairList": [
+                                {
+                                  "Condition": {
+                                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                    "param": {
+                                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                                      "ParamObject": {
+                                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                        "SerializeProperty": "=コース"
+                                      }
+                                    },
+                                    "value": "2"
+                                  },
+                                  "CommandList": [
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "1"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "2"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "3"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "4"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "ID": "82bd6246-cc6d-4f7f-9989-3c9a8691495d"
+                                }
+                              ],
+                              "Comments": "スペシャリストコースの場合、追加"
+                            }
+                          ],
+                          "Disabled": true
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_WorkFlowHistory",
+                          "UpdateType": "add",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に追加してもよろしいですか？",
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "project_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=NewBasicInformation.project_id"
+                              }
+                            },
+                            {
+                              "ColumnName": "step",
+                              "Value": "課題設定"
+                            },
+                            {
+                              "ColumnName": "task_name",
+                              "Value": "起票"
+                            },
+                            {
+                              "ColumnName": "status",
+                              "Value": "作成"
+                            },
+                            {
+                              "ColumnName": "consenter_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員コード"
+                              }
+                            },
+                            {
+                              "ColumnName": "consent_datetime",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=NOW()"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "ID": "3abf2e76-e8af-4850-811a-2e1d32e3ce22"
+                    },
+                    {
+                      "CommandList": [
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_BasicInformation",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に更新してもよろしいですか？",
+                          "RowsToUpdate": 1,
+                          "RowsToUpdateCondition": {
+                            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                            "Condition1": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "year"
+                              },
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=年度"
+                              }
+                            },
+                            "Condition2": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "T_BasicInformation",
+                                "ColumnName": "employee_z_code"
+                              },
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員コード"
+                              }
+                            }
+                          },
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "new_flag",
+                              "Value": "0"
+                            }
+                          ],
+                          "Comments": "自身の同じ年度の業績評価表を最新ではなくす"
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_BasicInformation",
+                          "UpdateType": "add",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に追加してもよろしいですか？",
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "year",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=年度"
+                              }
+                            },
+                            {
+                              "ColumnName": "period",
+                              "Value": "3"
+                            },
+                            {
+                              "ColumnName": "division_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_code_lvl03"
+                              }
+                            },
+                            {
+                              "ColumnName": "division_name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_name_lvl03"
+                              }
+                            },
+                            {
+                              "ColumnName": "affiliation_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_code_lvl00"
+                              }
+                            },
+                            {
+                              "ColumnName": "affiliation_name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_name_lvl04"
+                              }
+                            },
+                            {
+                              "ColumnName": "organization_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_code_lvl06"
+                              }
+                            },
+                            {
+                              "ColumnName": "organization_name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.department_name_lvl06"
+                              }
+                            },
+                            {
+                              "ColumnName": "employee_z_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員コード"
+                              }
+                            },
+                            {
+                              "ColumnName": "employee_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.employee_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "name",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.employee_name"
+                              }
+                            },
+                            {
+                              "ColumnName": "course_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.course_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "qualification_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.function_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "position_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員情報.post_code"
+                              }
+                            },
+                            {
+                              "ColumnName": "date_goal"
+                            },
+                            {
+                              "ColumnName": "date_comment"
+                            },
+                            {
+                              "ColumnName": "date_1st_month"
+                            },
+                            {
+                              "ColumnName": "date_2q_milestone"
+                            },
+                            {
+                              "ColumnName": "date_3q_milestone"
+                            },
+                            {
+                              "ColumnName": "date_self_assessment"
+                            },
+                            {
+                              "ColumnName": "date_end_comment"
+                            },
+                            {
+                              "ColumnName": "evaluation_type"
+                            },
+                            {
+                              "ColumnName": "exc_evaluation_type"
+                            },
+                            {
+                              "ColumnName": "end_check_status",
+                              "Value": "0"
+                            },
+                            {
+                              "ColumnName": "create_user"
+                            },
+                            {
+                              "ColumnName": "create_date"
+                            },
+                            {
+                              "ColumnName": "update_user"
+                            },
+                            {
+                              "ColumnName": "update_date"
+                            },
+                            {
+                              "ColumnName": "primary_evaluation_person"
+                            },
+                            {
+                              "ColumnName": "secondary_evaluation_person"
+                            },
+                            {
+                              "ColumnName": "pre_evaluation_person_1"
+                            },
+                            {
+                              "ColumnName": "pre_evaluation_person_2"
+                            },
+                            {
+                              "ColumnName": "new_flag",
+                              "Value": "1"
+                            }
+                          ],
+                          "ParamNameToSaveNewRowValue": "NewBasicInformation"
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_ManagementBasicInformation",
+                          "UpdateType": "add",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に追加してもよろしいですか？",
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "project_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=NewBasicInformation.project_id"
+                              }
+                            },
+                            {
+                              "ColumnName": "management_course_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=コース"
+                              }
+                            },
+                            {
+                              "ColumnName": "job_group_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=職務グループ"
+                              }
+                            },
+                            {
+                              "ColumnName": "job_grade_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=職務等級"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                          "ParameterName": "兼務情報",
+                          "TableValue": {
+                            "TableName": "lum_view_employee_department_relations_duplicated",
+                            "BindingInfos": [
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_code_lvl03"
+                                },
+                                "ColumnName": "department_code_lvl03"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_name_lvl03"
+                                },
+                                "ColumnName": "department_name_lvl03"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_code_lvl00"
+                                },
+                                "ColumnName": "department_code_lvl00"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_name_lvl04"
+                                },
+                                "ColumnName": "department_name_lvl04"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_code_lvl05"
+                                },
+                                "ColumnName": "department_code_lvl05"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_name_lvl05"
+                                },
+                                "ColumnName": "department_name_lvl05"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_code_lvl06"
+                                },
+                                "ColumnName": "department_code_lvl06"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "department_name_lvl06"
+                                },
+                                "ColumnName": "department_name_lvl06"
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "count_belonging_department"
+                                },
+                                "ColumnName": "count_belonging_department"
+                              }
+                            ],
+                            "SqlCondition": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                "ColumnBindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "employee_z_code"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=社員コード"
+                                }
+                              },
+                              "Condition2": {
+                                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                "CompareType": 3,
+                                "ColumnBindingInfo": {
+                                  "TableName": "lum_view_employee_department_relations_duplicated",
+                                  "ColumnName": "count_belonging_department"
+                                },
+                                "Value": "2"
+                              }
+                            }
+                          },
+                          "ID": "eb994c75d4b8436e9d8c61a1a6add573"
+                        },
+                        {
+                          "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                          "LoopInfo": {
+                            "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+                            "LoopCount": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=兼務情報"
+                            },
+                            "LoopItemParamName": "Item"
+                          },
+                          "CommandList": [
+                            {
+                              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                              "TableName": "T_ConcurrentDepartments",
+                              "UpdateType": "add",
+                              "ShowConfirm": false,
+                              "ConfirmText": "本当に追加してもよろしいですか？",
+                              "UpdateValues": [
+                                {
+                                  "ColumnName": "project_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=NewBasicInformation.project_id"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "divison_code",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.department_code_lvl03"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "division_name",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.department_name_lvl03"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "affiliation_code",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.department_code_lvl00"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "affiliation_name",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.department_name_lvl04"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "organization_code",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.department_code_lvl06"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "organization_name",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.department_name_lvl06"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "count_belonging_department",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.count_belonging_department"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                          "ParameterName": "行動評価要素一覧",
+                          "TableValue": {
+                            "TableName": "M_ManagementProcessElements",
+                            "BindingInfos": [
+                              {
+                                "BindingInfo": {
+                                  "TableName": "M_ManagementProcessElements",
+                                  "ColumnName": "process_element_id"
+                                },
+                                "ColumnName": "process_element_id"
+                              }
+                            ],
+                            "SqlCondition": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "Condition1": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "process_element_type_id"
+                                  },
+                                  "Value": "1"
+                                },
+                                "Condition2": {
+                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                  "Condition1": {
+                                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                    "ColumnBindingInfo": {
+                                      "TableName": "M_ManagementProcessElements",
+                                      "ColumnName": "process_element_type_id"
+                                    },
+                                    "Value": "2",
+                                    "LeftBracket": 1
+                                  },
+                                  "Condition2": {
+                                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                    "ColumnBindingInfo": {
+                                      "TableName": "M_ManagementProcessElements",
+                                      "ColumnName": "management_course_id"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=コース"
+                                    },
+                                    "RightBracket": 1
+                                  }
+                                },
+                                "RelationType": 1
+                              },
+                              "Condition2": {
+                                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                "Condition1": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "process_element_type_id"
+                                  },
+                                  "Value": "3",
+                                  "LeftBracket": 1
+                                },
+                                "Condition2": {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "job_group_id"
+                                  },
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=職務グループ"
+                                  },
+                                  "RightBracket": 1
+                                }
+                              },
+                              "RelationType": 1
+                            },
+                            "OrderBySqlCondition": {
+                              "OrderByColumns": [
+                                {
+                                  "ColumnBindingInfo": {
+                                    "TableName": "M_ManagementProcessElements",
+                                    "ColumnName": "sort"
+                                  },
+                                  "Order": 0
+                                }
+                              ]
+                            }
+                          },
+                          "ID": "aa28b67bca3e4d3ab45479801dedd243"
+                        },
+                        {
+                          "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                          "LoopInfo": {
+                            "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+                            "LoopCount": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=行動評価要素一覧"
+                            },
+                            "LoopItemParamName": "Item"
+                          },
+                          "CommandList": [
+                            {
+                              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                              "TableName": "T_ManagementProcessElements",
+                              "UpdateType": "add",
+                              "ShowConfirm": false,
+                              "ConfirmText": "本当に追加してもよろしいですか？",
+                              "UpdateValues": [
+                                {
+                                  "ColumnName": "project_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=NewBasicInformation.project_id"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "process_element_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Item.process_element_id"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                          "LoopInfo": {
+                            "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+                            "LoopCount": "7",
+                            "LoopIndexParamName": "Count",
+                            "LoopItemParamName": "Item"
+                          },
+                          "CommandList": [
+                            {
+                              "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                              "TableName": "T_ManagementAssignmentTasks",
+                              "UpdateType": "add",
+                              "ShowConfirm": false,
+                              "ConfirmText": "本当に追加してもよろしいですか？",
+                              "UpdateValues": [
+                                {
+                                  "ColumnName": "project_id",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=NewBasicInformation.project_id"
+                                  }
+                                },
+                                {
+                                  "ColumnName": "task_no",
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=Count"
+                                  }
+                                }
+                              ],
+                              "ParamNameToSaveNewRowValue": "AssignmentTask"
+                            },
+                            {
+                              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                              "ConditionAndCommandPairList": [
+                                {
+                                  "Condition": {
+                                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                    "param": {
+                                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                                      "ParamObject": {
+                                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                        "SerializeProperty": "=コース"
+                                      }
+                                    },
+                                    "value": "2"
+                                  },
+                                  "CommandList": [
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "1"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "2"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "3"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                      "TableName": "T_ManagementAssignmentTaskElements",
+                                      "UpdateType": "add",
+                                      "ShowConfirm": false,
+                                      "ConfirmText": "本当に追加してもよろしいですか？",
+                                      "UpdateValues": [
+                                        {
+                                          "ColumnName": "assignment_manage_id",
+                                          "Value": {
+                                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                            "SerializeProperty": "=AssignmentTask.assignment_manage_id"
+                                          }
+                                        },
+                                        {
+                                          "ColumnName": "task_element_id",
+                                          "Value": "4"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "ID": "b39097b3-ce74-40af-b013-d8649dccc9e5"
+                                }
+                              ],
+                              "Comments": "スペシャリストコースの場合、追加"
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                          "TableName": "T_WorkFlowHistory",
+                          "UpdateType": "add",
+                          "ShowConfirm": false,
+                          "ConfirmText": "本当に追加してもよろしいですか？",
+                          "UpdateValues": [
+                            {
+                              "ColumnName": "project_id",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=NewBasicInformation.project_id"
+                              }
+                            },
+                            {
+                              "ColumnName": "step",
+                              "Value": "課題設定"
+                            },
+                            {
+                              "ColumnName": "task_name",
+                              "Value": "起票"
+                            },
+                            {
+                              "ColumnName": "status",
+                              "Value": "作成"
+                            },
+                            {
+                              "ColumnName": "consenter_code",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=社員コード"
+                              }
+                            },
+                            {
+                              "ColumnName": "consent_datetime",
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=NOW()"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "ID": "f7ab4f94-1ab4-4a60-b18e-994c6f085255"
+                    }
+                  ]
+                },
+                {
+                  "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                  "ErrorCode": "0",
+                  "Message": "登録が完了しました",
+                  "CustomReturns": [
+                    {
+                      "ReturnPropertyName": "新規プロジェクトID",
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=NewBasicInformation.project_id"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "Comments": "起票権限",
+              "ID": "8c4df5cf-945e-44c6-86f4-910bbd8cca18"
+            },
+            {
+              "CommandList": [
+                {
+                  "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                  "ErrorCode": "1",
+                  "Message": "起票権限がありません",
+                  "CustomReturns": [
+                    {
+                      "ReturnPropertyName": "新規プロジェクトID"
+                    }
+                  ]
+                }
+              ],
+              "ID": "6ec327dd-ece8-4b1e-aca9-8536cf2687b6"
+            }
+          ],
+          "Comments": "起票権限チェック"
+        }
+      ]
+    }
+  ],
+  "ReturnProperties": [
+    {
+      "Name": "新規プロジェクトID"
+    }
+  ],
+  "Name": "新規登録"
+}

@@ -1,0 +1,135 @@
+{
+  "Rows": {
+    "Count": 25
+  },
+  "Cols": {
+    "Count": 18
+  },
+  "Values": {
+    "2,3": "パスワードを忘れた場合",
+    "5,2": "ユーザー名もしくはメールアドレスを入力し、送信してください。パスワードリセットのためのリンクが記載されたメールが送信されます。メールを受信後、そのリンクを開いて新しいパスワードを入力することができます。",
+    "11,2": "ユーザー名、またはメール アドレス",
+    "16,2": "メールを送信",
+    "19,2": "キャンセル"
+  },
+  "AttachInfos": {
+    "12,2": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "ForguncyAttribute": "ForgotPassword_UserOrEmail"
+      },
+      "DataValidationInfo": {
+        "IgnoreBlank": false
+      }
+    },
+    "16,2": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "Text": "メールを送信",
+        "AutoExecute": true,
+        "TemplateKey": "_RS_Normal_Style2",
+        "ForguncyAttribute": "ForgotPassword_Send"
+      }
+    },
+    "19,2": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "NavigateType": "back",
+            "PassValues": []
+          }
+        ],
+        "Text": "キャンセル",
+        "TemplateKey": "_RS_Outline_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontSize": 21.333333969116211,
+        "Foreground": 0,
+        "Formatter": 1,
+        "HorizontalAlignment": 2,
+        "VerticalAlignment": 3
+      },
+      {
+        "Foreground": 4,
+        "Formatter": 1,
+        "VerticalAlignment": 5,
+        "WordWrap": true
+      },
+      {
+        "FontSize": 14.666666984558105,
+        "Foreground": 6,
+        "Formatter": 1
+      },
+      {
+        "FontSize": 16.0,
+        "Foreground": null,
+        "Formatter": 7
+      },
+      {
+        "FontSize": 16.0,
+        "FontWeight": 8,
+        "Foreground": null,
+        "Formatter": 1
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Accent 1 -50",
+        "[AUTO]General",
+        "Center",
+        "Bottom",
+        "#FF3F3F3F",
+        "Top",
+        "#FF7F7F7F",
+        "@",
+        "Bold",
+        "Body",
+        "#FF000000"
+      ]
+    },
+    "CellStyles": {
+      "2,3": 0,
+      "5,2": 1,
+      "11,2": 2,
+      "12,2": 3,
+      "16,2": 4,
+      "19,2": 4
+    },
+    "SheetStyle": {
+      "FontFamily": 9,
+      "FontSize": 13.333333015441895,
+      "Foreground": 10
+    }
+  },
+  "Spans": [
+    "2,3,2,12",
+    "5,2,6,14",
+    "12,2,2,14",
+    "16,2,2,14",
+    "19,2,2,14"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "Title": "パスワードを忘れた場合",
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "IsBuiltInPage": true,
+    "IsMobilePage": true
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//9Ki+LpgFKt3lFPbzwy4aoOwNDbvG6L7eLrEYHMpY4FFmZ4YyIFT9ZY2Dodo9X8VR39Q43DATucBxW2+lGRbHm2lpXxRU5hhGSMGKDkzigb+sMI752PyoPcvU8DVn3PXGovPXSgFypCPj/coxWiTnIs4/0Q/+XfIeMMiagzAEkSewXLvQF1lKHUALX/2rvq0Xw8Ct6BhUa4ftByMEOyN9zpraO0g1Dmu0aeeURDuzHIo6FKMWqp/NqkCMKUak+Sl/0KGP7O/kUp92ZZluNkO1xCrXfvBgrG2xz+07CQ9yHVkIFFu2gQnmaa210a1yJP9fcXkY/lCfSwT9hM5lbyQ2b4ln2/2gDAFS4LGJpHbk0xu1zr7yiCaCMtrpWTLBF8su4cxSbbqGkh9cIrI3B/Fx8sC0EXUuiPnjy2njjgI5g0ndiD5AgT3iSOGLun0VGg+P773SbKMiFOSyCI3SFn9/glDwZHvSqSypUYp17ShFLcntaZAGy0bNAxp5/FfegYlc8Ak0V9rpLqcIDCPmLFWO5NfGwHwtJZ55whY2pgN3zq+v9LfXAJD4FS7JUOzBSdufSw8STYlPixuayfR/hVXVc3KoUCxPgyeUO8J8UmWnAqd0CIOvfMpLhBY2vuLrffIB6reKIYGc5ZBCA/auT/DX35HWpOW3DdDP/30YXuHtTinKx5b02rpooxTsyzZPOJv1N1RUgHm9zVY8mbhSLAiKQ9sq2VAI9eict+rxV5DUL0dfZs4aD7mBDTESWFiccgqu8axYMOBy20ZPNQieAHFICL3zpPl/nz2k1ir0SLZvqRid2o3luYhDKzEsgU7abqfpwAIhIUP3JsUkWPLmYtNYLCuZUe2fX82iURqPe1xKE3OqaTUrRWd++60jFaZM96/wAG/wg2smkaG6c13vS3+7TA==|920

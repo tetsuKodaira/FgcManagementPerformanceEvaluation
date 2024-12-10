@@ -1,0 +1,422 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      },
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 21.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 50.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 50.0
+        }
+      },
+      "7": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 50.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 23.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      0
+    ],
+    "Count": 9
+  },
+  "Cols": {
+    "Count": 53
+  },
+  "Values": {
+    "4,1": "test (2)"
+  },
+  "AttachInfos": {
+    "2,0": {
+      "CellType": {
+        "$type": "Forguncy.RadioGroupCellType, ServerDesignerCommon",
+        "NoneItemText": "＜なし＞",
+        "Style": 3,
+        "PrimaryColor": "Accent 1 0",
+        "ItemSpace": 0,
+        "Items": [
+          {
+            "Value": "bukailistview1",
+            "DisplayValue": "評価部会　編集"
+          },
+          {
+            "Value": "bukailistview2",
+            "DisplayValue": "評価部会-紐づけ部署　編集"
+          },
+          {
+            "Value": "bukailistview3",
+            "DisplayValue": "評価部会-紐づけ未実施部署　閲覧"
+          }
+        ],
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=hyoukabukai!subPageName"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=hyoukabukai!subPageNameSelected"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "4,1": {
+      "CellType": {
+        "$type": "Forguncy.ContentContainerCellType, ServerDesignerCommon",
+        "PageName": "bukailistview2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0,
+        "FontWeight": 1,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Underline": true,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "HorizontalAlignment": 3,
+        "Underline": true,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "Formatter": 4,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "Formatter": 4,
+        "HorizontalAlignment": 3,
+        "Underline": true,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 5,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "Foreground": 5,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Formatter": 4,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 6,
+        "Formatter": 4,
+        "HorizontalAlignment": 7,
+        "Underline": true,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 16.0,
+        "FontWeight": 1,
+        "Foreground": 2,
+        "HorizontalAlignment": 3,
+        "Underline": false,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 6,
+        "Formatter": 4,
+        "HorizontalAlignment": 7,
+        "Underline": true,
+        "BorderBottom": 0,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Foreground": 9,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "Background": null,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "Bold",
+        "Text 1 25",
+        "Left",
+        "[AUTO]General",
+        "Text 1 50",
+        "Blue",
+        "Right",
+        "Background 1 -25",
+        "Text 1 35"
+      ],
+      "Borders": [
+        {
+          "Color": 8
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,0": 0,
+      "0,1": 1,
+      "0,3": 1,
+      "0,4": 1,
+      "0,5": 1,
+      "0,6": 1,
+      "0,7": 1,
+      "0,11": 1,
+      "0,12": 1,
+      "1,0": 2,
+      "1,2": 3,
+      "1,3": 1,
+      "1,4": 4,
+      "1,5": 5,
+      "1,6": 4,
+      "1,7": 6,
+      "1,8": 1,
+      "1,9": 1,
+      "1,10": 1,
+      "1,11": 1,
+      "1,12": 7,
+      "1,13": 8,
+      "1,19": 9,
+      "1,43": 1,
+      "1,50": 10,
+      "2,0": 11,
+      "2,43": 1,
+      "2,50": 10,
+      "3,0": 12,
+      "3,1": 12,
+      "3,2": 12,
+      "3,3": 12,
+      "3,4": 12,
+      "3,5": 12,
+      "3,6": 12,
+      "3,7": 12,
+      "3,8": 12,
+      "3,9": 12,
+      "3,10": 12,
+      "3,11": 12,
+      "3,12": 12,
+      "3,13": 12,
+      "3,14": 12,
+      "3,15": 12,
+      "3,16": 12,
+      "3,17": 12,
+      "3,18": 12,
+      "3,19": 12,
+      "3,20": 12,
+      "3,21": 12,
+      "3,22": 12,
+      "3,23": 12,
+      "3,24": 12,
+      "3,25": 12,
+      "3,26": 12,
+      "3,27": 12,
+      "3,28": 12,
+      "3,29": 12,
+      "3,30": 12,
+      "3,31": 12,
+      "3,32": 12,
+      "3,33": 12,
+      "3,34": 12,
+      "3,35": 12,
+      "3,36": 12,
+      "3,37": 12,
+      "3,38": 12,
+      "3,39": 12,
+      "3,40": 12,
+      "3,41": 12,
+      "3,42": 12,
+      "3,43": 13,
+      "3,44": 12,
+      "3,45": 12,
+      "3,46": 12,
+      "3,47": 12,
+      "3,48": 12,
+      "3,49": 12,
+      "3,50": 14,
+      "3,51": 12,
+      "3,52": 12,
+      "4,52": 15,
+      "5,52": 15
+    },
+    "RowStyles": {
+      "4": 16,
+      "5": 17,
+      "6": 17,
+      "7": 17,
+      "8": 17
+    },
+    "SheetStyle": {
+      "FontFamily": 0,
+      "BorderBottom": null,
+      "BorderTop": null,
+      "BorderLeft": null,
+      "BorderRight": null
+    }
+  },
+  "Spans": [
+    "1,2,1,2",
+    "2,0,2,42",
+    "4,1,5,51"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "マスターページ",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+        "PropertyItemsList": [
+          {
+            "TargetCells": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=hyoukabukai!subPageNameSelected"
+            },
+            "Value": "bukailistview1"
+          }
+        ]
+      }
+    ],
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  },
+  "CustomNames": [
+    {
+      "Name": "subPageName",
+      "Formula": "hyoukabukai!$B$5"
+    },
+    {
+      "Name": "subPageNameSelected",
+      "Formula": "hyoukabukai!$A$3"
+    }
+  ]
+}//AdHh5XBe6LiT92r3pfVXjnwm2ZxHQSXP2w1EGDySdxURPCjOCaPUFQllPrKPz8OroPTykYV2ay6f/Pdc3DvzqZYK+rXCsinW+AQDgkpLCSjleUWQB/o0gkPM0xCHSFqcjjgNkfYC8UueLzRz0xYJhDafFaoW2NHB1N2szYbrUiUctkmZNnISJqjV+cyplagNzSilnLn2dtPgY+EEQMxynYG4xrTvgPNFM1GJfTeksBsWYwHtXSOzLeHh7MnzUZ5tvHfb1mIjWEZEulwuHIY68Whqm5cRb5A1Du3Y9FzjgiFuFFNLOWxCwpmJlqLyklW0drFAHN+m6K6L0Uyr1CSoo5IPb430WnqP/DI9ZXLfZRv91AaGdB0DQPrpmuJs28Vf7c+AHrA/qQdoNS0Y5zzLinLxcXu7Ph1fY/BbcbdqoSsYD+eRLG2WukuIVFQdEB8VboTJ62k8B6ME666M/VXAEQpGw6NLyEQrI5SoajJYGzHsDbcRrN/u96SC889ryBWT/4e3OXiZQNE5ZYHQ/5Nt0m5xVQcEk4HRVfQDdOoY3cNjGPj3Dv3hG+DCEAT6jRaP/GamXZn9O3npROJF5FoJNuHZ1vhuArgQbX3kZF/d0iPpQnsFwqHqDOeE+o2+PFGHlRtcR9jI3OA180XcldubPXyVMxG+0FqVrl5wFGRQPUs+L0hxd6Lxr2Sq2Oph3r/Y7udeWdRkPgsO8qZei1m4PNVYfkfIhJqxzm2ZOCjMx/RmO9ZhQHsHNcYmGXzyM3mt8UPIq8/JnPoLiUGy1DJz0Hw5x11M+JpVVqb2jCc0glDF+wmr0K74JEVDcouNyVmEl0pt2f+6UgkdBWSe9OXSzge8tesRQQjDfX3YSjXrEX3sUx+il/6xHK96dldTYAV+FD3HM0p8xfqO9/mSz0qSHg==|920

@@ -1,0 +1,1627 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 5.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 5.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 22.0
+        }
+      },
+      "7": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "9": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "35": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 37
+  },
+  "Cols": {
+    "InLogicalVisibleIndexes": [
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149
+    ],
+    "Count": 150
+  },
+  "Values": {
+    "0,137": "非表示",
+    "1,1": "未処理\r\n案件",
+    "1,7": true,
+    "1,16": "年度",
+    "1,20": "評価部会",
+    "1,28": "部署",
+    "1,40": "職務グループ",
+    "1,45": "コース",
+    "1,51": "等級",
+    "1,56": "業績評語",
+    "1,60": "行動評語",
+    "1,66": "条件クリア",
+    "4,49": "-",
+    "6,1": "評価部会",
+    "6,9": "社員番号",
+    "6,14": "社員名",
+    "6,19": "部署",
+    "6,34": "評価表\r\n職務G",
+    "6,39": "評価表\r\nコース",
+    "6,45": "評価表\r\n等級",
+    "6,49": "職務グループ",
+    "6,54": "コース",
+    "6,60": "等級",
+    "6,64": "入社日",
+    "6,68": "目安評価",
+    "6,76": "業績評価",
+    "6,88": "行動評価",
+    "6,100": "最終評価",
+    "7,68": "業績評価",
+    "7,72": "行動評価",
+    "7,76": "自己評価",
+    "7,82": "評価者評価",
+    "7,88": "自己評価",
+    "7,94": "評価者評価",
+    "7,100": "業績評価",
+    "7,106": "行動評価",
+    "8,68": "評語",
+    "8,72": "評語",
+    "8,76": "評点",
+    "8,79": "評語",
+    "8,82": "評点",
+    "8,85": "評語",
+    "8,88": "評点",
+    "8,91": "評語",
+    "8,94": "評点",
+    "8,97": "評語",
+    "8,100": "評点",
+    "8,103": "評語",
+    "8,106": "評点",
+    "8,109": "評語",
+    "8,112": "業績評語",
+    "8,116": "行動評語",
+    "8,120": "業績評語",
+    "8,124": "行動評語",
+    "8,128": "業績評語",
+    "8,132": "行動評語"
+  },
+  "Formulas": {
+    "6,120": "$Q$3-2&\"年度\"",
+    "6,112": "$Q$3-1&\"年度\"",
+    "6,128": "$Q$3-3&\"年度\""
+  },
+  "AttachInfos": {
+    "1,4": {
+      "CellType": {
+        "$type": "Forguncy.NumberCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "1,7": {
+      "CellType": {
+        "$type": "Forguncy.CheckBoxCellType, ServerDesignerCommon",
+        "CellDefaultValue": true,
+        "Caption": "未処理案件のみ表示",
+        "Style": 2
+      }
+    },
+    "1,66": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=部門評価部会!U3,部門評価部会!AC3,部門評価部会!AO3,部門評価部会!AT3,部門評価部会!AZ3,部門評価部会!BE3,部門評価部会!BI3"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "条件クリア",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "2,16": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "T_BasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "year"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "year"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "T_BasicInformation",
+                "ColumnName": "year"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "CellDefaultValue": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=YEAR(EDATE(TODAY(),-3))"
+        }
+      }
+    },
+    "2,20": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "",
+            "DisplayValue": ""
+          },
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ]
+      }
+    },
+    "2,28": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "項目1",
+            "DisplayValue": "項目1"
+          },
+          {
+            "Value": "項目2",
+            "DisplayValue": "項目2"
+          },
+          {
+            "Value": "項目3",
+            "DisplayValue": "項目3"
+          }
+        ],
+        "DataSource": "T_BasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "affiliation_name"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "affiliation_name"
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "2,40": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "研究開発",
+            "DisplayValue": "研究開発"
+          },
+          {
+            "Value": "生産",
+            "DisplayValue": "生産"
+          },
+          {
+            "Value": "事業",
+            "DisplayValue": "事業"
+          },
+          {
+            "Value": "コーポレート",
+            "DisplayValue": "コーポレート"
+          },
+          {
+            "Value": "DX",
+            "DisplayValue": "DX"
+          }
+        ],
+        "DataSource": "T_ManagementBasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_group_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_group_id",
+          "RelationBinding": {
+            "RelatedTable": "M_JobGroups",
+            "RelatedColumn": "job_group_id",
+            "DisplayColumn": "job_group_name"
+          }
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "2,45": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {},
+          {
+            "Value": "マネジメント",
+            "DisplayValue": "マネジメント"
+          },
+          {
+            "Value": "スペシャリスト",
+            "DisplayValue": "スペシャリスト"
+          }
+        ],
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "2,51": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "6等級",
+            "DisplayValue": "6等級"
+          },
+          {
+            "Value": "5等級",
+            "DisplayValue": "5等級"
+          },
+          {
+            "Value": "4等級",
+            "DisplayValue": "4等級"
+          },
+          {
+            "Value": "3等級",
+            "DisplayValue": "3等級"
+          },
+          {
+            "Value": "2等級",
+            "DisplayValue": "2等級"
+          },
+          {
+            "Value": "1等級",
+            "DisplayValue": "1等級"
+          }
+        ],
+        "DataSource": "T_ManagementBasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_grade_id"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_ManagementBasicInformation",
+          "ColumnName": "job_grade_id",
+          "RelationBinding": {
+            "RelatedTable": "M_JobGrades",
+            "RelatedColumn": "job_grade_id",
+            "DisplayColumn": "job_grade_name"
+          }
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "T_ManagementBasicInformation",
+                "ColumnName": "job_grade_id"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "AddNullItemWhenBinding": true
+      }
+    },
+    "2,56": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {
+            "Value": "",
+            "DisplayValue": ""
+          },
+          {
+            "Value": "3E",
+            "DisplayValue": "3E"
+          },
+          {
+            "Value": "2E",
+            "DisplayValue": "2E"
+          },
+          {
+            "Value": "E",
+            "DisplayValue": "E"
+          },
+          {
+            "Value": "3G",
+            "DisplayValue": "3G"
+          },
+          {
+            "Value": "2G",
+            "DisplayValue": "2G"
+          },
+          {
+            "Value": "G",
+            "DisplayValue": "G"
+          }
+        ]
+      }
+    },
+    "2,60": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "Items": [
+          {},
+          {
+            "Value": "3E",
+            "DisplayValue": "3E"
+          },
+          {
+            "Value": "2E",
+            "DisplayValue": "2E"
+          },
+          {
+            "Value": "E",
+            "DisplayValue": "E"
+          },
+          {
+            "Value": "3G",
+            "DisplayValue": "3G"
+          },
+          {
+            "Value": "2G",
+            "DisplayValue": "2G"
+          },
+          {
+            "Value": "G",
+            "DisplayValue": "G"
+          }
+        ]
+      }
+    },
+    "4,49": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=部門評価部会!AX5"
+                      }
+                    ]
+                  },
+                  "value": "-"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "UpdateType": 6,
+                    "ListviewName": "リストビュー1",
+                    "UpdateListviewCommandRunTimeMethodSetting": {
+                      "MethodName": "HideColumn",
+                      "ParameterValues": {
+                        "indexOrName": "職務グループ"
+                      },
+                      "RetrunParamNames": {}
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "UpdateType": 6,
+                    "ListviewName": "リストビュー1",
+                    "UpdateListviewCommandRunTimeMethodSetting": {
+                      "MethodName": "HideColumn",
+                      "ParameterValues": {
+                        "indexOrName": "コース"
+                      },
+                      "RetrunParamNames": {}
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "UpdateType": 6,
+                    "ListviewName": "リストビュー1",
+                    "UpdateListviewCommandRunTimeMethodSetting": {
+                      "MethodName": "HideColumn",
+                      "ParameterValues": {
+                        "indexOrName": "等級"
+                      },
+                      "RetrunParamNames": {}
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=部門評価部会!AX5"
+                        },
+                        "Value": "+"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "b19a0d23-4bbf-431c-895f-c9b5ef7f8436"
+              },
+              {
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "UpdateType": 6,
+                    "ListviewName": "リストビュー1",
+                    "UpdateListviewCommandRunTimeMethodSetting": {
+                      "MethodName": "ShowColumn",
+                      "ParameterValues": {
+                        "indexOrName": "職務グループ"
+                      },
+                      "RetrunParamNames": {}
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "UpdateType": 6,
+                    "ListviewName": "リストビュー1",
+                    "UpdateListviewCommandRunTimeMethodSetting": {
+                      "MethodName": "ShowColumn",
+                      "ParameterValues": {
+                        "indexOrName": "コース"
+                      },
+                      "RetrunParamNames": {}
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "UpdateType": 6,
+                    "ListviewName": "リストビュー1",
+                    "UpdateListviewCommandRunTimeMethodSetting": {
+                      "MethodName": "ShowColumn",
+                      "ParameterValues": {
+                        "indexOrName": "等級"
+                      },
+                      "RetrunParamNames": {}
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=部門評価部会!AX5"
+                        },
+                        "Value": "-"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "fa992bde-0250-4572-b92f-3f4e0e8c88ed"
+              }
+            ]
+          }
+        ],
+        "Text": "-",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "6,1": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "V_EvaluationTargetedEmployees",
+        "RowIndex": 6,
+        "ColumnIndex": 1,
+        "ColumnCount": 135,
+        "RowCount": 30,
+        "ColumnHeaderRowCount": 3,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "リストビュー1",
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_Medium2"
+      }
+    },
+    "9,1": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "evaluation_commitee_name"
+      }
+    },
+    "9,9": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "employee_code"
+      }
+    },
+    "9,14": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "employee_name"
+      }
+    },
+    "9,19": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "department_name_lvl04"
+      }
+    },
+    "9,34": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "job_group_name_from_table"
+      }
+    },
+    "9,39": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "course_name_for_table"
+      }
+    },
+    "9,45": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "job_grade_name_from_table"
+      }
+    },
+    "9,49": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "job_group_name"
+      },
+      "NameUsedInJavaScript": "職務グループ"
+    },
+    "9,54": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "course_name"
+      },
+      "NameUsedInJavaScript": "コース"
+    },
+    "9,60": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "job_grade_name"
+      },
+      "NameUsedInJavaScript": "等級"
+    },
+    "9,64": {
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "joined_date"
+      }
+    },
+    "9,68": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "approximate_grade_for_assignment_task"
+      }
+    },
+    "9,72": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "approximate_grade_for_process"
+      }
+    },
+    "9,76": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "assignment_task_self_assesment_point_figure"
+      }
+    },
+    "9,79": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "assignment_task_self_assesment_grade"
+      }
+    },
+    "9,82": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "assignment_task_assesment_point_figure"
+      }
+    },
+    "9,85": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "assignment_task_assesment_grade"
+      }
+    },
+    "9,88": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "process_element_self_assesment_point_figure"
+      }
+    },
+    "9,91": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "process_element_self_assesment_grade"
+      }
+    },
+    "9,94": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "process_element_assesment_point_figure"
+      }
+    },
+    "9,97": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "process_element_assesment_grade"
+      }
+    },
+    "9,100": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_task_point"
+      }
+    },
+    "9,103": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_task_grade"
+      }
+    },
+    "9,106": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_process_point"
+      }
+    },
+    "9,109": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_process_grade"
+      }
+    },
+    "9,112": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_task_grade_1year_ago"
+      }
+    },
+    "9,116": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_process_grade_1year_ago"
+      }
+    },
+    "9,120": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_task_grade_2year_ago"
+      }
+    },
+    "9,124": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_process_grade_2year_ago"
+      }
+    },
+    "9,128": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_task_grade_3year_ago"
+      }
+    },
+    "9,132": {
+      "IsCellIgnoreHideInListview": true,
+      "BindingInfo": {
+        "TableName": "V_EvaluationTargetedEmployees",
+        "ColumnName": "final_evaluation_process_grade_3year_ago"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "Foreground": 1
+      },
+      {
+        "Background": 0
+      },
+      {
+        "Background": 2,
+        "HorizontalAlignment": 3,
+        "WordWrap": true
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332,
+        "HorizontalAlignment": 3
+      },
+      {
+        "Background": 2,
+        "FontFamily": 4,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5,
+        "BorderRight": 0
+      },
+      {
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 2,
+        "FontFamily": 4,
+        "Formatter": 7,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 4,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 4,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 4
+      },
+      {
+        "FontFamily": 4,
+        "FontSize": 13.333333333333332
+      },
+      {
+        "FontFamily": 4,
+        "WordWrap": true
+      },
+      {
+        "FontFamily": 4,
+        "Formatter": 7
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 1 50",
+        "#FFFF0000",
+        "Accent 1 60",
+        "Center",
+        "Body",
+        "Left",
+        "Background 1 0",
+        "[AUTO]General"
+      ],
+      "Borders": [
+        {
+          "Color": 6
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,137": 0,
+      "0,138": 1,
+      "0,139": 1,
+      "0,140": 1,
+      "0,141": 1,
+      "0,142": 1,
+      "0,143": 1,
+      "0,144": 1,
+      "0,145": 1,
+      "0,146": 1,
+      "0,147": 1,
+      "0,148": 1,
+      "0,149": 1,
+      "1,1": 2,
+      "1,7": 3,
+      "1,16": 4,
+      "1,17": 5,
+      "1,18": 5,
+      "1,19": 5,
+      "1,20": 6,
+      "1,21": 7,
+      "1,22": 7,
+      "1,23": 7,
+      "1,24": 7,
+      "1,25": 7,
+      "1,26": 7,
+      "1,27": 7,
+      "1,28": 6,
+      "1,29": 7,
+      "1,30": 7,
+      "1,31": 7,
+      "1,32": 7,
+      "1,33": 7,
+      "1,34": 7,
+      "1,35": 7,
+      "1,36": 7,
+      "1,37": 7,
+      "1,38": 7,
+      "1,39": 7,
+      "1,40": 6,
+      "1,41": 7,
+      "1,42": 7,
+      "1,43": 7,
+      "1,44": 7,
+      "1,45": 6,
+      "1,46": 7,
+      "1,47": 7,
+      "1,48": 7,
+      "1,49": 7,
+      "1,50": 7,
+      "1,51": 6,
+      "1,52": 7,
+      "1,53": 7,
+      "1,54": 7,
+      "1,55": 7,
+      "1,56": 6,
+      "1,57": 7,
+      "1,58": 7,
+      "1,59": 7,
+      "1,60": 6,
+      "1,61": 7,
+      "1,62": 7,
+      "1,63": 8,
+      "1,66": 9,
+      "2,16": 9,
+      "2,20": 9,
+      "2,21": 9,
+      "2,22": 9,
+      "2,23": 9,
+      "2,24": 9,
+      "2,25": 9,
+      "2,26": 9,
+      "2,27": 9,
+      "2,28": 9,
+      "2,29": 9,
+      "2,30": 9,
+      "2,31": 9,
+      "2,32": 9,
+      "2,33": 9,
+      "2,34": 9,
+      "2,35": 9,
+      "2,36": 9,
+      "2,37": 9,
+      "2,38": 9,
+      "2,39": 9,
+      "2,40": 9,
+      "2,41": 9,
+      "2,42": 9,
+      "2,43": 9,
+      "2,44": 9,
+      "2,45": 9,
+      "2,46": 9,
+      "2,47": 9,
+      "2,48": 9,
+      "2,49": 9,
+      "2,50": 9,
+      "2,51": 9,
+      "2,52": 9,
+      "2,53": 9,
+      "2,54": 9,
+      "2,55": 9,
+      "2,56": 9,
+      "2,57": 9,
+      "2,58": 9,
+      "2,59": 9,
+      "2,60": 9,
+      "2,61": 9,
+      "2,62": 9,
+      "2,63": 9,
+      "3,1": 9,
+      "3,2": 9,
+      "3,3": 9,
+      "3,7": 3,
+      "3,8": 3,
+      "3,9": 3,
+      "3,10": 3,
+      "3,11": 3,
+      "3,12": 3,
+      "3,13": 3,
+      "3,14": 3,
+      "3,15": 3,
+      "3,16": 9,
+      "3,17": 9,
+      "3,18": 9,
+      "3,19": 9,
+      "3,20": 9,
+      "3,21": 9,
+      "3,22": 9,
+      "3,23": 9,
+      "3,24": 9,
+      "3,25": 9,
+      "3,26": 9,
+      "3,27": 9,
+      "3,28": 9,
+      "3,29": 9,
+      "3,30": 9,
+      "3,31": 9,
+      "3,32": 9,
+      "3,33": 9,
+      "3,35": 9,
+      "3,36": 9,
+      "3,37": 9,
+      "3,38": 9,
+      "3,39": 9,
+      "3,40": 9,
+      "3,41": 9,
+      "3,42": 9,
+      "3,43": 9,
+      "3,44": 9,
+      "3,45": 9,
+      "3,46": 9,
+      "3,48": 9,
+      "3,49": 9,
+      "3,50": 9,
+      "3,51": 9,
+      "3,52": 9,
+      "3,53": 9,
+      "3,54": 9,
+      "3,55": 9,
+      "3,57": 9,
+      "3,58": 9,
+      "3,59": 9,
+      "3,60": 9,
+      "3,61": 9,
+      "3,62": 9,
+      "3,63": 9,
+      "3,64": 9,
+      "3,65": 9,
+      "3,66": 9,
+      "4,1": 9,
+      "4,2": 9,
+      "4,3": 9,
+      "4,7": 3,
+      "4,8": 3,
+      "4,9": 3,
+      "4,10": 3,
+      "4,11": 3,
+      "4,12": 3,
+      "4,13": 3,
+      "4,14": 3,
+      "4,15": 3,
+      "4,16": 9,
+      "4,17": 9,
+      "4,18": 9,
+      "4,19": 9,
+      "4,20": 9,
+      "4,21": 9,
+      "4,22": 9,
+      "4,23": 9,
+      "4,24": 9,
+      "4,25": 9,
+      "4,26": 9,
+      "4,27": 9,
+      "4,28": 9,
+      "4,29": 9,
+      "4,30": 9,
+      "4,31": 9,
+      "4,32": 9,
+      "4,33": 9,
+      "4,36": 9,
+      "4,37": 9,
+      "4,38": 9,
+      "4,39": 9,
+      "4,40": 9,
+      "4,41": 9,
+      "4,42": 9,
+      "4,43": 9,
+      "4,44": 9,
+      "4,45": 9,
+      "4,46": 9,
+      "4,48": 9,
+      "4,49": 10,
+      "4,50": 9,
+      "4,51": 9,
+      "4,52": 9,
+      "4,53": 9,
+      "4,54": 9,
+      "4,55": 9,
+      "4,57": 9,
+      "4,58": 9,
+      "4,59": 9,
+      "4,60": 9,
+      "4,61": 9,
+      "4,62": 9,
+      "4,63": 9,
+      "4,64": 9,
+      "4,65": 9,
+      "4,66": 9,
+      "5,1": 9,
+      "5,2": 9,
+      "5,3": 9,
+      "5,7": 3,
+      "5,8": 3,
+      "5,9": 3,
+      "5,10": 3,
+      "5,11": 3,
+      "5,12": 3,
+      "5,13": 3,
+      "5,14": 3,
+      "5,15": 3,
+      "5,16": 9,
+      "5,17": 9,
+      "5,18": 9,
+      "5,19": 9,
+      "5,20": 9,
+      "5,21": 9,
+      "5,22": 9,
+      "5,23": 9,
+      "5,24": 9,
+      "5,25": 9,
+      "5,26": 9,
+      "5,27": 9,
+      "5,28": 9,
+      "5,29": 9,
+      "5,30": 9,
+      "5,31": 9,
+      "5,32": 9,
+      "5,33": 9,
+      "5,35": 9,
+      "5,36": 9,
+      "5,37": 9,
+      "5,38": 9,
+      "5,39": 9,
+      "5,40": 9,
+      "5,41": 9,
+      "5,42": 9,
+      "5,43": 9,
+      "5,44": 9,
+      "5,45": 9,
+      "5,46": 9,
+      "5,48": 9,
+      "5,49": 9,
+      "5,50": 9,
+      "5,51": 9,
+      "5,52": 9,
+      "5,53": 9,
+      "5,54": 9,
+      "5,55": 9,
+      "5,57": 9,
+      "5,58": 9,
+      "5,59": 9,
+      "5,60": 9,
+      "5,61": 9,
+      "5,62": 9,
+      "5,63": 9,
+      "5,64": 9,
+      "5,65": 9,
+      "5,66": 9,
+      "6,9": 9,
+      "6,14": 9,
+      "6,19": 9,
+      "6,34": 11,
+      "6,35": 9,
+      "6,36": 9,
+      "6,37": 9,
+      "6,38": 9,
+      "6,39": 11,
+      "6,40": 9,
+      "6,41": 9,
+      "6,42": 9,
+      "6,43": 9,
+      "6,44": 9,
+      "6,45": 11,
+      "6,46": 9,
+      "6,47": 9,
+      "6,48": 9,
+      "6,49": 9,
+      "6,50": 9,
+      "6,51": 9,
+      "6,52": 9,
+      "6,53": 9,
+      "6,54": 11,
+      "6,55": 9,
+      "6,56": 9,
+      "6,57": 9,
+      "6,58": 9,
+      "6,59": 9,
+      "6,60": 11,
+      "6,61": 9,
+      "6,62": 9,
+      "6,63": 9,
+      "6,64": 12,
+      "6,65": 9,
+      "6,66": 9,
+      "6,67": 9,
+      "6,68": 12,
+      "6,69": 9,
+      "6,70": 9,
+      "6,71": 9,
+      "6,72": 9,
+      "6,73": 9,
+      "6,74": 9,
+      "6,75": 9,
+      "6,76": 12,
+      "6,77": 9,
+      "6,78": 9,
+      "6,79": 9,
+      "6,80": 9,
+      "6,81": 9,
+      "6,82": 9,
+      "6,83": 9,
+      "6,84": 9,
+      "6,85": 9,
+      "6,86": 9,
+      "6,87": 9,
+      "6,88": 12,
+      "6,100": 9,
+      "6,112": 9,
+      "6,120": 9,
+      "6,128": 9,
+      "7,34": 9,
+      "7,35": 9,
+      "7,36": 9,
+      "7,37": 9,
+      "7,38": 9,
+      "7,39": 9,
+      "7,40": 9,
+      "7,41": 9,
+      "7,42": 9,
+      "7,43": 9,
+      "7,44": 9,
+      "7,45": 9,
+      "7,46": 9,
+      "7,47": 9,
+      "7,48": 9,
+      "7,49": 9,
+      "7,50": 9,
+      "7,51": 9,
+      "7,52": 9,
+      "7,53": 9,
+      "7,54": 9,
+      "7,55": 9,
+      "7,56": 9,
+      "7,57": 9,
+      "7,58": 9,
+      "7,59": 9,
+      "7,60": 9,
+      "7,61": 9,
+      "7,62": 9,
+      "7,63": 9,
+      "7,64": 9,
+      "7,65": 9,
+      "7,66": 9,
+      "7,67": 9,
+      "7,68": 12,
+      "7,69": 9,
+      "7,70": 9,
+      "7,71": 9,
+      "7,72": 9,
+      "7,73": 9,
+      "7,74": 9,
+      "7,75": 9,
+      "7,76": 12,
+      "7,77": 9,
+      "7,78": 9,
+      "7,79": 9,
+      "7,80": 9,
+      "7,81": 9,
+      "7,82": 9,
+      "7,83": 9,
+      "7,84": 9,
+      "7,85": 9,
+      "7,86": 9,
+      "7,87": 9,
+      "7,88": 12,
+      "7,89": 9,
+      "7,90": 9,
+      "7,91": 9,
+      "7,92": 9,
+      "7,93": 9,
+      "7,94": 12,
+      "7,95": 9,
+      "7,96": 9,
+      "7,97": 9,
+      "7,98": 9,
+      "7,99": 9,
+      "7,100": 12,
+      "7,101": 9,
+      "7,102": 9,
+      "7,103": 9,
+      "7,104": 9,
+      "7,105": 9,
+      "7,106": 12,
+      "7,107": 9,
+      "7,108": 9,
+      "7,109": 9,
+      "7,110": 9,
+      "7,111": 9,
+      "8,34": 9,
+      "8,35": 9,
+      "8,36": 9,
+      "8,37": 9,
+      "8,38": 9,
+      "8,39": 9,
+      "8,40": 9,
+      "8,41": 9,
+      "8,42": 9,
+      "8,43": 9,
+      "8,44": 9,
+      "8,45": 9,
+      "8,46": 9,
+      "8,47": 9,
+      "8,48": 9,
+      "8,49": 9,
+      "8,50": 9,
+      "8,51": 9,
+      "8,52": 9,
+      "8,53": 9,
+      "8,54": 9,
+      "8,55": 9,
+      "8,56": 9,
+      "8,57": 9,
+      "8,58": 9,
+      "8,59": 9,
+      "8,60": 9,
+      "8,61": 9,
+      "8,62": 9,
+      "8,63": 9,
+      "8,64": 9,
+      "8,65": 9,
+      "8,66": 9,
+      "8,67": 9,
+      "8,68": 12,
+      "8,69": 9,
+      "8,70": 9,
+      "8,71": 9,
+      "8,72": 9,
+      "8,73": 9,
+      "8,74": 9,
+      "8,75": 9,
+      "8,76": 12,
+      "8,77": 9,
+      "8,78": 9,
+      "8,79": 12,
+      "8,80": 9,
+      "8,81": 9,
+      "8,82": 12,
+      "8,83": 9,
+      "8,84": 9,
+      "8,85": 12,
+      "8,86": 9,
+      "8,87": 9,
+      "8,88": 12,
+      "8,89": 9,
+      "8,90": 9,
+      "8,91": 12,
+      "8,92": 9,
+      "8,93": 9,
+      "8,94": 12,
+      "8,95": 9,
+      "8,96": 9,
+      "8,97": 12,
+      "8,98": 9,
+      "8,99": 9,
+      "8,100": 12,
+      "8,101": 9,
+      "8,102": 9,
+      "8,103": 12,
+      "8,104": 9,
+      "8,105": 9,
+      "8,106": 12,
+      "8,107": 9,
+      "8,108": 9,
+      "8,109": 12,
+      "8,110": 9,
+      "8,111": 9,
+      "8,112": 9,
+      "8,120": 12,
+      "8,121": 9,
+      "8,122": 9,
+      "8,123": 9,
+      "8,124": 12,
+      "8,125": 9,
+      "8,126": 9,
+      "8,127": 9,
+      "8,128": 12,
+      "8,129": 9,
+      "8,130": 9,
+      "8,131": 9,
+      "8,132": 12,
+      "8,133": 9,
+      "8,134": 9,
+      "8,135": 9,
+      "9,9": 9,
+      "9,14": 9,
+      "9,19": 9,
+      "9,34": 9,
+      "9,39": 9,
+      "9,45": 9,
+      "9,49": 9,
+      "9,54": 9,
+      "9,60": 9,
+      "9,64": 9,
+      "9,68": 9,
+      "9,72": 9,
+      "9,76": 9,
+      "9,79": 9,
+      "9,82": 9,
+      "9,85": 9,
+      "9,88": 9,
+      "9,91": 9,
+      "9,94": 9,
+      "9,97": 9,
+      "9,100": 9,
+      "9,103": 9,
+      "9,106": 9,
+      "9,109": 9,
+      "9,112": 9,
+      "9,116": 9,
+      "9,120": 9,
+      "9,124": 9,
+      "9,132": 9
+    },
+    "ColStyles": {
+      "137": 1
+    },
+    "SheetStyle": {
+      "FontFamily": 4
+    }
+  },
+  "Spans": [
+    "1,1,2,3",
+    "1,4,2,3",
+    "1,7,2,9",
+    "1,66,2,70",
+    "1,16,1,4",
+    "1,20,1,8",
+    "2,20,1,8",
+    "1,28,1,12",
+    "2,28,1,12",
+    "1,40,1,5",
+    "2,40,1,5",
+    "1,45,1,6",
+    "2,45,1,6",
+    "1,51,1,5",
+    "2,51,1,5",
+    "1,56,1,4",
+    "2,56,1,4",
+    "1,60,1,4",
+    "2,60,1,4",
+    "10,1,26,135",
+    "6,1,3,8",
+    "6,9,3,5",
+    "6,14,3,5",
+    "6,19,3,15",
+    "6,88,1,12",
+    "6,100,1,12",
+    "7,88,1,6",
+    "7,94,1,6",
+    "8,88,1,3",
+    "8,91,1,3",
+    "8,94,1,3",
+    "8,97,1,3",
+    "7,100,1,6",
+    "7,106,1,6",
+    "8,100,1,3",
+    "8,103,1,3",
+    "8,106,1,3",
+    "8,109,1,3",
+    "6,112,2,8",
+    "6,120,2,8",
+    "6,128,2,8",
+    "8,112,1,4",
+    "8,116,1,4",
+    "8,120,1,4",
+    "8,124,1,4",
+    "8,128,1,4",
+    "8,132,1,4",
+    "9,1,1,8",
+    "9,9,1,5",
+    "9,14,1,5",
+    "9,19,1,15",
+    "6,49,3,5",
+    "6,54,3,6",
+    "6,60,3,4",
+    "6,64,3,4",
+    "6,68,1,8",
+    "7,68,1,4",
+    "7,72,1,4",
+    "8,68,1,4",
+    "8,72,1,4",
+    "6,76,1,12",
+    "7,76,1,6",
+    "7,82,1,6",
+    "8,76,1,3",
+    "8,79,1,3",
+    "8,82,1,3",
+    "8,85,1,3",
+    "6,34,3,5",
+    "6,39,3,6",
+    "6,45,3,4",
+    "9,39,1,6",
+    "9,34,1,5",
+    "9,45,1,4",
+    "9,49,1,5",
+    "9,54,1,6",
+    "9,60,1,4",
+    "9,64,1,4",
+    "9,72,1,4",
+    "9,68,1,4",
+    "9,76,1,3",
+    "9,82,1,3",
+    "9,79,1,3",
+    "9,85,1,3",
+    "9,88,1,3",
+    "9,91,1,3",
+    "9,94,1,3",
+    "9,97,1,3",
+    "9,100,1,3",
+    "9,103,1,3",
+    "9,106,1,3",
+    "9,109,1,3",
+    "9,112,1,4",
+    "9,120,1,4",
+    "9,128,1,4",
+    "9,116,1,4",
+    "9,124,1,4",
+    "9,132,1,4",
+    "2,16,1,4"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "マスターページ",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "RelatedDataTableName": "T_BasicInformation"
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//lkQUbTlDRdKEHTDbAHXzrnbI2dGRbNxSm2CBI15vXZ80Mwc15cLlR2ur+emrfmtJZLQ3f2Q5YbwqNslr7VBTm1kKsCo+8uSs9BPTozuHP0eMOqtgwc913OvnUWm6OpsxgSobhFwBxVKskOISARf6RwoEofvj2OKtFfXoCX1CcEFb0DW8y0xc5dMFxIrfdVTUU6/Q/tNCnn/YfKG/R8tmPZ+kIMRiFdcjyX+EYZWGO0lCBxMqeqO60S8rCEfNz7rWxQaMgT/RY5nO2OpuU8Y/vhjOdpNpNQiwP+NY4rXkZzAWX91h7HM398ISmeqDBFyLey0yDBhVF183M1gcRg34tWxgufbE7ZOyxebn1LBJMSJaqHNDhNm2Ny6tLSi/Z0INiFwHHhh1hn3yM6c19dcvZ42attMesllZ26fYDCcEzfg44uBbzeZCVwjU6MfxNH3T0dCJkY+XFdA+jYC2kVoJM1DBH9w28Yy14UvnZJHz4ncwEtLww2fQYsOEfeVCcNPykSL56FTTmGSG1XCEL6naYUENmbwCOGaRTQenAEYYJ1hIFBR8YxOGYPey+ZRS9GF+Eod2kxSjb2wr/m3Rp/GIqRaho/tRxB62tUFoFH106ZAvFUBq/t7ijoclTaM083QaJ/xPO4jSssIYBqmN+bICviRryEfpLsRpxSiMPa9BVF/gid/AmRxWFpsfs7lPLZEU7oAjdGSUpeqVDkz5JnURfgZrnUun/17th5/zY+xmTKrGVz6WtIgmjiQml7b++a8tLoBVL+vfHJlAydoGa15GSpyf8jYBpOoklhDbeQbtI/JlOyLqCKUtbzhpyxkn12P/V6WJg9Hmd6eet5NIlhh9IXYdKW9wrAJVm1NOoEYl9JV5+3a+FUSJgo9uqSbXmPEhX3XqS7U5I+nqWkipaPQpvg==|920

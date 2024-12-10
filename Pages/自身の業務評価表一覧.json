@@ -1,0 +1,619 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "34": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "35": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      26
+    ],
+    "Count": 36
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "76": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 145.0,
+          "IsHidden": true
+        }
+      },
+      "77": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 100.0,
+          "IsHidden": true
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      27,
+      28,
+      29,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87
+    ],
+    "Count": 88
+  },
+  "Values": {
+    "0,75": "非表示",
+    "1,1": "年度",
+    "1,10": true,
+    "1,69": "新規登録",
+    "2,76": "有効案件検索条件",
+    "4,5": "年度",
+    "4,9": "ステップ",
+    "4,19": "状態",
+    "4,30": "WF担当者名",
+    "4,39": "コース",
+    "4,76": "選択中プロジェクトID",
+    "5,1": "編集",
+    "5,29": "%CurrentUser.UserName%"
+  },
+  "Formulas": {
+    "2,77": "IF(OR(K2=1,K2=TRUE),1,\"\")",
+    "5,1": "IF(AND(AB6=AD6,AC6=TRUE),\"編集\",\"参照\")"
+  },
+  "AttachInfos": {
+    "1,4": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "Items": [
+          {
+            "Value": "2024",
+            "DisplayValue": "2024"
+          },
+          {
+            "Value": "2023",
+            "DisplayValue": "2023"
+          },
+          {
+            "Value": "2022",
+            "DisplayValue": "2022"
+          }
+        ],
+        "DataSource": "T_BasicInformation",
+        "ValueColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "year"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "T_BasicInformation",
+          "ColumnName": "year"
+        },
+        "ItemsQuery": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "T_BasicInformation",
+            "ColumnName": "employee_z_code"
+          },
+          "Value": "%CurrentUser%"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "T_BasicInformation",
+                "ColumnName": "year"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "1,10": {
+      "CellType": {
+        "$type": "Forguncy.CheckBoxCellType, ServerDesignerCommon",
+        "CellDefaultValue": true,
+        "Caption": "有効案件のみ表示",
+        "Style": 2
+      }
+    },
+    "1,69": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShareCommand, ServerDesignerCommon",
+            "ShareCommandContainerRefer": {
+              "ShareCommandContainerID": "1c01060e-1f00-4b86-8d09-9558d5620056"
+            },
+            "Params": [
+              {
+                "ParamReferObject": {
+                  "ParamID": "b2c2d802-d7ad-4459-94d7-8a4b2e95660c",
+                  "ShareCommandContainerReferObject": {
+                    "ShareCommandContainerID": "1c01060e-1f00-4b86-8d09-9558d5620056"
+                  }
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=自身の業務評価表一覧!employeeZCodeLogin"
+                }
+              }
+            ],
+            "ResultMessageTo": {
+              "SerializeProperty": "リターンメッセージ"
+            },
+            "ReturnPropertiesTo": [
+              {
+                "ReturnPropertyReferObject": {
+                  "ParamID": "230c66ef-7b10-4f3a-8b67-a81cbedf661c",
+                  "ShareCommandContainerReferObject": {
+                    "ShareCommandContainerID": "1c01060e-1f00-4b86-8d09-9558d5620056"
+                  }
+                },
+                "ResultTo": {
+                  "SerializeProperty": "canCreate"
+                }
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=自身の業務評価表一覧!canCreate"
+                      }
+                    ]
+                  },
+                  "value": "1"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+                    "PageName": "新規登録",
+                    "PassValues": []
+                  }
+                ],
+                "ID": "3fb0a2af-a1be-47d8-a86a-3bf55ecfdec0"
+              },
+              {
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                    "MessageFormula": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=自身の業務評価表一覧!リターンメッセージ"
+                    }
+                  }
+                ],
+                "ID": "3afd91e3-4192-4d2d-a3fd-34b4aea848fa"
+              }
+            ],
+            "Comments": "コースコードが15or35のみ、起票可能"
+          }
+        ],
+        "Text": "新規登録",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "4,1": {
+      "ListViewInfo": {
+        "ShowColumnHeaderInDesigner": true,
+        "TableName": "T_BasicInformation",
+        "RowIndex": 4,
+        "ColumnIndex": 1,
+        "ColumnCount": 44,
+        "RowCount": 31,
+        "ColumnOperation": 2,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "Name": "リストビュー1",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "Condition1": {
+            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+            "Condition1": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "T_BasicInformation",
+                "ColumnName": "employee_z_code"
+              },
+              "Value": "%CurrentUser%"
+            },
+            "Condition2": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "T_BasicInformation",
+                "ColumnName": "year"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=自身の業務評価表一覧!E2"
+              }
+            }
+          },
+          "Condition2": {
+            "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+            "ColumnBindingInfo": {
+              "TableName": "T_BasicInformation",
+              "ColumnName": "new_flag"
+            },
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=自身の業務評価表一覧!BZ3"
+            }
+          }
+        },
+        "TopCondition": null,
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "T_BasicInformation",
+                "ColumnName": "year"
+              },
+              "Order": 1
+            },
+            {
+              "ColumnBindingInfo": {
+                "TableName": "T_BasicInformation",
+                "ColumnName": "new_flag"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "ListViewStyleName": "_RS_Medium2"
+      }
+    },
+    "4,77": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id"
+      }
+    },
+    "5,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "自身の業績評価表",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=自身の業務評価表一覧!$BZ$5"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=自身の業績評価表!親_プロジェクトID"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "編集",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "5,5": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "year"
+      },
+      "ConditionFormatRulesCollection": {
+        "Rules": [
+          {
+            "$type": "Forguncy.ConditionFormat.FormulaRule, ServerDesignerCommon",
+            "Formula": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=自身の業務評価表一覧!$AC6=FALSE"
+            },
+            "StyleInfo": {
+              "Background": "Background 1 -15",
+              "Underline": null,
+              "Strikethrough": null
+            }
+          }
+        ]
+      }
+    },
+    "5,9": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "ステップ"
+      }
+    },
+    "5,19": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "WF担当者"
+      }
+    },
+    "5,27": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "FGC_AssignTo"
+      }
+    },
+    "5,28": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "new_flag"
+      }
+    },
+    "5,30": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "FGC_AssignTo",
+        "AttachType": {
+          "$type": "ForguncyDataAccess.AssignToColumnAttachObj, ForguncyDataAccess",
+          "UserColumnAttachType": 1
+        }
+      },
+      "ConditionFormatRulesCollection": {
+        "Rules": [
+          {
+            "$type": "Forguncy.ConditionFormat.FormulaRule, ServerDesignerCommon",
+            "Formula": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=自身の業務評価表一覧!$AC6=FALSE"
+            },
+            "StyleInfo": {
+              "Background": "Background 1 -15",
+              "Underline": null,
+              "Strikethrough": null
+            }
+          }
+        ]
+      }
+    },
+    "5,39": {
+      "BindingInfo": {
+        "TableName": "T_BasicInformation",
+        "ColumnName": "project_id",
+        "RelationBinding": {
+          "RelatedTable": "T_ManagementBasicInformation",
+          "RelatedColumn": "project_id",
+          "DisplayColumn": "management_course_id",
+          "NextRelationBinding": {
+            "RelatedTable": "M_ManagementCourses",
+            "RelatedColumn": "management_course_id",
+            "DisplayColumn": "management_corse_name"
+          }
+        }
+      },
+      "ConditionFormatRulesCollection": {
+        "Rules": [
+          {
+            "$type": "Forguncy.ConditionFormat.FormulaRule, ServerDesignerCommon",
+            "Formula": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=自身の業務評価表一覧!$AC6=FALSE"
+            },
+            "StyleInfo": {
+              "Background": "Background 1 -15",
+              "Underline": null,
+              "Strikethrough": null
+            }
+          }
+        ]
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "Foreground": 1
+      },
+      {
+        "Background": 0
+      },
+      {
+        "Background": 2,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 4
+      },
+      {
+        "Background": null,
+        "Foreground": null
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Foreground": 6
+      },
+      {
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 4,
+        "HorizontalAlignment": 3
+      },
+      {
+        "Foreground": 7,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderRight": null
+      },
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderRight": null
+      },
+      {
+        "Background": null
+      },
+      {
+        "Background": null,
+        "Foreground": 7
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 1 50",
+        "#FFFF0000",
+        "Accent 1 60",
+        "Center",
+        "Body",
+        "black",
+        "Background 1 0",
+        "#FF000000"
+      ],
+      "Borders": [
+        {
+          "Color": 5
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,75": 0,
+      "0,76": 1,
+      "0,77": 1,
+      "0,78": 1,
+      "0,79": 1,
+      "0,80": 1,
+      "0,81": 1,
+      "0,82": 1,
+      "0,83": 1,
+      "0,84": 1,
+      "0,85": 1,
+      "0,86": 1,
+      "0,87": 1,
+      "1,1": 2,
+      "1,10": 3,
+      "1,11": 3,
+      "1,12": 3,
+      "1,13": 3,
+      "1,14": 3,
+      "1,15": 3,
+      "1,16": 3,
+      "1,17": 3,
+      "1,18": 3,
+      "1,19": 3,
+      "1,39": 4,
+      "2,10": 3,
+      "2,11": 3,
+      "2,12": 3,
+      "2,13": 3,
+      "2,14": 3,
+      "2,15": 3,
+      "2,16": 3,
+      "2,17": 3,
+      "2,18": 3,
+      "2,19": 3,
+      "2,39": 4,
+      "2,76": 5,
+      "2,77": 6,
+      "4,19": 3,
+      "4,27": 3,
+      "4,28": 3,
+      "4,29": 3,
+      "4,39": 7,
+      "5,5": 8,
+      "5,9": 8,
+      "5,19": 9,
+      "5,27": 3,
+      "5,28": 3,
+      "5,29": 3,
+      "5,30": 8,
+      "5,39": 10,
+      "5,40": 11,
+      "5,41": 11,
+      "5,42": 11,
+      "5,43": 11,
+      "5,44": 11
+    },
+    "ColStyles": {
+      "19": 12,
+      "27": 1,
+      "28": 1,
+      "29": 1,
+      "39": 13,
+      "75": 1
+    },
+    "SheetStyle": {
+      "FontFamily": 4
+    }
+  },
+  "Spans": [
+    "1,1,2,3",
+    "1,4,2,5",
+    "1,10,2,9",
+    "1,69,2,5",
+    "5,1,1,4",
+    "5,5,1,4",
+    "5,9,1,10",
+    "5,19,1,8",
+    "5,30,1,9",
+    "5,39,1,6",
+    "6,1,29,44",
+    "4,1,1,4",
+    "4,5,1,4",
+    "4,9,1,10",
+    "4,19,1,8",
+    "4,30,1,9",
+    "4,39,1,6"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "マスターページ",
+    "AuthorizeInfo": {
+      "VisitMode": 2
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "RelatedDataTableName": "T_BasicInformation"
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//n/q2Z0GRUHJg8hwZx2vyIHIo1W99Ul4FfDryIBLqR9JO39/niHUDrQNG+KBM3ZKyWrBPsgKZGcbjjd5GQmjJqPH6sKnbVG8nc/8KfuxXTa2DlUtCfuEUQHJnFCxxLS4OaG4mO5UrFJoeOgoPjVIRWq0tYTxNx/c6cp8DkBOetQPcVFy0dFjNKr86Zrzpiz0m6ubp9Lm0sw40TbiG0VDRt81h97c4KCqTr5aJQfvM1S4UyRtGZ8ztiUkohU+Kkh+GGgJA1qwJTAvJlbBovK9juLyAcH2Ibx4Xxe2pasR47AAQRENVgrqPABB4EvrNmkaCApf4SKaKlmkRpRDx6yg6foSTpRSfDeMLIQaKM8F/d59EOVYR8Fnlh7qvCa/qVV787UWnX4czPvKP3NQDzQZ6xbC7NzbOYF9mm7usc7clPU8Si1eFOLBpT76rwaCZgwLfzV57Z6D5E0TqROD4sft2U0DwOlRN+UKQo/5EPyZAtz4Hu86VjWhGXeGseLNW7eYsf/zPA/En//aTSAa3OojMrjLbykVwUkiEHHNGHDT0d6kuLBH3U5hmMkvUfvBAFr5saoEz0aaatHlrO/G/0xgPYZZtLmOpvXFCJmWUIi3EBIt2I7RkhR3fyhJ7wkLJ8Eyh7ToBOF3/ig0SS48dGIcCFsx5+MziC9xKe4c7zucK42gchr/SSFJghs215+o6E2+hw/aUz5ytGLY/YMwi+7whZ7QJPAAMOJhK2uERSlIpSlb7HBH02d6oySXuPdoeQsZIDW2CvABHZw/GJrPpqRcII5PBe7xq9MlZ7cCsBKWu4bs6PfX1t2B7+Cj9WIeBuZCqhJm4I6VdNBjKOg+mNLnDh5anO3K5WuCciXJcH5RvP5x7tM0kOIq9pqyAtBtap9qdYOhQbEDDAyn6oEZ/2Vh2nA==|920

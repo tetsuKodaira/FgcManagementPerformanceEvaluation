@@ -1,0 +1,12 @@
+[
+  {
+    "ConnectionString": "Data Source=NTVMDTEST-006\\SQLEXPRESS;Initial Catalog=ManagementEvaluationDB;Persist Security Info=True;User ID=kodaira;Password=kodaira",
+    "DataBaseType": 1,
+    "ID": "a3135340-d2e1-4280-9cbb-2ceba10bbd8e"
+  },
+  {
+    "ConnectionString": "Data Source=rds-commondb-poc-zeon-db-001.cjzyjlprofpu.ap-northeast-1.rds.amazonaws.com;Initial Catalog=Dev_L_USER_MST;Persist Security Info=True;User ID=Z037674;Password=Z037674",
+    "DataBaseType": 1,
+    "ID": "730d62c6-3541-4ae5-a7db-58f93e617699"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "IntegrateWithOtherApplication": {
+    "Password": "80W48IF1P!Hd"
+  },
+  "WebSitePort": 25846,
+  "UserServicePort": 53228,
+  "StartPage": "自身の業務評価表一覧",
+  "StartDateFiscalYear": 4,
+  "SuppressedWarningMessages": [
+    "マスターページ->ページロード時のコマンド->条件分岐, ページが遷移される、もしくはその他の理由により、条件分岐コマンドより後のコマンドは実行されません。"
+  ]
+}
