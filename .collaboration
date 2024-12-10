@@ -406,7 +406,16 @@
   },
   {
     "ModuleName": "PCPage/meibolistview1",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "tetsuyaKodaira",
+      "Email": "tetsuya.kodaira@zeon.co.jp"
+    },
+    "LockDateTime": "2024-12-11T08:15:36.3147075+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\評価名簿\\meibolistview1.json"
+    ]
   },
   {
     "ModuleName": "PCPage/meibolistview2",
